@@ -32,3 +32,14 @@
 [x] 32. Fixed pricing and FAQ CTA sections visibility (changed m-5 to mx-5 my-5 with explicit display/visibility)
 [x] 33. Replaced hero background image with better fintech-themed image URL
 [x] 34. Updated background-blend-mode from overlay to multiply for better image visibility
+[x] 35. Re-installed npm dependencies to fix tsx missing error
+[x] 36. Restarted workflow - application now running successfully on port 5000
+[x] 37. Verified application displaying correctly via screenshot - SimpleBit homepage fully functional
+[x] 38. Fixed HTML hero image positioning - removed margin-top that was pushing image down
+[x] 39. Updated HTML hero background image to use same fintech image from React version
+[x] 40. Adjusted hero background to extend behind fixed navbar with top: -60px
+[x] 41. Fixed hero content padding to properly account for fixed navbar spacing
+[x] 42. Fixed navbar visibility on non-home pages (about, pricing, case-studies, faq, contact)
+[x] 43. Changed navbar from navbar-transparent to navbar-light sticky-top on all non-home pages
+[x] 44. Updated Watch Demo button from btn-outline-light to btn-outline-dark for proper contrast
+[x] 45. Navbar menu items now visible with dark text on white background from page load
