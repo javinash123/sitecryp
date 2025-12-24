@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../images/logo.png">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..700;1,9..40,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Contact Us - SimpleBit</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">
+                <img src="../images/logo.png" alt="SimpleBit" class="navbar-logo">
+                <span class="ms-2">SimpleBit</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="features.html">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="case-studies.html">Case Studies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="contact.html" class="btn btn-primary ms-3">Partner With Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="py-5 bg-light">
+        <div class="container py-5 text-center">
+            <h1 class="display-4 fw-bold mb-4">Get in Touch</h1>
+            <p class="lead text-muted">We'd love to hear from you. Send us a message!</p>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-8">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" name="phone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="company" class="form-label">Company Name</label>
+                            <input type="text" class="form-control" id="company" name="company">
+                        </div>
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">Subject *</label>
+                            <select class="form-select" id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="partnership">Partnership Inquiry</option>
+                                <option value="support">Support</option>
+                                <option value="feedback">Feedback</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message *</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                    </form>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="mb-5">
+                        <h5 class="fw-bold mb-3">
+                            <i class="fas fa-map-marker-alt text-primary me-2"></i> Address
+                        </h5>
+                        <p class="text-muted">Dubai, United Arab Emirates</p>
+                    </div>
+                    <div class="mb-5">
+                        <h5 class="fw-bold mb-3">
+                            <i class="fas fa-envelope text-primary me-2"></i> Email
+                        </h5>
+                        <p><a href="mailto:hello@simplebit.ae" class="text-decoration-none text-primary">hello@simplebit.ae</a></p>
+                    </div>
+                    <div class="mb-5">
+                        <h5 class="fw-bold mb-3">
+                            <i class="fas fa-phone text-primary me-2"></i> Phone
+                        </h5>
+                        <p><a href="tel:+971123456789" class="text-decoration-none text-primary">+971 (0) 12 345 6789</a></p>
+                    </div>
+                    <div>
+                        <h5 class="fw-bold mb-3">Business Hours</h5>
+                        <p class="text-muted small">
+                            Monday - Friday: 9:00 AM - 6:00 PM<br>
+                            Saturday: 10:00 AM - 4:00 PM<br>
+                            Sunday: Closed
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-3">Response Time</h2>
+            <p class="lead text-muted">We typically respond to all inquiries within 24 hours</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-light border-top">
+        <div class="container py-5">
+            <div class="row g-4 mb-5">
+                <div class="col-md-4">
+                    <a href="../index.html" class="d-flex align-items-center text-decoration-none mb-3">
+                        <img src="../images/logo.png" alt="SimpleBit" style="height: 40px;">
+                        <span class="ms-2 fw-bold">SimpleBit</span>
+                    </a>
+                    <p class="text-muted small">The future of payments in AED.</p>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-muted text-decoration-none small">About Us</a></li>
+                        <li><a href="contact.html" class="text-muted text-decoration-none small">Careers</a></li>
+                        <li><a href="case-studies.html" class="text-muted text-decoration-none small">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold mb-3">Product</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="features.html" class="text-muted text-decoration-none small">Features</a></li>
+                        <li><a href="pricing.html" class="text-muted text-decoration-none small">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none small">Privacy Policy</a></li>
+                        <li><a href="faq.html" class="text-muted text-decoration-none small">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top pt-4">
+                <p class="text-muted small mb-0">&copy; 2024 SimpleBit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>

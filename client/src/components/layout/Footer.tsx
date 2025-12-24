@@ -43,7 +43,7 @@ export function Footer() {
               <li><Link href="/features" className="hover:text-primary transition-colors">Features</Link></li>
               <li><Link href="/features" className="hover:text-primary transition-colors">Integration</Link></li>
               <li><Link href="/features" className="hover:text-primary transition-colors">Security</Link></li>
-              <li><Link href="/faq" className="hover:text-primary transition-colors">Pricing</Link></li>
+              <li><Link href="/pricing" className="hover:text-primary transition-colors">Pricing</Link></li>
             </ul>
           </div>
 

@@ -76,7 +76,7 @@ export default function Home() {
             
             <motion.h1 variants={item} className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
               The Future of Payments <br className="hidden md:block" />
-              in <span className="text-white">AED</span>.
+              in <span className="text-primary">AED</span>.
             </motion.h1>
             
             <motion.p variants={item} className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
