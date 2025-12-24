@@ -26,3 +26,9 @@
 [x] 26. Fixed navbar styling across all pages to match React version exactly
 [x] 27. Reduced case-studies card heights for better layout proportions
 [x] 28. All HTML pages now 100% identical to React version in appearance and functionality
+[x] 29. Fixed homepage hero section navbar visibility and logo display
+[x] 30. Fixed case study card heights (reduced from 250px to 200px)
+[x] 31. Fixed pricing page "MOST POPULAR" badge text color (changed from white to dark)
+[x] 32. Fixed pricing and FAQ CTA sections visibility (changed m-5 to mx-5 my-5 with explicit display/visibility)
+[x] 33. Replaced hero background image with better fintech-themed image URL
+[x] 34. Updated background-blend-mode from overlay to multiply for better image visibility
