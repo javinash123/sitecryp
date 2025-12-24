@@ -4,12 +4,34 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (navbar && navbar.classList.contains('navbar-transparent')) {
         window.addEventListener('scroll', function() {
-            if (window.scrollY > window.innerHeight * 0.6) {
+            if (window.scrollY > 100) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
             }
         });
+    }
+
+    // Rotating text effect for feature badge
+    const rotatingText = document.getElementById('rotating-text');
+    if (rotatingText) {
+        const texts = [
+            'New: Apple Pay Integration',
+            'Lightning-Fast Settlements',
+            'Crypto & Cards Accepted'
+        ];
+        let currentIndex = 0;
+        
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % texts.length;
+            rotatingText.style.opacity = '0';
+            setTimeout(() => {
+                rotatingText.textContent = texts[currentIndex];
+                rotatingText.style.opacity = '1';
+            }, 300);
+        }, 4000);
+        
+        rotatingText.style.transition = 'opacity 0.3s ease-in-out';
     }
 
     // Counter animation
