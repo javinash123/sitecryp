@@ -1,5 +1,7 @@
-import { Zap, Shield, Smartphone, Globe, BarChart3, Lock } from "lucide-react";
+import { Zap, Shield, Smartphone, Globe, BarChart3, Lock, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
 
 export default function Features() {
   const features = [
@@ -44,7 +46,7 @@ export default function Features() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-24">
         {features.map((feature, i) => (
           <Card key={i} className="hover:shadow-lg transition-all duration-300 border-black/[0.05]">
             <CardHeader>
@@ -60,6 +62,24 @@ export default function Features() {
             </CardContent>
           </Card>
         ))}
+      </div>
+
+      <div className="bg-gradient-to-br from-slate-900 via-purple-900 to-primary text-white rounded-3xl p-12 text-center overflow-hidden relative">
+        <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
+          <div className="absolute right-0 top-0 w-96 h-96 bg-white blur-[128px]"></div>
+          <div className="absolute left-0 bottom-0 w-64 h-64 bg-purple-500 blur-[128px]"></div>
+        </div>
+        <div className="relative z-10">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+          <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-10">
+            Transform your payment experience today. No setup fees. No hidden costs. Enterprise-grade security.
+          </p>
+          <Link href="/contact">
+            <Button size="lg" className="h-12 px-8 text-base bg-white text-primary hover:bg-gray-100 shadow-lg hover:scale-105 transition-all">
+              Get Started Now <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
+        </div>
       </div>
     </div>
   );

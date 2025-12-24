@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Play, Shield, Zap, Globe, BarChart3, TrendingUp } from "lucide-react";
+import { ArrowRight, CheckCircle2, Play, Shield, Zap, Globe, BarChart3, TrendingUp, Clock, Percent, Zap as ZapStat, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import heroBg from "@assets/stock_images/modern_fintech_techn_5a39f5a8.jpg";
@@ -7,8 +7,20 @@ import { Link } from "wouter";
 import { RotatingFeatures } from "@/components/RotatingFeatures";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { Navbar } from "@/components/layout/Navbar";
+import { Footer } from "@/components/layout/Footer";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > window.innerHeight * 0.6);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -43,12 +55,12 @@ export default function Home() {
             alt="Background" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/50 to-black/60 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/65 to-black/75 z-10" />
         </div>
         
-        {/* Transparent Navbar */}
-        <div className="absolute top-0 left-0 right-0 z-50">
-          <Navbar isTransparent={true} />
+        {/* Dynamic Navbar - Transparent on hero, white after scroll */}
+        <div className="fixed top-0 left-0 right-0 z-50">
+          <Navbar isTransparent={!isScrolled} />
         </div>
         
         <div className="container relative z-10 px-4 md:px-6 mx-auto h-full flex items-center">
@@ -64,7 +76,7 @@ export default function Home() {
             
             <motion.h1 variants={item} className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
               The Future of Payments <br className="hidden md:block" />
-              in <span className="text-gradient">AED</span>.
+              in <span className="text-white">AED</span>.
             </motion.h1>
             
             <motion.p variants={item} className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
@@ -108,7 +120,7 @@ export default function Home() {
       <section className="py-24 bg-white">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">How It Works</h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">How It <span className="text-gradient">Works</span></h2>
             <p className="text-muted-foreground text-lg">
               Three simple steps to revolutionize your payment processing and start getting paid instantly.
             </p>
@@ -222,28 +234,36 @@ export default function Home() {
         <div className="container relative z-10 px-4 md:px-6 mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { val: 10, label: "Second Settlement", suffix: "s" },
-              { val: 300, label: "Revenue Boost", suffix: "%" },
-              { val: 99.9, label: "System Uptime", suffix: "%" },
-              { val: 50, label: "Million Processed", prefix: "$" }
-            ].map((stat, i) => (
-              <motion.div 
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.1 }}
-                className="text-center"
-              >
-                <div className="font-bold text-4xl md:text-5xl lg:text-6xl mb-3 font-heading">
-                  <AnimatedCounter 
-                    value={stat.val} 
-                    suffix={stat.suffix}
-                    prefix={stat.prefix}
-                  />
-                </div>
-                <div className="text-white/80 font-medium text-sm md:text-base">{stat.label}</div>
-              </motion.div>
-            ))}
+              { val: 10, label: "Second Settlement", suffix: "s", icon: Clock },
+              { val: 300, label: "Revenue Boost", suffix: "%", icon: TrendingUp },
+              { val: 99.9, label: "System Uptime", suffix: "%", icon: Shield },
+              { val: 50, label: "Million Processed", prefix: "$", icon: DollarSign }
+            ].map((stat, i) => {
+              const IconComponent = stat.icon;
+              return (
+                <motion.div 
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.1 }}
+                  className="text-center"
+                >
+                  <div className="flex justify-center mb-3">
+                    <div className="p-3 bg-white/20 rounded-full">
+                      <IconComponent className="w-6 h-6 text-white/90" />
+                    </div>
+                  </div>
+                  <div className="font-bold text-4xl md:text-5xl lg:text-6xl mb-3 font-heading">
+                    <AnimatedCounter 
+                      value={stat.val} 
+                      suffix={stat.suffix}
+                      prefix={stat.prefix}
+                    />
+                  </div>
+                  <div className="text-white/80 font-medium text-sm md:text-base">{stat.label}</div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -256,9 +276,12 @@ export default function Home() {
               <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-primary/10 text-primary mb-6">
                 Success Story
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                "SimpleBit completely transformed our business. International customers can now pay with crypto, and we receive AED instantly."
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                <span className="text-gradient">Transformed</span> Their Payment Experience
               </h2>
+              <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
+                "SimpleBit completely transformed our business. International customers can now pay with crypto, and we receive AED instantly."
+              </p>
               <div className="flex items-center gap-4 mb-8">
                 <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">AR</div>
                 <div>
@@ -267,7 +290,9 @@ export default function Home() {
                 </div>
               </div>
               <Link href="/case-studies">
-                <Button variant="outline">View All Success Stories</Button>
+                <Button size="lg" className="h-12 px-8 text-base bg-primary text-white hover:bg-purple-700 shadow-lg hover:scale-105 transition-all">
+                  View All Success Stories <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
               </Link>
             </div>
             <div className="relative">
@@ -322,6 +347,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }

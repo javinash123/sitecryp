@@ -1,5 +1,8 @@
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Link } from "wouter";
+import teamImage from "@assets/stock_images/modern_fintech_techn_5a39f5a8.jpg";
 
 export default function About() {
   return (
@@ -43,12 +46,40 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="bg-slate-100 rounded-3xl h-[400px] w-full flex items-center justify-center">
-          <div className="text-slate-400 font-heading text-2xl">Team Photo Placeholder</div>
+        <div className="rounded-3xl h-[400px] w-full overflow-hidden">
+          <img src={teamImage} alt="Team" className="w-full h-full object-cover" />
         </div>
       </div>
 
-      <div className="bg-slate-50 rounded-3xl p-12 text-center">
+      <div className="bg-gradient-to-br from-primary/10 to-purple-50 rounded-3xl p-12 mb-24">
+        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">Our Vision</h2>
+        <p className="text-lg text-muted-foreground max-w-3xl leading-relaxed">
+          We envision a future where payment barriers no longer limit business growth. By bridging traditional finance with emerging technologies, SimpleBit empowers UAE businesses to reach global customers seamlessly. Our mission is to make instant, secure, and cost-effective payments the standard for every business, regardless of size or industry. We're committed to building financial infrastructure that's fast, fair, and accessible to all.
+        </p>
+      </div>
+
+      <div className="bg-white rounded-3xl p-12 mb-24 border border-black/[0.05]">
+        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-12 text-center">Our Achievements</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="space-y-4 text-center">
+            <div className="text-5xl font-bold text-primary">500+</div>
+            <h3 className="text-xl font-semibold">Businesses Powered</h3>
+            <p className="text-muted-foreground">UAE-based businesses trusting SimpleBit for their payment needs</p>
+          </div>
+          <div className="space-y-4 text-center">
+            <div className="text-5xl font-bold text-primary">$50M+</div>
+            <h3 className="text-xl font-semibold">Transactions Processed</h3>
+            <p className="text-muted-foreground">Billions in value securely processed annually</p>
+          </div>
+          <div className="space-y-4 text-center">
+            <div className="text-5xl font-bold text-primary">99.9%</div>
+            <h3 className="text-xl font-semibold">Uptime Guarantee</h3>
+            <p className="text-muted-foreground">Enterprise-grade infrastructure and support</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-slate-50 rounded-3xl p-12 text-center mb-24">
         <h2 className="font-heading text-3xl font-bold mb-12">Join Our Team</h2>
         <div className="grid md:grid-cols-3 gap-6 text-left">
           {[
@@ -62,6 +93,18 @@ export default function About() {
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="bg-gradient-to-r from-primary to-purple-600 text-white rounded-3xl p-12 text-center">
+        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6">Ready to Partner With SimpleBit?</h2>
+        <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">
+          Join hundreds of UAE businesses transforming their payment experience with instant settlements and global reach.
+        </p>
+        <Link href="/contact">
+          <Button size="lg" className="h-12 px-8 text-base bg-white text-primary hover:bg-gray-100 shadow-lg hover:scale-105 transition-all">
+            Get Started Today <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </Link>
       </div>
     </div>
   );

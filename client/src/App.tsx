@@ -7,6 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import Home from "@/pages/Home";
 import About from "@/pages/About";
 import Features from "@/pages/Features";
+import Pricing from "@/pages/Pricing";
 import CaseStudies from "@/pages/CaseStudies";
 import Contact from "@/pages/Contact";
 import FAQ from "@/pages/FAQ";
@@ -36,6 +37,17 @@ function Router() {
               <Navbar />
               <main className="flex-grow">
                 <Features />
+              </main>
+              <Footer />
+            </>
+          )}
+        </Route>
+        <Route path="/pricing">
+          {() => (
+            <>
+              <Navbar />
+              <main className="flex-grow">
+                <Pricing />
               </main>
               <Footer />
             </>
