@@ -1,0 +1,13 @@
+I want to design a website for my fintech business. I should be mobile friendly, fully responsive website. I want to strictly design it using HTML, CSS, Bootstrap, Javascript and jQuery only, I dont need it to be designed using React and Vite. I need this website to be in light mode only. The name of the website will be SimpleBit use the logo and color from the reference link - https://app--simple-bit-8911b974.base44.app/ , also this website https://app--simple-bit-8911b974.base44.app/ can be used for all the content that will be required in the website. We are looking something like stripe very professional and our business competitior websites are - https://www.zbooni.com/ and https://ziina.com/ , In the header use the logo from the reference link, also the color combination should be as per the logo color only in the website, we will have Home, About, Features, Case Studies, FAQ, COntact and a button for Partner With Us. And in footer we should have light gray as the background color,  all the header menus will be there and at the bottom along with copyright line Privacy Policy and Terms Of Services option should be there. There will be following pages in the website - 
+
+1. Home - It should have a image as the hero section , image should start from top of the header,header should be above to it and having two buttons Partner With Us and Watch Demo. Then we should have TRUSTED BY 500+ UAE BUSINESSES with there logo and name, below to this we should have how it works with modern and unique design. Then why business choose us section, below to it a banner section with statistics, then we should have success stories section, then perfect for which industries section, then a banner to partner with us. 
+2. About - about us, our vision, our mission, our stats, also add career section in it. 
+3. Features - All the features of the website should come here along with why us and what stands us out from the other companies.
+4. Case Studies - It should look like a professional cae study page of any fintech company, provide client reviews and ratings, the page should give a modern feel.
+5. FAQ - It like any other standard websites FAQ but the design should be modern and unique
+6. Contact - it should have all the section like contact details, address, contact us form etc. but the design should be modern and unique
+7. Privacy Policy - Add basic content for now
+8. Terms Of Services - Add basic content for now
+
+complete website should look modern, minimalistic and unique in design. the buttons , fonts , icons should be of standard sizes.
+
