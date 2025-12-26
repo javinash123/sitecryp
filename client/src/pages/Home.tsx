@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle2, Play, Shield, Zap, Globe, BarChart3, TrendingUp, Clock, Percent, Zap as ZapStat, DollarSign } from "lucide-react";
+import { ArrowRight, CheckCircle2, Play, Shield, Zap, Globe, BarChart3, TrendingUp, Clock, Percent, Zap as ZapStat, DollarSign, CreditCard, Apple, Coins, Lock, Award, Star, Utensils, Hotel, ShoppingBag, Scissors, Dumbbell, Package } from "lucide-react";
+import { SiVisa, SiMastercard, SiApplepay, SiBitcoin } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import heroBg from "@assets/stock_images/modern_fintech_techn_5a39f5a8.jpg";
+import heroBg from "@assets/stock_images/fintech_business_mob_09d37021.jpg";
 import { Link } from "wouter";
 import { RotatingFeatures } from "@/components/RotatingFeatures";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
@@ -37,25 +38,26 @@ export default function Home() {
   };
 
   const industries = [
-    { name: "Restaurants", icon: "🍽️" },
-    { name: "Hotels", icon: "🏨" },
-    { name: "Retail", icon: "🛍️" },
-    { name: "Salons", icon: "💇" },
-    { name: "Gyms", icon: "💪" },
-    { name: "E-commerce", icon: "📦" },
+    { name: "Restaurants", icon: <Utensils className="w-10 h-10" /> },
+    { name: "Hotels", icon: <Hotel className="w-10 h-10" /> },
+    { name: "Retail", icon: <ShoppingBag className="w-10 h-10" /> },
+    { name: "Salons", icon: <Scissors className="w-10 h-10" /> },
+    { name: "Gyms", icon: <Dumbbell className="w-10 h-10" /> },
+    { name: "E-commerce", icon: <Package className="w-10 h-10" /> },
   ];
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen overflow-x-hidden">
       {/* Hero Section with Transparent Navbar */}
-      <section className="relative min-h-screen pt-32 pb-32 overflow-hidden">
+      <section className="relative min-h-screen pt-32 pb-32 overflow-hidden flex items-center">
         <div className="absolute inset-0 z-0">
           <img 
             src={heroBg} 
             alt="Background" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/65 to-black/75 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-tr from-black/85 via-black/55 to-primary/40 z-10" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_rgba(0,0,0,0.5)_100%)] z-10" />
         </div>
         
         {/* Dynamic Navbar - Transparent on hero, white after scroll */}
@@ -74,38 +76,69 @@ export default function Home() {
               <RotatingFeatures />
             </motion.div>
             
-            <motion.h1 variants={item} className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
-              The Future of Payments <br className="hidden md:block" />
-              in <span className="text-primary">AED</span>.
+            <motion.h1 variants={item} className="text-3xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1] px-4">
+              The Future of Business <br className="hidden md:block" />
+              Payments in <span className="text-primary">AED</span>.
             </motion.h1>
             
-            <motion.p variants={item} className="text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-              Accept crypto, cards, and Apple Pay in seconds. Get paid instantly in AED at the best rates — seamless, secure, and built for businesses of every size.
+            <motion.p variants={item} className="text-lg md:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed font-medium px-4">
+              Accept Crypto, Cards & Apple Pay — Settle Instantly in AED.
             </motion.p>
             
-            <motion.div variants={item} className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Link href="/contact">
-                <Button size="lg" className="h-12 px-8 text-base bg-white text-primary hover:bg-purple-50 shadow-xl hover:scale-105 transition-all">
-                  Partner With Us <ArrowRight className="ml-2 h-4 w-4" />
+            <motion.div variants={item} className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 px-6">
+              <Link href="/contact" className="w-full sm:w-auto">
+                <Button size="lg" className="h-14 px-10 text-lg bg-primary text-white hover:bg-primary/90 shadow-2xl transition-all font-bold w-full">
+                  Partner With Us <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Link href="/contact">
-                <Button size="lg" variant="outline" className="h-12 px-8 text-base border-white/30 text-white hover:bg-white/20">
+              <Link href="/contact" className="w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="h-14 px-10 text-lg border-white/40 text-white hover:bg-white/20 backdrop-blur-sm w-full">
                   <Play className="mr-2 h-4 w-4 fill-current" /> Watch Demo
                 </Button>
               </Link>
+            </motion.div>
+
+            {/* Payment Methods Section */}
+            <motion.div variants={item} className="pt-12 space-y-6">
+              <p className="text-white/60 text-sm font-semibold uppercase tracking-widest">Supported by global payment networks</p>
+              <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 grayscale invert opacity-70">
+                <SiVisa className="w-12 h-12" title="Visa" />
+                <SiMastercard className="w-10 h-10" title="Mastercard" />
+                <SiApplepay className="w-14 h-14" title="Apple Pay" />
+                <SiBitcoin className="w-10 h-10" title="Crypto" />
+              </div>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Trusted By Section */}
-      <section className="py-12 border-y border-black/[0.05] bg-slate-50/50">
+      {/* Trust & Compliance Strip */}
+      <section className="bg-white border-b py-6">
         <div className="container px-4 md:px-6 mx-auto">
-          <p className="text-center text-sm font-semibold text-muted-foreground uppercase tracking-wider mb-8">
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+            <div className="flex items-center gap-2 text-muted-foreground font-medium">
+              <Shield className="w-5 h-5 text-primary" />
+              <span>PCI-DSS Level 1</span>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground font-medium">
+              <Lock className="w-5 h-5 text-primary" />
+              <span>AES-256 Encryption</span>
+            </div>
+            <div className="flex items-center gap-2 text-muted-foreground font-medium">
+              <Award className="w-5 h-5 text-primary" />
+              <span>AED Instant Payouts</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Trusted By Section */}
+      <section className="py-12 border-b border-black/[0.05] bg-slate-50/30">
+        <div className="container px-4 md:px-6 mx-auto">
+          <p className="text-center text-xs font-bold text-muted-foreground uppercase tracking-[0.2em] mb-8">
             Trusted by 500+ UAE Businesses
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-40 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-500 cursor-default">
             <span className="text-xl font-bold">TechFlow</span>
             <span className="text-xl font-bold italic">Velvet.co</span>
             <span className="text-xl font-black tracking-tighter">NEXUS</span>
@@ -147,12 +180,12 @@ export default function Home() {
                 icon: <CheckCircle2 className="h-8 w-8 text-primary" />
               }
             ].map((item, i) => (
-              <Card key={i} className="relative overflow-hidden border-none shadow-lg hover:shadow-xl transition-all duration-300 group">
-                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+              <Card key={i} className="relative overflow-hidden border-none shadow-lg hover:shadow-2xl transition-all duration-500 group">
+                <div className="absolute top-0 right-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity">
                   <span className="text-9xl font-bold text-primary">{item.step}</span>
                 </div>
                 <CardContent className="pt-8 pb-8 px-6 relative z-10">
-                  <div className="mb-6 p-3 bg-primary/10 w-fit rounded-xl rounded-tl-none">
+                  <div className="mb-6 p-4 bg-primary/10 w-fit rounded-2xl rounded-tl-none group-hover:bg-primary group-hover:text-white transition-colors duration-500">
                     {item.icon}
                   </div>
                   <h3 className="text-2xl font-bold mb-3">{item.title}</h3>
@@ -162,6 +195,35 @@ export default function Home() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Banner (Moved here) */}
+      <section className="py-24 bg-slate-950 text-white overflow-hidden relative">
+        <div className="absolute inset-0 opacity-30">
+          <div className="absolute right-0 top-0 w-[600px] h-[600px] bg-primary blur-[150px] rounded-full"></div>
+          <div className="absolute left-0 bottom-0 w-[400px] h-[400px] bg-purple-600 blur-[150px] rounded-full"></div>
+        </div>
+        <div className="container relative z-10 px-4 md:px-6 mx-auto text-center">
+          <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-sm font-semibold mb-8 backdrop-blur-sm">
+            🚀 Trusted by 500+ UAE Businesses
+          </div>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">Start accepting payments today.</h2>
+          <p className="text-white/70 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed">
+            Unlock new revenue streams. No setup fees. No hidden costs. Enterprise-grade security for the modern UAE business.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
+             <Link href="/contact">
+              <Button size="lg" className="h-16 px-12 text-lg bg-white hover:bg-white/90 text-primary border-none shadow-2xl shadow-white/10 font-bold">
+                Partner With Us
+              </Button>
+            </Link>
+            <Link href="/features">
+              <Button size="lg" variant="outline" className="h-16 px-12 text-lg border-white/20 text-white hover:bg-white/10 hover:text-white bg-white/5 backdrop-blur-sm font-bold">
+                Explore Features
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -176,15 +238,22 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
             {industries.map((industry, i) => (
               <motion.div
                 key={i}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="p-6 rounded-2xl bg-white border-2 border-primary/20 hover:border-primary hover:shadow-lg transition-all cursor-pointer text-center group"
+                whileHover={{ scale: 1.08, y: -8 }}
+                whileTap={{ scale: 0.95 }}
+                className="p-8 rounded-3xl bg-white border border-primary/10 hover:border-primary hover:shadow-2xl hover:shadow-primary/20 transition-all cursor-pointer text-center group"
               >
-                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">{industry.icon}</div>
-                <p className="font-semibold text-foreground group-hover:text-primary transition-colors">{industry.name}</p>
+                <motion.div 
+                  initial={{ scale: 1 }}
+                  whileHover={{ rotate: [0, -10, 10, 0] }}
+                  className="mb-4 flex justify-center text-primary"
+                >
+                  {industry.icon}
+                </motion.div>
+                <p className="font-bold text-foreground group-hover:text-primary transition-colors">{industry.name}</p>
               </motion.div>
             ))}
           </div>
@@ -210,13 +279,13 @@ export default function Home() {
               { title: "Global Reach", desc: "Accept payments from anywhere in the world, expanding your base.", icon: <Globe /> },
               { title: "Advanced Analytics", desc: "Real-time insights and detailed reporting to optimize strategy.", icon: <BarChart3 /> },
             ].map((feature, i) => (
-              <div key={i} className="flex gap-4 p-6 rounded-2xl bg-white border border-primary/10 hover:border-primary/30 hover:shadow-lg transition-all hover:bg-primary/5">
-                <div className="text-primary flex-shrink-0">
+              <div key={i} className="flex gap-4 p-8 rounded-3xl bg-white border border-primary/10 hover:border-primary/30 hover:shadow-xl transition-all hover:bg-primary/[0.02] group">
+                <div className="text-primary flex-shrink-0 group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
                 <div>
                   <h4 className="font-bold text-lg mb-2">{feature.title}</h4>
-                  <p className="text-sm text-muted-foreground">{feature.desc}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{feature.desc}</p>
                 </div>
               </div>
             ))}
@@ -225,14 +294,14 @@ export default function Home() {
       </section>
 
       {/* Advanced Stats Banner */}
-      <section className="py-20 bg-gradient-to-r from-primary to-purple-600 text-white relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-white blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-72 h-72 bg-white blur-3xl"></div>
+      <section className="py-24 bg-slate-950 text-white relative overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary blur-[120px] rounded-full"></div>
+          <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600 blur-[120px] rounded-full"></div>
         </div>
         
         <div className="container relative z-10 px-4 md:px-6 mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
             {[
               { val: 10, label: "Second Settlement", suffix: "s", icon: Clock },
               { val: 300, label: "Revenue Boost", suffix: "%", icon: TrendingUp },
@@ -245,22 +314,23 @@ export default function Home() {
                   key={i}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="text-center"
+                  className="text-center group"
                 >
-                  <div className="flex justify-center mb-3">
-                    <div className="p-3 bg-white/20 rounded-full">
-                      <IconComponent className="w-6 h-6 text-white/90" />
+                  <div className="flex justify-center mb-4">
+                    <div className="p-4 bg-white/5 rounded-2xl group-hover:bg-primary/20 transition-colors">
+                      <IconComponent className="w-8 h-8 text-primary" />
                     </div>
                   </div>
-                  <div className="font-bold text-4xl md:text-5xl lg:text-6xl mb-3 font-heading">
+                  <div className="font-bold text-4xl md:text-5xl lg:text-6xl mb-3 font-heading tracking-tight">
                     <AnimatedCounter 
                       value={stat.val} 
                       suffix={stat.suffix}
                       prefix={stat.prefix}
                     />
                   </div>
-                  <div className="text-white/80 font-medium text-sm md:text-base">{stat.label}</div>
+                  <div className="text-white/50 font-semibold text-xs uppercase tracking-widest">{stat.label}</div>
                 </motion.div>
               );
             })}
@@ -268,82 +338,117 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Success Stories */}
+      {/* Success Stories / Testimonials */}
       <section className="py-24 bg-white">
         <div className="container px-4 md:px-6 mx-auto">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold border-transparent bg-primary/10 text-primary mb-6">
-                Success Story
-              </div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                <span className="text-gradient">Transformed</span> Their Payment Experience
-              </h2>
-              <p className="text-xl text-muted-foreground mb-6 leading-relaxed">
-                "SimpleBit completely transformed our business. International customers can now pay with crypto, and we receive AED instantly."
-              </p>
-              <div className="flex items-center gap-4 mb-8">
-                <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">AR</div>
-                <div>
-                  <div className="font-bold">Ahmed Al-Rashid</div>
-                  <div className="text-sm text-muted-foreground">CEO, Rent Any Car Dubai</div>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">What Our <span className="text-gradient">Partners Say</span></h2>
+            <p className="text-muted-foreground text-lg">
+              Empowering businesses across the UAE to thrive in the digital economy.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <motion.div 
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="space-y-8"
+            >
+              <div className="bg-slate-50 p-8 md:p-12 rounded-[2.5rem] border border-black/[0.03] relative overflow-hidden group">
+                <div className="absolute top-0 right-0 p-8 opacity-5">
+                  <Globe className="w-32 h-32" />
+                </div>
+                
+                <div className="flex gap-1 mb-6">
+                  {[1, 2, 3, 4, 5].map((s) => (
+                    <Star key={s} className="w-5 h-5 fill-primary text-primary" />
+                  ))}
+                </div>
+
+                <p className="text-2xl md:text-3xl font-medium mb-10 leading-tight">
+                  "SimpleBit completely transformed our business. International customers can now pay with crypto, and we receive AED instantly. The best decision we made this year."
+                </p>
+
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <div className="h-14 w-14 rounded-2xl bg-primary text-white flex items-center justify-center font-bold text-xl shadow-lg shadow-primary/20">
+                      AR
+                    </div>
+                    <div>
+                      <div className="font-bold text-lg">Ahmed Al-Rashid</div>
+                      <div className="text-sm text-muted-foreground">CEO, Rent Any Car Dubai</div>
+                    </div>
+                  </div>
+                  <div className="hidden sm:block">
+                    <div className="px-4 py-2 bg-white rounded-full border text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                      Verified Partner
+                    </div>
+                  </div>
                 </div>
               </div>
-              <Link href="/case-studies">
-                <Button size="lg" className="h-12 px-8 text-base bg-primary text-white hover:bg-purple-700 shadow-lg hover:scale-105 transition-all">
-                  View All Success Stories <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-            </div>
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-3xl transform rotate-3 scale-105 -z-10"></div>
-              <div className="bg-slate-50 p-8 rounded-3xl border border-black/[0.05]">
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="p-4 bg-white rounded-xl shadow-sm">
-                    <div className="text-2xl font-bold text-primary mb-1">300%</div>
-                    <div className="text-xs text-muted-foreground">Revenue Increase</div>
+            </motion.div>
+
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="relative"
+            >
+              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent rounded-[3rem] transform rotate-3 scale-105 -z-10 opacity-50"></div>
+              <div className="bg-white p-8 md:p-12 rounded-[2.5rem] border shadow-2xl shadow-primary/10">
+                <div className="grid grid-cols-2 gap-8">
+                  <div className="space-y-2">
+                    <div className="text-4xl font-bold text-primary tracking-tight">300%</div>
+                    <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Revenue Increase</div>
                   </div>
-                  <div className="p-4 bg-white rounded-xl shadow-sm">
-                    <div className="text-2xl font-bold text-primary mb-1">10s</div>
-                    <div className="text-xs text-muted-foreground">Checkout Speed</div>
+                  <div className="space-y-2">
+                    <div className="text-4xl font-bold text-primary tracking-tight">10s</div>
+                    <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Checkout Speed</div>
                   </div>
-                  <div className="p-4 bg-white rounded-xl shadow-sm">
-                    <div className="text-2xl font-bold text-primary mb-1">45%</div>
-                    <div className="text-xs text-muted-foreground">Intl. Sales</div>
+                  <div className="space-y-2">
+                    <div className="text-4xl font-bold text-primary tracking-tight">45%</div>
+                    <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Intl. Sales Growth</div>
                   </div>
-                  <div className="p-4 bg-white rounded-xl shadow-sm">
-                    <div className="text-2xl font-bold text-primary mb-1">5.0</div>
-                    <div className="text-xs text-muted-foreground">Customer Rating</div>
+                  <div className="space-y-2">
+                    <div className="text-4xl font-bold text-primary tracking-tight">5.0</div>
+                    <div className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Partner Rating</div>
                   </div>
                 </div>
+                
+                <div className="mt-12 pt-12 border-t">
+                  <Link href="/case-studies">
+                    <Button variant="link" className="p-0 h-auto text-primary font-bold text-lg hover:no-underline group">
+                      Explore our case studies <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
+                </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-24 bg-gradient-to-br from-slate-900 via-purple-900 to-primary text-white overflow-hidden relative">
-        <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
-             <div className="absolute right-0 top-0 w-96 h-96 bg-white blur-[128px]"></div>
-             <div className="absolute left-0 bottom-0 w-64 h-64 bg-purple-500 blur-[128px]"></div>
-        </div>
-        <div className="container relative z-10 px-4 md:px-6 mx-auto text-center">
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">Start accepting payments today.</h2>
-          <p className="text-blue-100 text-lg max-w-2xl mx-auto mb-10">
-            Unlock new revenue streams. No setup fees. No hidden costs. Enterprise-grade security.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-             <Link href="/contact">
-              <Button size="lg" className="h-14 px-10 text-lg bg-white hover:bg-gray-100 text-primary border-none shadow-lg shadow-white/20 font-semibold">
-                Partner With Us
-              </Button>
-            </Link>
-            <Link href="/features">
-              <Button size="lg" variant="outline" className="h-14 px-10 text-lg border-white/30 text-white hover:bg-white/10 hover:text-white bg-transparent">
-                Explore Features
-              </Button>
-            </Link>
+      {/* Mini Contact CTA */}
+      <section className="pb-12 bg-white">
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="bg-primary/[0.03] rounded-[2rem] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-8 border border-primary/10">
+            <div className="text-center md:text-left">
+              <h3 className="text-2xl md:text-3xl font-bold mb-2">Ready to transform your payments?</h3>
+              <p className="text-muted-foreground font-medium">Schedule a free consultation with our experts today.</p>
+            </div>
+            <div className="flex gap-4">
+              <Link href="/contact">
+                <Button className="h-12 px-8 bg-primary text-white hover:bg-primary/90 font-bold shadow-lg shadow-primary/20">
+                  Book a Demo
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button variant="outline" className="h-12 px-8 font-bold">
+                  Contact Sales
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>

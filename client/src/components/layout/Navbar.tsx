@@ -15,7 +15,6 @@ export function Navbar({ isTransparent = false }: NavbarProps) {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Features", href: "/features" },
     { name: "Pricing", href: "/pricing" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "FAQ", href: "/faq" },
@@ -55,25 +54,13 @@ export function Navbar({ isTransparent = false }: NavbarProps) {
           <div className="hidden md:flex items-center gap-4">
             <Link href="/contact">
               <Button 
-                variant="ghost" 
-                className={`font-medium ${
-                  isTransparent 
-                    ? "text-white hover:text-purple-200 hover:bg-white/10" 
-                    : "hover:text-primary"
-                }`}
-              >
-                Watch Demo
-              </Button>
-            </Link>
-            <Link href="/contact">
-              <Button 
                 className={`font-medium shadow-lg transition-all hover:scale-105 ${
                   isTransparent
                     ? "bg-white text-primary hover:bg-purple-50"
                     : "shadow-primary/20"
                 }`}
               >
-                Partner With Us <ArrowRight className="ml-2 h-4 w-4" />
+                Dashboard Login <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
           </div>
@@ -103,11 +90,8 @@ export function Navbar({ isTransparent = false }: NavbarProps) {
               </Link>
             ))}
             <div className="flex flex-col gap-3 mt-4">
-              <Button variant="outline" className="w-full justify-center">
-                Watch Demo
-              </Button>
               <Button className="w-full justify-center">
-                Partner With Us <ArrowRight className="ml-2 h-4 w-4" />
+                Dashboard Login <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
           </div>

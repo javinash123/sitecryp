@@ -59,6 +59,26 @@ export default function About() {
       </div>
 
       <div className="bg-white rounded-3xl p-12 mb-24 border border-black/[0.05]">
+        <h2 className="font-heading text-3xl md:text-4xl font-bold mb-12 text-center">Our Team</h2>
+        <div className="grid md:grid-cols-4 gap-8">
+          {[
+            { name: "Omar Al-Fayed", role: "Co-Founder & CEO", initials: "OA" },
+            { name: "Sarah Jenkins", role: "Chief Product Officer", initials: "SJ" },
+            { name: "David Chen", role: "CTO", initials: "DC" },
+            { name: "Laila Rashid", role: "Head of Operations", initials: "LR" },
+          ].map((member, i) => (
+            <div key={i} className="text-center group">
+              <div className="h-24 w-24 rounded-full bg-primary/10 flex items-center justify-center font-bold text-2xl text-primary mx-auto mb-4 group-hover:bg-primary group-hover:text-white transition-all duration-300 shadow-inner">
+                {member.initials}
+              </div>
+              <h3 className="font-bold text-lg mb-1">{member.name}</h3>
+              <p className="text-sm text-muted-foreground">{member.role}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="bg-white rounded-3xl p-12 mb-24 border border-black/[0.05]">
         <h2 className="font-heading text-3xl md:text-4xl font-bold mb-12 text-center">Our Achievements</h2>
         <div className="grid md:grid-cols-3 gap-8">
           <div className="space-y-4 text-center">
