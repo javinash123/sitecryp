@@ -83,12 +83,10 @@ export default function Home() {
     }
   ];
 
-  const features = [
+  const heroFeatures = [
     { icon: <Check className="w-5 h-5" />, text: "Apple Pay" },
     { icon: <Check className="w-5 h-5" />, text: "Cards" },
     { icon: <Check className="w-5 h-5" />, text: "Crypto" },
-    { icon: <Check className="w-5 h-5" />, text: "Instant AED Payouts" },
-    { icon: <Check className="w-5 h-5" />, text: "No Setup Fees" },
   ];
 
   const howItWorks = [
@@ -124,6 +122,7 @@ export default function Home() {
           />
           <div className="absolute inset-0 bg-gradient-to-tr from-black/95 via-black/75 to-primary/20 z-10" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_10%,_rgba(0,0,0,0.7)_100%)] z-10" />
+          <div className="absolute bottom-0 right-0 w-2/3 h-2/3 bg-gradient-to-tl from-black/40 to-transparent z-10 pointer-events-none" />
         </div>
         
         {/* Dynamic Navbar */}
@@ -136,12 +135,12 @@ export default function Home() {
             variants={container}
             initial="hidden"
             animate="show"
-            className="max-w-5xl mx-auto text-center space-y-10 w-full"
+            className="max-w-5xl mx-auto text-center space-y-14 w-full"
           >
-            {/* KPI Line with Improved Spacing */}
+            {/* KPI Line */}
             <motion.div 
               variants={item}
-              className="flex flex-wrap justify-center items-center gap-6 text-white/80 text-sm md:text-base font-medium"
+              className="flex flex-wrap justify-center items-center gap-6 text-white/80 text-xs md:text-sm lg:text-base font-medium"
             >
               <motion.span 
                 className="flex items-center gap-2 group cursor-default px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors"
@@ -174,7 +173,7 @@ export default function Home() {
             
             <motion.h1 
               variants={item} 
-              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.25] px-4"
+              className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.25] px-4"
             >
               The Future of Business <br className="hidden md:block" />
               Payments in <span className="text-primary">AED</span>.
@@ -182,103 +181,112 @@ export default function Home() {
             
             <motion.p 
               variants={item} 
-              className="text-lg md:text-xl text-white/85 max-w-2xl mx-auto leading-relaxed font-medium px-4"
+              className="text-base md:text-lg text-white/85 max-w-2xl mx-auto leading-relaxed font-medium px-4"
             >
               Accept Crypto, Cards & Apple Pay — Settle Instantly in AED.
             </motion.p>
-
-            {/* Feature Strip */}
-            <motion.div 
-              variants={item}
-              className="flex flex-wrap justify-center items-center gap-4 md:gap-6 text-white/70 text-sm md:text-base py-6 px-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 max-w-3xl mx-auto"
-            >
-              {features.map((feature, i) => (
-                <motion.div
-                  key={i}
-                  className="flex items-center gap-2 group"
-                  whileHover={{ scale: 1.05 }}
-                >
-                  <div className="text-primary group-hover:scale-125 transition-transform">
-                    {feature.icon}
-                  </div>
-                  <span className="whitespace-nowrap">{feature.text}</span>
-                </motion.div>
-              ))}
-            </motion.div>
             
-            {/* CTA Buttons - Primary & Secondary */}
+            {/* CTA Buttons - Stacked on Mobile */}
             <motion.div 
               variants={item} 
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 px-6"
+              className="flex flex-col gap-3 md:flex-row md:items-center md:justify-center md:gap-4 px-4"
             >
-              <Link href="/contact" className="w-full sm:w-auto">
+              <Link href="/contact" className="w-full md:w-auto">
                 <Button 
                   size="lg" 
-                  className="h-14 px-12 text-lg bg-primary text-white hover:bg-primary/90 shadow-xl hover:shadow-2xl transition-all font-bold w-full hover:scale-105 active:scale-95 duration-200"
+                  className="h-12 md:h-14 px-8 md:px-12 text-base md:text-lg bg-primary text-white hover:bg-primary/90 shadow-xl hover:shadow-2xl transition-all font-bold w-full hover:scale-105 active:scale-95 duration-200"
                   data-testid="button-hero-partner"
                 >
-                  Partner With Us <ArrowRight className="ml-2 h-5 w-5" />
+                  Partner With Us <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5" />
                 </Button>
               </Link>
-              <Link href="/contact" className="w-full sm:w-auto">
+              <Link href="/contact" className="w-full md:w-auto">
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="h-14 px-12 text-lg border-white/40 text-white hover:bg-white/20 backdrop-blur-sm w-full hover:scale-105 active:scale-95 duration-200"
+                  className="h-12 md:h-14 px-8 md:px-12 text-base md:text-lg border-white/40 text-white hover:bg-white/20 backdrop-blur-sm w-full hover:scale-105 active:scale-95 duration-200"
                   data-testid="button-hero-demo"
                 >
-                  <Play className="mr-2 h-4 w-4 fill-current" /> Watch Demo
+                  <Play className="mr-2 h-3 md:h-4 w-3 md:w-4 fill-current" /> Watch Demo
                 </Button>
               </Link>
             </motion.div>
 
             {/* Payment Methods */}
-            <motion.div variants={item} className="pt-12 space-y-6">
-              <p className="text-white/50 text-sm font-semibold uppercase tracking-widest">Supported by global payment networks</p>
-              <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 grayscale invert opacity-70 hover:opacity-100 transition-opacity duration-500">
-                <SiVisa className="w-12 h-12" title="Visa" />
-                <SiMastercard className="w-10 h-10" title="Mastercard" />
-                <SiApplepay className="w-14 h-14" title="Apple Pay" />
-                <SiBitcoin className="w-10 h-10" title="Crypto" />
+            <motion.div variants={item} className="space-y-6">
+              <p className="text-white/50 text-xs font-semibold uppercase tracking-widest">Supported by global payment networks</p>
+              <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 grayscale invert opacity-70 hover:opacity-100 transition-opacity duration-500">
+                <SiVisa className="w-10 md:w-12 h-10 md:h-12" title="Visa" />
+                <SiMastercard className="w-8 md:w-10 h-8 md:h-10" title="Mastercard" />
+                <SiApplepay className="w-11 md:w-14 h-11 md:h-14" title="Apple Pay" />
+                <SiBitcoin className="w-8 md:w-10 h-8 md:h-10" title="Crypto" />
               </div>
             </motion.div>
           </motion.div>
         </div>
       </section>
 
-      {/* Trust & Compliance Strip - Refined */}
-      <section className="bg-white border-b py-10">
+      {/* Feature Chips & Compliance Strip */}
+      <section className="bg-gradient-to-b from-white/50 to-white border-b py-12">
         <div className="container px-4 md:px-6 mx-auto">
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
-            <motion.div 
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              className="flex items-center gap-3 text-muted-foreground font-medium group hover:text-primary transition-colors cursor-default"
-            >
-              <Shield className="w-5 h-5 text-primary group-hover:scale-125 transition-transform" />
-              <span>PCI-DSS Level 1</span>
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="flex items-center gap-3 text-muted-foreground font-medium group hover:text-primary transition-colors cursor-default"
-            >
-              <Lock className="w-5 h-5 text-primary group-hover:scale-125 transition-transform" />
-              <span>AES-256 Encryption</span>
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="flex items-center gap-3 text-muted-foreground font-medium group hover:text-primary transition-colors cursor-default"
-            >
-              <Award className="w-5 h-5 text-primary group-hover:scale-125 transition-transform" />
-              <span>Instant AED Payouts</span>
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+            {/* Feature Chips */}
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">Payment Methods</p>
+              <div className="flex flex-col gap-4">
+                {heroFeatures.map((feature, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="flex items-center gap-3 p-3 rounded-lg bg-white border border-primary/10 hover:border-primary/30 hover:bg-primary/5 transition-all group cursor-default"
+                  >
+                    <div className="text-primary flex-shrink-0 group-hover:scale-125 transition-transform">
+                      {feature.icon}
+                    </div>
+                    <span className="font-medium text-foreground">{feature.text}</span>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            {/* Compliance Badges */}
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-6">Security & Trust</p>
+              <div className="flex flex-col gap-4">
+                <motion.div 
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  className="flex items-center gap-3 p-3 rounded-lg bg-white border border-primary/10 hover:border-primary/30 hover:bg-primary/5 transition-all group cursor-default"
+                >
+                  <Shield className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-125 transition-transform" />
+                  <span className="font-medium text-foreground">PCI-DSS Level 1</span>
+                </motion.div>
+                <motion.div 
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                  className="flex items-center gap-3 p-3 rounded-lg bg-white border border-primary/10 hover:border-primary/30 hover:bg-primary/5 transition-all group cursor-default"
+                >
+                  <Lock className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-125 transition-transform" />
+                  <span className="font-medium text-foreground">AES-256 Encryption</span>
+                </motion.div>
+                <motion.div 
+                  initial={{ opacity: 0, x: 20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.2 }}
+                  className="flex items-center gap-3 p-3 rounded-lg bg-white border border-primary/10 hover:border-primary/30 hover:bg-primary/5 transition-all group cursor-default"
+                >
+                  <Award className="w-5 h-5 text-primary flex-shrink-0 group-hover:scale-125 transition-transform" />
+                  <span className="font-medium text-foreground">Instant AED Payouts</span>
+                </motion.div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
