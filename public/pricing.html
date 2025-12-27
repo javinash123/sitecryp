@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SimpleBit Pricing - Simple, transparent pricing plans for businesses of all sizes">
+  <title>Pricing - SimpleBit</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-md navbar-light bg-white/80 sticky-top border-bottom" style="z-index: 1000; backdrop-filter: blur(10px);">
+    <div class="container-fluid px-4 px-md-6">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="15" fill="#8e49f0"></circle>
+          <text x="50%" y="50%" font-size="14" font-weight="bold" fill="white" text-anchor="middle" dy="0.35em">S</text>
+        </svg>
+        <span class="navbar-brand-text fw-bold text-dark fs-4">SimpleBit</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav ms-auto gap-4">
+          <a class="nav-link text-muted fw-500" href="index.html">Home</a>
+          <a class="nav-link text-muted fw-500" href="about.html">About</a>
+          <a class="nav-link text-primary fw-500" href="pricing.html">Pricing</a>
+          <a class="nav-link text-muted fw-500" href="case-studies.html">Case Studies</a>
+          <a class="nav-link text-muted fw-500" href="faq.html">FAQ</a>
+          <a class="nav-link text-muted fw-500" href="contact.html">Contact</a>
+        </div>
+        <div class="ms-auto">
+          <a href="contact.html" class="btn btn-primary btn-sm px-3 py-2 fw-bold rounded-2">
+            Dashboard Login <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Pricing Section -->
+  <section class="py-5" style="padding-top: 120px; padding-bottom: 80px;">
+    <div class="container">
+      <div class="text-center mx-auto mb-5" style="max-width: 48rem;">
+        <h1 class="display-4 fw-bold mb-4">Simple, Transparent <span class="text-gradient">Pricing</span></h1>
+        <p class="lead text-muted mb-5">Choose the perfect plan for your business scale. No hidden fees, no surprises.</p>
+
+        <!-- Billing Toggle -->
+        <div class="d-inline-flex align-items-center gap-3 p-3 rounded-5 border border-slate-200" style="background-color: rgba(248, 250, 252, 0.5);">
+          <label class="form-check-label fw-bold cursor-pointer" style="color: var(--primary);">Monthly</label>
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="billingToggle" style="width: 40px; height: 24px;">
+          </div>
+          <label class="form-check-label fw-bold cursor-pointer text-muted">Yearly <span class="badge bg-primary ms-2">Save 20%</span></label>
+        </div>
+      </div>
+
+      <!-- Pricing Cards -->
+      <div class="row g-4 mb-5">
+        <!-- Starter Plan -->
+        <div class="col-md-4">
+          <div class="card pricing-card border-0 rounded-4 h-100" style="box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+            <div class="card-body p-5 pb-4 d-flex flex-column">
+              <div class="mb-3">
+                <h5 class="fw-bold mb-2">Starter</h5>
+                <p class="text-primary small fw-bold">For new businesses testing the product</p>
+              </div>
+              <p class="text-muted small flex-grow-1">Everything you need to accept your first payment</p>
+              <div class="mb-4">
+                <span class="display-6 fw-bold">Free</span>
+                <span class="text-muted small ms-2">Forever</span>
+              </div>
+              
+              <div class="space-y-3 mb-5 flex-grow-1">
+                <small class="text-muted fw-bold d-block text-uppercase">What's included:</small>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">100 monthly transactions included</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Instant AED local bank settlement</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Standard QR payment terminal</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Real-time analytics dashboard</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Secure customer data vault</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Single-user dashboard access</span></div>
+              </div>
+
+              <a href="contact.html" class="btn btn-outline-primary w-100 fw-bold rounded-3 py-3">Get Started <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Professional Plan (Featured) -->
+        <div class="col-md-4">
+          <div class="card pricing-card pricing-card.featured border-0 rounded-4 h-100 position-relative" style="border: 2px solid var(--primary); box-shadow: 0 20px 40px rgba(142,73,240,0.2); transform: scale(1.05); z-index: 10;">
+            <div class="position-absolute top-0 start-0 end-0 bg-primary text-white text-center py-2">
+              <small class="fw-bold text-uppercase" style="letter-spacing: 0.15em;">Most Popular Choice</small>
+            </div>
+            <div class="card-body p-5 pb-4 d-flex flex-column" style="padding-top: 4rem !important;">
+              <div class="mb-3">
+                <h5 class="fw-bold mb-2">Professional</h5>
+                <p class="text-primary small fw-bold">For growing businesses with multiple locations</p>
+              </div>
+              <p class="text-muted small flex-grow-1">Scale your revenue with advanced payment tools</p>
+              <div class="mb-4">
+                <span class="display-6 fw-bold price-professional">AED 499</span>
+                <span class="text-muted small ms-2">/month</span>
+              </div>
+              
+              <div class="space-y-3 mb-5 flex-grow-1">
+                <small class="text-muted fw-bold d-block text-uppercase">What's included:</small>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Unlimited transaction volume</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Multi-location terminal sync</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Full payment suite (Crypto & Cards)</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Priority 24/7 technical support</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Custom API for website integration</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">White-labeled payment receipts</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Advanced fraud prevention tools</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">99.9% operational uptime SLA</span></div>
+              </div>
+
+              <a href="contact.html" class="btn btn-primary w-100 fw-bold rounded-3 py-3">Start Free Trial <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Enterprise Plan -->
+        <div class="col-md-4">
+          <div class="card pricing-card border-0 rounded-4 h-100" style="box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+            <div class="card-body p-5 pb-4 d-flex flex-column">
+              <div class="mb-3">
+                <h5 class="fw-bold mb-2">Enterprise</h5>
+                <p class="text-primary small fw-bold">For regulated or high-volume operations</p>
+              </div>
+              <p class="text-muted small flex-grow-1">Bespoke infrastructure for global requirements</p>
+              <div class="mb-4">
+                <span class="display-6 fw-bold price-enterprise">Custom</span>
+                <span class="text-muted small ms-2">Tailored Quote</span>
+              </div>
+              
+              <div class="space-y-3 mb-5 flex-grow-1">
+                <small class="text-muted fw-bold d-block text-uppercase">What's included:</small>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Dedicated enterprise account lead</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Custom regulatory compliance suite</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Full white-label platform deployment</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Volume-based transaction discounts</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">On-premise infrastructure support</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Custom legal & financial framework</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Direct core-engineer access</span></div>
+                <div class="d-flex gap-2 align-items-start"><i class="fas fa-check text-primary mt-1 flex-shrink-0"></i> <span class="small">Advanced biometric security vault</span></div>
+              </div>
+
+              <a href="contact.html" class="btn btn-outline-primary w-100 fw-bold rounded-3 py-3">Book Consultation <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="row mx-auto mb-5 p-4 rounded-4 border border-slate-200" style="background-color: rgba(248, 250, 252, 0.5);">
+        <div class="col-md-3 text-center mb-3 mb-md-0">
+          <small class="text-muted fw-bold text-uppercase"><i class="fas fa-shield-alt text-primary me-2"></i>PCI-DSS Level 1</small>
+        </div>
+        <div class="col-md-3 text-center mb-3 mb-md-0">
+          <small class="text-muted fw-bold text-uppercase"><i class="fas fa-lock text-primary me-2"></i>AES-256 Encryption</small>
+        </div>
+        <div class="col-md-3 text-center mb-3 mb-md-0">
+          <small class="text-muted fw-bold text-uppercase"><i class="fas fa-bolt text-primary me-2"></i>Local AED Settlement</small>
+        </div>
+        <div class="col-md-3 text-center">
+          <small class="text-muted fw-bold text-uppercase"><i class="fas fa-check text-primary me-2"></i>Cancel Anytime</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section class="py-5 rounded-5 mx-4 my-5" style="background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 100%); color: white; padding: 80px 40px;">
+    <div class="container text-center">
+      <h2 class="display-4 fw-bold mb-3">Ready to grow with <br><span class="text-primary italic">SimpleBit</span>?</h2>
+      <p class="lead mb-5" style="color: rgba(255,255,255,0.8); max-width: 48rem; margin-left: auto; margin-right: auto;">Join the payment revolution in the UAE. Start your free trial today or speak with our enterprise solutions team.</p>
+      
+      <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center mb-4">
+        <a href="contact.html" class="btn btn-primary btn-lg px-5 fw-bold rounded-3">
+          Start Free Trial
+        </a>
+        <a href="contact.html" class="btn btn-outline-light btn-lg px-5 fw-bold rounded-3">
+          Schedule Demo
+        </a>
+      </div>
+
+      <a href="https://wa.me/#" class="d-inline-flex align-items-center gap-2 px-4 py-3 rounded-5" style="background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.9); text-decoration: none; transition: all 0.3s;">
+        <i class="fas fa-comments" style="color: #25D366;"></i>
+        <span class="small fw-bold">Quick chat on WhatsApp</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light pt-5 pb-3 border-top">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-3 mb-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <svg class="logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="15" fill="#8e49f0"></circle>
+              <text x="50%" y="50%" font-size="14" font-weight="bold" fill="white" text-anchor="middle" dy="0.35em">S</text>
+            </svg>
+            <h5 class="mb-0 fw-bold">SimpleBit</h5>
+          </div>
+          <p class="text-muted small">The future of payments in AED.</p>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-bold mb-3">Company</h6>
+          <ul class="list-unstyled small text-muted">
+            <li><a href="about.html" class="text-muted text-decoration-none hover-primary">About Us</a></li>
+            <li><a href="contact.html" class="text-muted text-decoration-none hover-primary">Careers</a></li>
+            <li><a href="case-studies.html" class="text-muted text-decoration-none hover-primary">Success Stories</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-bold mb-3">Product</h6>
+          <ul class="list-unstyled small text-muted">
+            <li><a href="pricing.html" class="text-muted text-decoration-none hover-primary">Pricing</a></li>
+            <li><a href="#" class="text-muted text-decoration-none hover-primary">Security</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-bold mb-3">Legal</h6>
+          <ul class="list-unstyled small text-muted">
+            <li><a href="#" class="text-muted text-decoration-none hover-primary">Privacy Policy</a></li>
+            <li><a href="faq.html" class="text-muted text-decoration-none hover-primary">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="text-muted small mb-0">&copy; 2025 SimpleBit. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

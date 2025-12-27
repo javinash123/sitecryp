@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact SimpleBit - Get in touch with our payments team for demos, onboarding, and support">
+  <title>Contact - SimpleBit</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-md navbar-light bg-white/80 sticky-top border-bottom" style="z-index: 1000; backdrop-filter: blur(10px);">
+    <div class="container-fluid px-4 px-md-6">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="15" fill="#8e49f0"></circle>
+          <text x="50%" y="50%" font-size="14" font-weight="bold" fill="white" text-anchor="middle" dy="0.35em">S</text>
+        </svg>
+        <span class="navbar-brand-text fw-bold text-dark fs-4">SimpleBit</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav ms-auto gap-4">
+          <a class="nav-link text-muted fw-500" href="index.html">Home</a>
+          <a class="nav-link text-muted fw-500" href="about.html">About</a>
+          <a class="nav-link text-muted fw-500" href="pricing.html">Pricing</a>
+          <a class="nav-link text-muted fw-500" href="case-studies.html">Case Studies</a>
+          <a class="nav-link text-muted fw-500" href="faq.html">FAQ</a>
+          <a class="nav-link text-primary fw-500" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contact Section -->
+  <section class="py-5" style="padding-top: 120px; padding-bottom: 80px;">
+    <div class="container">
+      <div class="row g-5">
+        <!-- Left Column -->
+        <div class="col-lg-6">
+          <div class="mb-5">
+            <h1 class="display-5 fw-bold mb-3">Talk to Our <span class="text-gradient">Payments Team</span></h1>
+            <p class="lead text-muted">Get fast support, demos, or onboarding guidance within 24 hours.</p>
+          </div>
+
+          <!-- Contact Cards -->
+          <div class="space-y-4">
+            <!-- Email -->
+            <div class="contact-card group">
+              <div class="d-flex gap-3">
+                <div class="contact-icon">
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-2">Email Us</h5>
+                  <p class="text-muted fw-500 mb-1">hello@simplebit.ae</p>
+                  <p class="text-secondary text-sm">support@simplebit.ae</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="contact-card group">
+              <div class="d-flex gap-3">
+                <div class="contact-icon">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-2">Visit Us</h5>
+                  <p class="text-muted fw-500">Al Maqam Tower, ADGM Square<br>Al Maryah Island, Abu Dhabi, UAE</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Phone -->
+            <div class="contact-card group">
+              <div class="d-flex gap-3">
+                <div class="contact-icon">
+                  <i class="fas fa-phone"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-2">Call Us</h5>
+                  <p class="text-muted fw-500">+971 4 123 4567</p>
+                  <p class="text-secondary text-sm italic">Mon-Fri, 9AM - 6PM GST</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WhatsApp CTA -->
+          <div class="mt-5">
+            <a href="https://wa.me/#" target="_blank" class="btn btn-success btn-lg w-100 fw-bold rounded-3 py-3 gap-2 d-flex align-items-center justify-content-center">
+              <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+            <p class="text-center text-muted small mt-3 fw-bold">⚡ Fastest response for UAE businesses</p>
+          </div>
+        </div>
+
+        <!-- Right Column - Form -->
+        <div class="col-lg-6">
+          <div class="position-relative">
+            <div class="position-absolute -inset-4 rounded-5 blur-lg -z-1" style="background-color: rgba(142,73,240,0.05); border-radius: 2.5rem; width: calc(100% + 2rem); height: calc(100% + 2rem);"></div>
+            <div class="bg-white p-5 rounded-5 border border-slate-100 shadow-lg">
+              <div class="d-flex align-items-center gap-2 text-primary mb-4">
+                <i class="fas fa-clock"></i>
+                <span class="small fw-bold text-uppercase">Response in 24h</span>
+              </div>
+
+              <form id="contactForm" class="space-y-4">
+                <div class="row g-3 mb-3">
+                  <div class="col-sm-6">
+                    <label class="form-label fw-500 mb-2">Name</label>
+                    <input type="text" class="form-control rounded-2" id="name" placeholder="Your name" required>
+                  </div>
+                  <div class="col-sm-6">
+                    <label class="form-label fw-500 mb-2">Email</label>
+                    <input type="email" class="form-control rounded-2" id="email" placeholder="your@email.com" required>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label fw-500 mb-2">Company</label>
+                  <input type="text" class="form-control rounded-2" id="company" placeholder="Company name" required>
+                </div>
+
+                <div class="mb-3">
+                  <label class="form-label fw-500 mb-2">What can we help with?</label>
+                  <select class="form-select rounded-2" id="purpose" required>
+                    <option value="">Select an option...</option>
+                    <option value="integration">Integration Support</option>
+                    <option value="demo">Schedule Demo</option>
+                    <option value="enterprise">Enterprise Solution</option>
+                    <option value="support">Technical Support</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label fw-500 mb-2">Message</label>
+                  <textarea class="form-control rounded-2" id="message" rows="4" placeholder="Tell us about your business..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100 fw-bold rounded-3 py-3">
+                  Send Message <i class="fas fa-arrow-right ms-2"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light pt-5 pb-3 border-top">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-3 mb-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <svg class="logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="15" fill="#8e49f0"></circle>
+              <text x="50%" y="50%" font-size="14" font-weight="bold" fill="white" text-anchor="middle" dy="0.35em">S</text>
+            </svg>
+            <h5 class="mb-0 fw-bold">SimpleBit</h5>
+          </div>
+          <p class="text-muted small">The future of payments in AED.</p>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-bold mb-3">Company</h6>
+          <ul class="list-unstyled small text-muted">
+            <li><a href="about.html" class="text-muted text-decoration-none hover-primary">About Us</a></li>
+            <li><a href="contact.html" class="text-muted text-decoration-none hover-primary">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-bold mb-3">Product</h6>
+          <ul class="list-unstyled small text-muted">
+            <li><a href="pricing.html" class="text-muted text-decoration-none hover-primary">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-bold mb-3">Legal</h6>
+          <ul class="list-unstyled small text-muted">
+            <li><a href="#" class="text-muted text-decoration-none hover-primary">Privacy Policy</a></li>
+            <li><a href="faq.html" class="text-muted text-decoration-none hover-primary">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="text-muted small mb-0">&copy; 2025 SimpleBit. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SimpleBit - The future of business payments in AED. Accept crypto, cards, and Apple Pay instantly with best-in-market rates.">
+  <meta property="og:title" content="SimpleBit - Future of Business Payments in AED">
+  <meta property="og:description" content="Accept crypto, cards, and Apple Pay. Settle instantly in AED. Join 500+ UAE businesses.">
+  <title>SimpleBit - The Future of Business Payments in AED</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-transparent fixed-top" style="z-index: 1000; border: none;">
+    <div class="container-fluid px-4 px-md-6">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="16" cy="16" r="15" fill="currentColor"></circle>
+          <text x="50%" y="50%" font-size="14" font-weight="bold" fill="white" text-anchor="middle" dy="0.35em">S</text>
+        </svg>
+        <span class="navbar-brand-text fw-bold text-white fs-4">SimpleBit</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav ms-auto gap-4">
+          <a class="nav-link text-white/70 fw-500 transition" href="index.html">Home</a>
+          <a class="nav-link text-white/70 fw-500 transition" href="about.html">About</a>
+          <a class="nav-link text-white/70 fw-500 transition" href="pricing.html">Pricing</a>
+          <a class="nav-link text-white/70 fw-500 transition" href="case-studies.html">Case Studies</a>
+          <a class="nav-link text-white/70 fw-500 transition" href="faq.html">FAQ</a>
+          <a class="nav-link text-white/70 fw-500 transition" href="contact.html">Contact</a>
+        </div>
+        <div class="ms-auto">
+          <a href="contact.html" class="btn btn-primary px-4 py-2 fw-bold rounded-2 gap-2 d-flex align-items-center">
+            Dashboard Login <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section position-relative overflow-hidden d-flex align-items-center" style="min-height: 100vh; padding-top: 100px; background-image: url('assets/images/fintech_business.jpg'); background-size: cover; background-position: center;">
+    <div class="position-absolute inset-0" style="background: linear-gradient(135deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.75) 50%, rgba(139,73,240,0.2) 100%); z-index: 1;"></div>
+    <div class="position-absolute inset-0" style="background: radial-gradient(circle at center, transparent 10%, rgba(0,0,0,0.7) 100%); z-index: 1;"></div>
+    <div class="position-absolute bottom-0 end-0 w-75 h-75" style="background: linear-gradient(to top left, rgba(0,0,0,0.4) 0%, transparent 100%); z-index: 1; pointer-events: none;"></div>
+    
+    <div class="container position-relative z-3 text-center text-white" style="padding: 60px 20px;">
+      <div class="max-width-5xl mx-auto">
+        <!-- KPI Line -->
+        <div class="d-flex flex-wrap justify-content-center align-items-center gap-3 mb-5 text-white/80 small fw-500">
+          <span class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill hover-item transition">
+            <span class="dot-pulse rounded-circle" style="width: 8px; height: 8px; background: #8e49f0;"></span>
+            <span>Trusted by 500+ UAE businesses</span>
+          </span>
+          <span class="text-white/30 d-none d-sm-inline">•</span>
+          <span class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill hover-item transition">
+            <span class="dot-pulse rounded-circle" style="width: 8px; height: 8px; background: #8e49f0;"></span>
+            <span>AED payouts in seconds</span>
+          </span>
+          <span class="text-white/30 d-none d-sm-inline">•</span>
+          <span class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill hover-item transition">
+            <span class="dot-pulse rounded-circle" style="width: 8px; height: 8px; background: #8e49f0;"></span>
+            <span>Up to 300% revenue boost</span>
+          </span>
+        </div>
+
+        <!-- Rotating Badge -->
+        <div class="mb-5">
+          <span class="badge badge-feature bg-white/90 text-primary rounded-pill px-4 py-2 fw-bold">
+            <i class="fas fa-star me-2"></i> New: Apple Pay Integration
+          </span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="display-3 fw-bold mb-4 lh-1" style="font-size: clamp(2rem, 8vw, 4rem);">
+          The Future of Business <br>Payments in <span class="text-gradient">AED</span>.
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="lead mb-5 text-white/90" style="font-size: clamp(1rem, 3vw, 1.25rem); max-width: 600px; margin-left: auto; margin-right: auto;">
+          Accept Crypto, Cards & Apple Pay — Settle Instantly in AED.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+          <a href="contact.html" class="btn btn-primary btn-lg px-5 py-3 fw-bold rounded-3 gap-2 d-flex align-items-center justify-content-center">
+            Partner With Us <i class="fas fa-arrow-right ms-2"></i>
+          </a>
+          <button class="btn btn-outline-light btn-lg px-5 py-3 fw-bold rounded-3 gap-2 d-flex align-items-center justify-content-center">
+            <i class="fas fa-play-circle me-2"></i> Watch Demo
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Chips Section -->
+  <section class="py-5 bg-white position-relative">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="feature-chip text-center p-4 rounded-3 border border-primary/10 hover-elevate transition" style="animation: slideInLeft 0.6s ease-out;">
+            <i class="fas fa-check-circle text-primary mb-3" style="font-size: 2rem;"></i>
+            <h5 class="fw-bold">Apple Pay</h5>
+            <p class="text-muted small">Seamless payment experience</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-chip text-center p-4 rounded-3 border border-primary/10 hover-elevate transition" style="animation: slideInLeft 0.6s ease-out 0.1s forwards; opacity: 0;">
+            <i class="fas fa-credit-card text-primary mb-3" style="font-size: 2rem;"></i>
+            <h5 class="fw-bold">Cards</h5>
+            <p class="text-muted small">All major payment networks</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-chip text-center p-4 rounded-3 border border-primary/10 hover-elevate transition" style="animation: slideInLeft 0.6s ease-out 0.2s forwards; opacity: 0;">
+            <i class="fas fa-bitcoin text-primary mb-3" style="font-size: 2rem;"></i>
+            <h5 class="fw-bold">Crypto</h5>
+            <p class="text-muted small">Bitcoin & blockchain support</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="row mt-5">
+        <div class="col-md-3 text-center">
+          <small class="text-muted fw-bold text-uppercase">🛡️ PCI-DSS Level 1</small>
+        </div>
+        <div class="col-md-3 text-center">
+          <small class="text-muted fw-bold text-uppercase">🔒 AES-256 Encryption</small>
+        </div>
+        <div class="col-md-3 text-center">
+          <small class="text-muted fw-bold text-uppercase">⚡ Instant Settlement</small>
+        </div>
+        <div class="col-md-3 text-center">
+          <small class="text-muted fw-bold text-uppercase">✓ Cancel Anytime</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="text-center display-5 fw-bold mb-5">How It Works</h2>
+      <div class="row g-4">
+        <div class="col-md-4 text-center">
+          <div class="p-4 rounded-3 bg-primary/5 border border-primary/10">
+            <div class="display-6 fw-bold text-primary mb-3">01</div>
+            <h5 class="fw-bold mb-2">Create</h5>
+            <p class="text-muted small">Generate QR codes or invoices instantly with our dashboard</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="p-4 rounded-3 bg-primary/5 border border-primary/10">
+            <div class="display-6 fw-bold text-primary mb-3">02</div>
+            <h5 class="fw-bold mb-2">Pay</h5>
+            <p class="text-muted small">Customers pay via crypto, card, or Apple Pay seamlessly</p>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="p-4 rounded-3 bg-primary/5 border border-primary/10">
+            <div class="display-6 fw-bold text-primary mb-3">03</div>
+            <h5 class="fw-bold mb-2">Settle</h5>
+            <p class="text-muted small">Business receives AED instantly with best rates</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-5 bg-slate-50">
+    <div class="container">
+      <h2 class="text-center display-5 fw-bold mb-5">Trusted by Leaders</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card border-0 rounded-3 shadow-sm p-4 h-100">
+            <div class="d-flex gap-1 mb-3">
+              <i class="fas fa-star text-warning" style="font-size: 0.9rem;"></i>
+              <i class="fas fa-star text-warning" style="font-size: 0.9rem;"></i>
+              <i class="fas fa-star text-warning" style="font-size: 0.9rem;"></i>
+              <i class="fas fa-star text-warning" style="font-size: 0.9rem;"></i>
+              <i class="fas fa-star text-warning" style="font-size: 0.9rem;"></i>
+            </div>
+            <p class="text-muted mb-4 flex-grow-1">"SimpleBit transformed our business. International customers can now pay with crypto, and we receive AED instantly."</p>
+            <div class="d-flex align-items-center gap-3 pt-3 border-top">
+              <div class="rounded-circle bg-primary text-white fw-bold d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">AR</div>
+              <div>
+                <div class="fw-bold small">Ahmed Al-Rashid</div>
+                <div class="text-muted small">CEO, Rent Any Car Dubai</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 rounded-3 shadow-sm p-4 h-100">
+            <div class="d-flex gap-1 mb-3">
+              <i class="fas fa-star text-warning" style="font-size: 0.9rem;"></i>
+              <i class="fas fa-star text-warning" style="font-size: 0.9rem;"></i>
+              <i class="fas fa-star text-warning" style="font-size: 0.9rem;"></i>
+              <i class="fas fa-star text-warning" style="font-size: 0.9rem;"></i>
+              <i class="fas fa-star text-warning" style="font-size: 0.9rem;"></i>
+            </div>
+            <p class="text-muted mb-4 flex-grow-1">"The Apple Pay integration and instant AED settlement is game-changing. Our customers love the seamless experience."</p>
+            <div class="d-flex align-items-center gap-3 pt-3 border-top">
+              <div class="rounded-circle bg-primary text-white fw-bold d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">FZ</div>
+              <div>
+                <div class="fw-bold small">Fatima Al-Zahra</div>
+                <div class="text-muted small">Owner, The Golden Fork Restaurant</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card border-0 rounded-3 shadow-sm p-4 h-100">
+            <div class="d-flex gap-1 mb-3">
+              <i class="fas fa-star text-warning" style="font-size: 0.9rem;"></i>
+              <i class="fas fa-star text-warning" style="font-size: 0.9rem;"></i>
+              <i class="fas fa-star text-warning" style="font-size: 0.9rem;"></i>
+              <i class="fas fa-star text-warning" style="font-size: 0.9rem;"></i>
+              <i class="fas fa-star text-warning" style="font-size: 0.9rem;"></i>
+            </div>
+            <p class="text-muted mb-4 flex-grow-1">"Setup took 10 minutes. Enterprise security, zero hidden fees. Best fintech decision for the UAE market."</p>
+            <div class="d-flex align-items-center gap-3 pt-3 border-top">
+              <div class="rounded-circle bg-primary text-white fw-bold d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">MH</div>
+              <div>
+                <div class="fw-bold small">Mohammed Hassan</div>
+                <div class="text-muted small">Founder, TechFlow Solutions</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="py-5 bg-dark text-white rounded-5 mx-4 my-5" style="background: linear-gradient(135deg, #1a1a2e 0%, #8e49f0 100%);">
+    <div class="container text-center">
+      <h2 class="display-5 fw-bold mb-3">Start Accepting Payments Today</h2>
+      <p class="lead mb-4">Join 500+ UAE businesses scaling faster with SimpleBit</p>
+      <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 fw-bold rounded-3">
+        Get Started Free <i class="fas fa-arrow-right ms-2"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-light pt-5 pb-3 border-top">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md-3 mb-4">
+          <div class="d-flex align-items-center gap-2 mb-3">
+            <svg class="logo-icon" width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="16" cy="16" r="15" fill="#8e49f0"></circle>
+              <text x="50%" y="50%" font-size="14" font-weight="bold" fill="white" text-anchor="middle" dy="0.35em">S</text>
+            </svg>
+            <h5 class="mb-0 fw-bold">SimpleBit</h5>
+          </div>
+          <p class="text-muted small">The future of payments in AED. Accept crypto, cards, and Apple Pay instantly.</p>
+          <div class="d-flex gap-2">
+            <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle p-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle p-2"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="btn btn-sm btn-outline-secondary rounded-circle p-2"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-bold mb-3">Company</h6>
+          <ul class="list-unstyled small text-muted">
+            <li><a href="about.html" class="text-muted text-decoration-none hover-primary">About Us</a></li>
+            <li><a href="contact.html" class="text-muted text-decoration-none hover-primary">Careers</a></li>
+            <li><a href="case-studies.html" class="text-muted text-decoration-none hover-primary">Success Stories</a></li>
+            <li><a href="contact.html" class="text-muted text-decoration-none hover-primary">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-bold mb-3">Product</h6>
+          <ul class="list-unstyled small text-muted">
+            <li><a href="pricing.html" class="text-muted text-decoration-none hover-primary">Integration</a></li>
+            <li><a href="pricing.html" class="text-muted text-decoration-none hover-primary">Security</a></li>
+            <li><a href="pricing.html" class="text-muted text-decoration-none hover-primary">Pricing</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <h6 class="fw-bold mb-3">Legal</h6>
+          <ul class="list-unstyled small text-muted">
+            <li><a href="#" class="text-muted text-decoration-none hover-primary">Privacy Policy</a></li>
+            <li><a href="#" class="text-muted text-decoration-none hover-primary">Terms of Service</a></li>
+            <li><a href="faq.html" class="text-muted text-decoration-none hover-primary">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-top pt-4 d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <p class="text-muted small mb-0">&copy; 2025 SimpleBit. All rights reserved.</p>
+        <div class="text-muted small">Trusted by 500+ UAE Businesses</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
