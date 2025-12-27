@@ -395,132 +395,155 @@
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-32 bg-white overflow-hidden">
-        <div class="container px-4">
+    <section class="py-32 bg-white">
+        <div class="container px-4 md:px-6 mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-20" data-aos="fade-up">
                 <h2 class="display-5 fw-bold mb-4">What Our <span class="text-gradient">Partners Say</span></h2>
-                <p class="text-muted fs-5">Join the thousands of UAE businesses that have transformed their checkout experience and unlocked new revenue with SimpleBit.</p>
+                <p class="text-muted fs-5">Empowering businesses across the UAE to thrive in the digital economy.</p>
             </div>
 
             <div class="row g-4 justify-content-center">
                 <!-- Ahmed Al-Rashid -->
                 <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card h-100 testimonial-card pt-50 pb-40 px-32 position-relative group border-0 shadow-sm hover-shadow-xl transition-all duration-500 rounded-2xl bg-slate-50">
-                        <div class="position-absolute top-0 end-0 p-4 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity pointer-events-none">
-                            <i class="fas fa-star text-primary" style="font-size: 160px; transform: rotate(15deg) translate(20px, -20px);"></i>
+                    <div class="card h-100 bg-slate-50 p-8 rounded-xl border position-relative overflow-visible group hover-shadow-xl transition-all duration-500" style="border: 1px solid rgba(0,0,0,0.08); display: flex; flex-direction: column;">
+                        <!-- Background Star -->
+                        <div class="position-absolute top-0 end-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none" style="overflow: visible;">
+                            <i class="fas fa-star text-primary" style="font-size: 130px;"></i>
                         </div>
-                        <div class="card-body p-0 position-relative z-10 d-flex flex-column">
-                            <div class="d-flex gap-1 mb-6 stars">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                            <p class="fs-5 fw-medium text-foreground leading-relaxed mb-8 italic">"SimpleBit transformed our business. International customers can now pay with crypto, and we receive AED instantly."</p>
-                            
-                            <div class="mt-auto">
-                                <div class="bg-white rounded-xl p-4 border border-primary-10 mb-8 d-flex gap-4">
-                                    <div class="flex-grow-1">
-                                        <p class="fs-xs fw-bold text-muted text-uppercase tracking-wider mb-1">Revenue Boost</p>
-                                        <p class="fs-4 fw-bold text-primary mb-0">300%</p>
-                                    </div>
-                                    <div class="border-start ps-4 flex-grow-1">
-                                        <p class="fs-xs fw-bold text-muted text-uppercase tracking-wider mb-1">Checkout Speed</p>
-                                        <p class="fs-4 fw-bold text-primary mb-0">10s</p>
-                                    </div>
-                                </div>
+                        
+                        <!-- Star Rating -->
+                        <div class="d-flex gap-1 mb-4 position-relative z-10">
+                            <i class="fas fa-star text-primary" style="font-size: 16px;"></i>
+                            <i class="fas fa-star text-primary" style="font-size: 16px;"></i>
+                            <i class="fas fa-star text-primary" style="font-size: 16px;"></i>
+                            <i class="fas fa-star text-primary" style="font-size: 16px;"></i>
+                            <i class="fas fa-star text-primary" style="font-size: 16px;"></i>
+                        </div>
 
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="avatar-square w-12 h-12 bg-primary text-white rounded-lg d-flex align-items-center justify-content-center fw-bold fs-5 shadow-lg shadow-primary/20">AR</div>
-                                    <div>
-                                        <h4 class="fs-6 fw-bold mb-0 text-foreground">Ahmed Al-Rashid</h4>
-                                        <p class="fs-xs text-muted mb-0">CEO, Rent Any Car Dubai</p>
-                                    </div>
-                                    <div class="ms-auto badge bg-primary-10 text-primary rounded-full px-3 py-1 fs-xs fw-bold">Verified</div>
+                        <!-- Quote -->
+                        <p class="fs-6 fw-medium text-foreground leading-relaxed mb-5 position-relative z-10" style="min-height: 80px; word-wrap: break-word; overflow-wrap: break-word;">
+                            "SimpleBit transformed our business. International customers can now pay with crypto, and we receive AED instantly."
+                        </p>
+
+                        <!-- Metrics Box -->
+                        <div class="bg-white rounded-lg p-4 mb-5 position-relative z-10 d-grid" style="grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="text-center">
+                                <div class="fs-5 fw-bold text-primary mb-1">300%</div>
+                                <div class="fs-xs text-muted fw-medium" style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; word-wrap: break-word;">Revenue Boost</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="fs-5 fw-bold text-primary mb-1">10s</div>
+                                <div class="fs-xs text-muted fw-medium" style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; word-wrap: break-word;">Checkout Speed</div>
+                            </div>
+                        </div>
+
+                        <!-- Author Section with Border -->
+                        <div class="position-relative z-10 pt-4 mt-auto" style="border-top: 1px solid rgba(0,0,0,0.08);">
+                            <div class="d-flex align-items-flex-start gap-3 mb-3">
+                                <div class="bg-primary text-white rounded-lg d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px; font-size: 13px; flex-shrink: 0;">AR</div>
+                                <div style="word-wrap: break-word; overflow-wrap: break-word; min-width: 0;">
+                                    <div class="fw-bold" style="font-size: 14px; margin: 0; line-height: 1.3;">Ahmed Al-Rashid</div>
+                                    <div class="text-muted" style="font-size: 12px; margin: 0; line-height: 1.3;">CEO, Rent Any Car Dubai</div>
                                 </div>
                             </div>
+                            <div class="badge text-primary rounded-pill px-3 py-2" style="background-color: rgba(168, 85, 247, 0.1); font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.03em; display: inline-block; word-wrap: break-word;">Verified Partner</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Fatima Al-Zahra -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card h-100 testimonial-card pt-50 pb-40 px-32 position-relative group border-0 shadow-sm hover-shadow-xl transition-all duration-500 rounded-2xl bg-slate-50">
-                        <div class="position-absolute top-0 end-0 p-4 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity pointer-events-none">
-                            <i class="fas fa-star text-primary" style="font-size: 160px; transform: rotate(15deg) translate(20px, -20px);"></i>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="card h-100 bg-slate-50 p-8 rounded-xl border position-relative overflow-visible group hover-shadow-xl transition-all duration-500" style="border: 1px solid rgba(0,0,0,0.08); display: flex; flex-direction: column;">
+                        <!-- Background Star -->
+                        <div class="position-absolute top-0 end-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none" style="overflow: visible;">
+                            <i class="fas fa-star text-primary" style="font-size: 130px;"></i>
                         </div>
-                        <div class="card-body p-0 position-relative z-10 d-flex flex-column">
-                            <div class="d-flex gap-1 mb-6 stars">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                            <p class="fs-5 fw-medium text-foreground leading-relaxed mb-8 italic">"The Apple Pay integration and instant AED settlement is game-changing. Our customers love the seamless experience."</p>
-                            
-                            <div class="mt-auto">
-                                <div class="bg-white rounded-xl p-4 border border-primary-10 mb-8 d-flex gap-4">
-                                    <div class="flex-grow-1">
-                                        <p class="fs-xs fw-bold text-muted text-uppercase tracking-wider mb-1">Sales Growth</p>
-                                        <p class="fs-4 fw-bold text-primary mb-0">45%</p>
-                                    </div>
-                                    <div class="border-start ps-4 flex-grow-1">
-                                        <p class="fs-xs fw-bold text-muted text-uppercase tracking-wider mb-1">Customer Rating</p>
-                                        <p class="fs-4 fw-bold text-primary mb-0">5.0</p>
-                                    </div>
-                                </div>
+                        
+                        <!-- Star Rating -->
+                        <div class="d-flex gap-1 mb-4 position-relative z-10">
+                            <i class="fas fa-star text-primary" style="font-size: 16px;"></i>
+                            <i class="fas fa-star text-primary" style="font-size: 16px;"></i>
+                            <i class="fas fa-star text-primary" style="font-size: 16px;"></i>
+                            <i class="fas fa-star text-primary" style="font-size: 16px;"></i>
+                            <i class="fas fa-star text-primary" style="font-size: 16px;"></i>
+                        </div>
 
-                                <div class="d-flex align-items-center gap-3">
-                                    <div class="avatar-square w-12 h-12 bg-primary text-white rounded-lg d-flex align-items-center justify-content-center fw-bold fs-5 shadow-lg shadow-primary/20">FZ</div>
-                                    <div>
-                                        <h4 class="fs-6 fw-bold mb-0 text-foreground">Fatima Al-Zahra</h4>
-                                        <p class="fs-xs text-muted mb-0">Owner, The Golden Fork</p>
-                                    </div>
-                                    <div class="ms-auto badge bg-primary-10 text-primary rounded-full px-3 py-1 fs-xs fw-bold">Verified</div>
+                        <!-- Quote -->
+                        <p class="fs-6 fw-medium text-foreground leading-relaxed mb-5 position-relative z-10" style="min-height: 80px; word-wrap: break-word; overflow-wrap: break-word;">
+                            "The Apple Pay integration and instant AED settlement is game-changing. Our customers love the seamless experience."
+                        </p>
+
+                        <!-- Metrics Box -->
+                        <div class="bg-white rounded-lg p-4 mb-5 position-relative z-10 d-grid" style="grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="text-center">
+                                <div class="fs-5 fw-bold text-primary mb-1">45%</div>
+                                <div class="fs-xs text-muted fw-medium" style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; word-wrap: break-word;">Sales Growth</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="fs-5 fw-bold text-primary mb-1">5.0</div>
+                                <div class="fs-xs text-muted fw-medium" style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; word-wrap: break-word;">Customer Rating</div>
+                            </div>
+                        </div>
+
+                        <!-- Author Section with Border -->
+                        <div class="position-relative z-10 pt-4 mt-auto" style="border-top: 1px solid rgba(0,0,0,0.08);">
+                            <div class="d-flex align-items-flex-start gap-3 mb-3">
+                                <div class="bg-primary text-white rounded-lg d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px; font-size: 13px; flex-shrink: 0;">FZ</div>
+                                <div style="word-wrap: break-word; overflow-wrap: break-word; min-width: 0;">
+                                    <div class="fw-bold" style="font-size: 14px; margin: 0; line-height: 1.3;">Fatima Al-Zahra</div>
+                                    <div class="text-muted" style="font-size: 12px; margin: 0; line-height: 1.3;">Owner, The Golden Fork</div>
                                 </div>
                             </div>
+                            <div class="badge text-primary rounded-pill px-3 py-2" style="background-color: rgba(168, 85, 247, 0.1); font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.03em; display: inline-block; word-wrap: break-word;">Verified Partner</div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Mohammed Hassan -->
-                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card h-100 testimonial-card pt-50 pb-40 px-32 position-relative group border-0 shadow-sm hover-shadow-xl transition-all duration-500 rounded-2xl bg-slate-50">
-                        <div class="position-absolute top-0 end-0 p-4 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity pointer-events-none">
-                            <i class="fas fa-star text-primary" style="font-size: 160px; transform: rotate(15deg) translate(20px, -20px);"></i>
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 bg-slate-50 p-8 p-md-10 rounded-xl border border-black-08 position-relative overflow-hidden group hover-shadow-xl hover-border-primary-20 transition-all duration-500" style="border-color: rgba(0,0,0,0.08);">
+                        <!-- Background Star -->
+                        <div class="position-absolute top-0 end-0 p-4 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
+                            <i class="fas fa-star text-primary" style="font-size: 130px;"></i>
                         </div>
-                        <div class="card-body p-0 position-relative z-10 d-flex flex-column">
-                            <div class="d-flex gap-1 mb-6 stars">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                            </div>
-                            <p class="fs-5 fw-medium text-foreground leading-relaxed mb-8 italic">"Setup took 10 minutes. Enterprise security, zero hidden fees. Best fintech decision for the UAE market."</p>
-                            
-                            <div class="mt-auto">
-                                <div class="bg-white rounded-xl p-4 border border-primary-10 mb-8 d-flex gap-4">
-                                    <div class="flex-grow-1">
-                                        <p class="fs-xs fw-bold text-muted text-uppercase tracking-wider mb-1">Integration Time</p>
-                                        <p class="fs-4 fw-bold text-primary mb-0">&lt;1 hr</p>
-                                    </div>
-                                    <div class="border-start ps-4 flex-grow-1">
-                                        <p class="fs-xs fw-bold text-muted text-uppercase tracking-wider mb-1">Support Quality</p>
-                                        <p class="fs-4 fw-bold text-primary mb-0">5.0</p>
-                                    </div>
-                                </div>
+                        
+                        <!-- Star Rating -->
+                        <div class="d-flex gap-1 mb-4 position-relative z-10">
+                            <i class="fas fa-star text-primary" style="font-size: 16px;"></i>
+                            <i class="fas fa-star text-primary" style="font-size: 16px;"></i>
+                            <i class="fas fa-star text-primary" style="font-size: 16px;"></i>
+                            <i class="fas fa-star text-primary" style="font-size: 16px;"></i>
+                            <i class="fas fa-star text-primary" style="font-size: 16px;"></i>
+                        </div>
 
+                        <!-- Quote -->
+                        <p class="fs-6 fw-medium text-foreground leading-relaxed mb-5 position-relative z-10" style="min-height: 80px;">
+                            "Setup took 10 minutes. Enterprise security, zero hidden fees. Best fintech decision for the UAE market."
+                        </p>
+
+                        <!-- Metrics Box -->
+                        <div class="bg-white rounded-lg p-4 mb-5 position-relative z-10 d-grid" style="grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="text-center">
+                                <div class="fs-5 fw-bold text-primary mb-1">&lt;1 hr</div>
+                                <div class="fs-xs text-muted fw-medium" style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em;">Integration Time</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="fs-5 fw-bold text-primary mb-1">5.0</div>
+                                <div class="fs-xs text-muted fw-medium" style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em;">Support Quality</div>
+                            </div>
+                        </div>
+
+                        <!-- Author Section with Border -->
+                        <div class="position-relative z-10 pt-4" style="border-top: 1px solid rgba(0,0,0,0.08);">
+                            <div class="d-flex align-items-center justify-content-between gap-3">
                                 <div class="d-flex align-items-center gap-3">
-                                    <div class="avatar-square w-12 h-12 bg-primary text-white rounded-lg d-flex align-items-center justify-content-center fw-bold fs-5 shadow-lg shadow-primary/20">MH</div>
+                                    <div class="bg-primary text-white rounded-lg d-flex align-items-center justify-content-center fw-bold" style="width: 40px; height: 40px; font-size: 13px;">MH</div>
                                     <div>
-                                        <h4 class="fs-6 fw-bold mb-0 text-foreground">Mohammed Hassan</h4>
-                                        <p class="fs-xs text-muted mb-0">Founder, TechFlow Solutions</p>
+                                        <div class="fw-bold" style="font-size: 14px;">Mohammed Hassan</div>
+                                        <div class="text-muted" style="font-size: 12px;">Founder, TechFlow Solutions</div>
                                     </div>
-                                    <div class="ms-auto badge bg-primary-10 text-primary rounded-full px-3 py-1 fs-xs fw-bold">Verified</div>
                                 </div>
+                                <div class="badge text-primary rounded-pill px-2 py-1" style="background-color: rgba(168, 85, 247, 0.1); font-size: 11px; font-weight: bold; text-transform: uppercase; letter-spacing: 0.03em; white-space: nowrap;">Verified Partner</div>
                             </div>
                         </div>
                     </div>
@@ -528,12 +551,12 @@
             </div>
 
             <!-- Case Studies Link -->
-            <div class="mt-5 text-center" data-aos="fade-up" style="margin-top: 4rem;">
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.5 }} class="mt-5 text-center" data-aos="fade-up" style="margin-top: 4rem;">
                 <a href="case-studies.html" class="text-primary fw-bold fs-5 text-decoration-none d-inline-flex align-items-center gap-2 group">
                     Explore our case studies
                     <i class="fas fa-arrow-right transition-transform group-hover-translate-x-1"></i>
                 </a>
-            </div>
+            </motion.div>
         </div>
     </section>
 
