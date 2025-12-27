@@ -59,66 +59,90 @@
     </nav>
 
     <!-- Hero Section -->
-    <section id="hero" class="hero" style="background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('assets/images/background_hand_lifestyle.jpg') center/cover no-repeat; min-height: 100vh; padding: 160px 0 120px; text-align: center; position: relative; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-      <div class="hero-content">
-        <span class="hero-badge mb-4 d-inline-block px-3 py-1 rounded-pill bg-white-10 backdrop-blur border border-white-10 text-white fs-sm fw-bold">🌟 Apple Pay Integration Now Live</span>
-
-        <h1 class="display-3 fw-bold mb-4">The Future of Business <br> Payments in <span class="highlight" style="color: #8e49f0;">AED.</span></h1>
-        <p class="fs-5 text-white-85 max-w-2xl mx-auto mb-5 fw-medium">Accept Crypto, Cards & Apple Pay — Settle Instantly in AED.</p>
-
-        <div class="hero-buttons d-flex justify-content-center gap-3 mb-0">
-          <a href="#" class="btn btn-primary-custom px-5 py-3 fw-bold rounded-3 shadow-xl hover-scale">Partner With Us</a>
-          <a href="#" class="btn btn-outline-light px-5 py-3 rounded-3 backdrop-blur hover-scale">Watch Demo</a>
+    <section id="hero" class="hero" style="background: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.75), rgba(0,0,0,0.7)), url('assets/images/fintech_business_mob_09d37021.jpg') center/cover no-repeat; min-height: 100vh; padding: 160px 0 120px; text-align: center; position: relative; color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; overflow: hidden;">
+      <div class="container position-relative z-10">
+        <!-- KPI Line -->
+        <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 text-white-80 fs-6 fw-medium mb-5">
+          <span class="d-flex align-items-center gap-2 px-3 py-1.5 rounded-full bg-white-05 hover-bg-white-10 transition-all cursor-default">
+            <span class="rounded-circle bg-primary group-hover-scale-150" style="width: 8px; height: 8px;"></span>
+            <span>Trusted by 500+ UAE businesses</span>
+          </span>
+          <span class="text-white-30 d-none d-sm-inline">•</span>
+          <span class="d-flex align-items-center gap-2 px-3 py-1.5 rounded-full bg-white-05 hover-bg-white-10 transition-all cursor-default">
+            <span class="rounded-circle bg-primary group-hover-scale-150" style="width: 8px; height: 8px;"></span>
+            <span>AED payouts in seconds</span>
+          </span>
+          <span class="text-white-30 d-none d-sm-inline">•</span>
+          <span class="d-flex align-items-center gap-2 px-3 py-1.5 rounded-full bg-white-05 hover-bg-white-10 transition-all cursor-default">
+            <span class="rounded-circle bg-primary group-hover-scale-150" style="width: 8px; height: 8px;"></span>
+            <span>Up to 300% revenue boost</span>
+          </span>
         </div>
-      </div>
 
-      <div class="hero-phone-wrap" style="margin-top: 60px;">
-        <img src="assets/images/fintech_business_mob_09d37021.jpg" alt="Phone" class="hero-phone rounded-5 shadow-2xl border border-white-10" style="width: 350px; display: block; margin: 0 auto; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);">
-      </div>
+        <div class="hero-content space-y-14">
+          <div class="mb-5">
+            <h2 class="fs-4 fw-bold text-white bg-primary-10 d-inline-block px-4 py-2 rounded-pill border border-primary-20">
+              <i class="fas fa-check-circle me-2"></i> Apple Pay Integration
+            </h2>
+          </div>
 
-      <div class="hero-trust-logos d-flex justify-content-center align-items-center gap-5 grayscale invert opacity-70" style="margin-top: 30px;">
-        <i class="fab fa-cc-visa fa-3x" title="Visa"></i>
-        <i class="fab fa-cc-mastercard fa-3x" title="Mastercard"></i>
-        <i class="fab fa-apple-pay fa-4x" title="Apple Pay"></i>
-        <i class="fab fa-bitcoin fa-3x" title="Crypto"></i>
+          <h1 class="display-3 fw-bold mb-4 tracking-tight lh-sm">The Future of Business <br class="d-none d-md-block"> Payments in <span class="text-primary">AED.</span></h1>
+          <p class="fs-5 text-white-85 max-w-2xl mx-auto mb-5 fw-medium leading-relaxed">Accept Crypto, Cards & Apple Pay — Settle Instantly in AED.</p>
+
+          <div class="hero-buttons d-flex flex-column flex-md-row justify-content-center gap-3 mb-5 px-4">
+            <a href="contact.html" class="btn btn-primary-custom h-14 px-5 py-3 fw-bold rounded-3 shadow-xl hover-scale active-scale-95">Partner With Us <i class="fas fa-arrow-right ms-2"></i></a>
+            <a href="contact.html" class="btn btn-outline-light h-14 px-5 py-3 rounded-3 backdrop-blur hover-scale active-scale-95"><i class="fas fa-play me-2"></i> Watch Demo</a>
+          </div>
+
+          <!-- Payment Methods -->
+          <div class="mt-5 pt-4 space-y-6">
+            <p class="text-white-50 fs-xs fw-bold text-uppercase tracking-widest mb-4">Supported by global payment networks</p>
+            <div class="d-flex justify-content-center align-items-center gap-4 gap-md-5 grayscale invert opacity-70">
+              <i class="fab fa-cc-visa fa-3x" title="Visa"></i>
+              <i class="fab fa-cc-mastercard fa-3x" title="Mastercard"></i>
+              <i class="fab fa-apple-pay fa-4x" title="Apple Pay"></i>
+              <i class="fab fa-bitcoin fa-3x" title="Crypto"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Trust Strip -->
-    <section class="py-5 bg-light-gradient border-bottom">
+    <!-- Feature Chips & Compliance Strip -->
+    <section class="py-12 bg-white-gradient border-bottom">
         <div class="container">
-            <div class="row align-items-center g-4 max-w-4xl mx-auto">
+            <div class="row align-items-center g-5 max-w-4xl mx-auto">
                 <div class="col-md-6" data-aos="fade-right">
                     <p class="text-uppercase tracking-widest fs-xs fw-bold text-muted mb-4">Payment Methods</p>
                     <div class="d-flex flex-column gap-3">
-                        <div class="chip d-flex align-items-center gap-3 p-3 rounded-3 bg-white border border-primary-10 hover-border-primary transition-all group">
-                            <i class="fas fa-check text-primary fs-5 transition-transform group-hover-scale"></i>
-                            <span class="fw-medium">Apple Pay</span>
+                        <div class="chip d-flex align-items-center gap-3 p-3 rounded-3 bg-white border border-primary-10 hover-border-primary transition-all group cursor-default">
+                            <i class="fas fa-check text-primary fs-5 transition-transform group-hover-scale-125"></i>
+                            <span class="fw-medium text-foreground">Apple Pay</span>
                         </div>
-                        <div class="chip d-flex align-items-center gap-3 p-3 rounded-3 bg-white border border-primary-10 hover-border-primary transition-all group">
-                            <i class="fas fa-check text-primary fs-5 transition-transform group-hover-scale"></i>
-                            <span class="fw-medium">Cards</span>
+                        <div class="chip d-flex align-items-center gap-3 p-3 rounded-3 bg-white border border-primary-10 hover-border-primary transition-all group cursor-default">
+                            <i class="fas fa-check text-primary fs-5 transition-transform group-hover-scale-125"></i>
+                            <span class="fw-medium text-foreground">Cards</span>
                         </div>
-                        <div class="chip d-flex align-items-center gap-3 p-3 rounded-3 bg-white border border-primary-10 hover-border-primary transition-all group">
-                            <i class="fas fa-check text-primary fs-5 transition-transform group-hover-scale"></i>
-                            <span class="fw-medium">Crypto</span>
+                        <div class="chip d-flex align-items-center gap-3 p-3 rounded-3 bg-white border border-primary-10 hover-border-primary transition-all group cursor-default">
+                            <i class="fas fa-check text-primary fs-5 transition-transform group-hover-scale-125"></i>
+                            <span class="fw-medium text-foreground">Crypto</span>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6" data-aos="fade-left">
                     <p class="text-uppercase tracking-widest fs-xs fw-bold text-muted mb-4">Security & Trust</p>
                     <div class="d-flex flex-column gap-3">
-                        <div class="chip d-flex align-items-center gap-3 p-3 rounded-3 bg-white border border-primary-10 hover-border-primary transition-all group">
-                            <i class="fas fa-shield-alt text-primary fs-5 transition-transform group-hover-scale"></i>
-                            <span class="fw-medium">PCI-DSS Level 1</span>
+                        <div class="chip d-flex align-items-center gap-3 p-3 rounded-3 bg-white border border-primary-10 hover-border-primary transition-all group cursor-default">
+                            <i class="fas fa-shield-alt text-primary fs-5 transition-transform group-hover-scale-125"></i>
+                            <span class="fw-medium text-foreground">PCI-DSS Level 1</span>
                         </div>
-                        <div class="chip d-flex align-items-center gap-3 p-3 rounded-3 bg-white border border-primary-10 hover-border-primary transition-all group">
-                            <i class="fas fa-lock text-primary fs-5 transition-transform group-hover-scale"></i>
-                            <span class="fw-medium">AES-256 Encryption</span>
+                        <div class="chip d-flex align-items-center gap-3 p-3 rounded-3 bg-white border border-primary-10 hover-border-primary transition-all group cursor-default">
+                            <i class="fas fa-lock text-primary fs-5 transition-transform group-hover-scale-125"></i>
+                            <span class="fw-medium text-foreground">AES-256 Encryption</span>
                         </div>
-                        <div class="chip d-flex align-items-center gap-3 p-3 rounded-3 bg-white border border-primary-10 hover-border-primary transition-all group">
-                            <i class="fas fa-award text-primary fs-5 transition-transform group-hover-scale"></i>
-                            <span class="fw-medium">Instant AED Payouts</span>
+                        <div class="chip d-flex align-items-center gap-3 p-3 rounded-3 bg-white border border-primary-10 hover-border-primary transition-all group cursor-default">
+                            <i class="fas fa-award text-primary fs-5 transition-transform group-hover-scale-125"></i>
+                            <span class="fw-medium text-foreground">Instant AED Payouts</span>
                         </div>
                     </div>
                 </div>
@@ -127,10 +151,10 @@
     </section>
 
     <!-- Logo Cloud -->
-    <section class="py-5 bg-slate-50 border-bottom">
+    <section class="py-12 border-bottom border-black-05 bg-slate-50-40">
         <div class="container text-center">
-            <p class="text-uppercase tracking-[0.2em] fs-xs fw-bold text-muted mb-5">Trusted by 500+ UAE Businesses</p>
-            <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 gap-md-5 opacity-40 grayscale hover-opacity-100 hover-grayscale-0 transition-all duration-500">
+            <p class="text-center text-uppercase tracking-[0.2em] fs-xs fw-bold text-muted mb-5">Trusted by 500+ UAE Businesses</p>
+            <div class="d-flex flex-wrap justify-content-center align-items-center gap-4 gap-md-5 opacity-40 grayscale hover-opacity-100 hover-grayscale-0 transition-all duration-500 cursor-default">
                 <span class="fs-4 fw-bold">TechFlow</span>
                 <span class="fs-4 fw-bold fst-italic">Velvet.co</span>
                 <span class="fs-4 fw-black tracking-tighter">NEXUS</span>
@@ -142,52 +166,52 @@
     </section>
 
     <!-- How It Works -->
-    <section class="py-10 bg-white">
+    <section class="py-32 bg-white">
         <div class="container">
-            <div class="text-center max-w-3xl mx-auto mb-10">
-                <h2 class="display-5 fw-bold mb-3">How It <span class="text-gradient">Works</span></h2>
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="display-5 fw-bold mb-4">How It <span class="text-gradient">Works</span></h2>
                 <p class="text-muted fs-5">Three simple steps to revolutionize your payment processing and start getting paid instantly.</p>
             </div>
 
             <div class="row g-4 justify-content-center">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card h-100 border-light-subtle shadow-sm hover-shadow-xl transition-all duration-500 overflow-hidden group">
+                    <div class="card h-100 border-black-08 shadow-md hover-shadow-xl transition-all duration-500 overflow-hidden group">
                         <div class="position-absolute top-0 end-0 p-4 opacity-5 group-hover-opacity-10 transition-opacity">
                             <span class="display-1 fw-bold text-primary">01</span>
                         </div>
                         <div class="card-body p-5 position-relative z-1">
-                            <div class="icon-box mb-4 p-4 bg-primary-10 rounded-xl w-fit group-hover-bg-primary transition-colors">
+                            <div class="icon-box mb-4 p-4 bg-primary-10 rounded-xl w-fit group-hover-bg-primary group-hover-text-white transition-colors duration-500">
                                 <i class="fas fa-bolt fs-2 text-primary group-hover-text-white"></i>
                             </div>
-                            <h3 class="h4 fw-bold mb-3">Create</h3>
+                            <h3 class="h4 fw-bold mb-3 text-foreground">Create</h3>
                             <p class="text-muted leading-relaxed">Generate a QR code or custom invoice in seconds with our intuitive dashboard.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card h-100 border-light-subtle shadow-sm hover-shadow-xl transition-all duration-500 overflow-hidden group">
+                    <div class="card h-100 border-black-08 shadow-md hover-shadow-xl transition-all duration-500 overflow-hidden group">
                         <div class="position-absolute top-0 end-0 p-4 opacity-5 group-hover-opacity-10 transition-opacity">
                             <span class="display-1 fw-bold text-primary">02</span>
                         </div>
                         <div class="card-body p-5 position-relative z-1">
-                            <div class="icon-box mb-4 p-4 bg-primary-10 rounded-xl w-fit group-hover-bg-primary transition-colors">
+                            <div class="icon-box mb-4 p-4 bg-primary-10 rounded-xl w-fit group-hover-bg-primary group-hover-text-white transition-colors duration-500">
                                 <i class="fas fa-globe fs-2 text-primary group-hover-text-white"></i>
                             </div>
-                            <h3 class="h4 fw-bold mb-3">Pay</h3>
+                            <h3 class="h4 fw-bold mb-3 text-foreground">Pay</h3>
                             <p class="text-muted leading-relaxed">Customer pays via crypto, card, or Apple Pay with a seamless checkout experience.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card h-100 border-light-subtle shadow-sm hover-shadow-xl transition-all duration-500 overflow-hidden group">
+                    <div class="card h-100 border-black-08 shadow-md hover-shadow-xl transition-all duration-500 overflow-hidden group">
                         <div class="position-absolute top-0 end-0 p-4 opacity-5 group-hover-opacity-10 transition-opacity">
                             <span class="display-1 fw-bold text-primary">03</span>
                         </div>
                         <div class="card-body p-5 position-relative z-1">
-                            <div class="icon-box mb-4 p-4 bg-primary-10 rounded-xl w-fit group-hover-bg-primary transition-colors">
+                            <div class="icon-box mb-4 p-4 bg-primary-10 rounded-xl w-fit group-hover-bg-primary group-hover-text-white transition-colors duration-500">
                                 <i class="fas fa-check-circle fs-2 text-primary group-hover-text-white"></i>
                             </div>
-                            <h3 class="h4 fw-bold mb-3">Settle</h3>
+                            <h3 class="h4 fw-bold mb-3 text-foreground">Settle</h3>
                             <p class="text-muted leading-relaxed">Business receives AED instantly with best-in-market conversion rates.</p>
                         </div>
                     </div>
@@ -197,66 +221,66 @@
     </section>
 
     <!-- Industry Grid -->
-    <section class="py-10 bg-light-gradient-purple">
+    <section class="py-32 bg-industry-gradient">
         <div class="container">
-            <div class="text-center max-w-3xl mx-auto mb-10">
-                <h2 class="display-5 fw-bold mb-3">Perfect for <span class="text-gradient">Every Industry</span></h2>
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="display-5 fw-bold mb-4">Perfect for <span class="text-gradient">Every Industry</span></h2>
                 <p class="text-muted fs-5">Whether you're running a restaurant, hotel, retail shop, or any other business, SimpleBit adapts to your needs.</p>
             </div>
 
             <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-4">
                 <div class="col" data-aos="zoom-in" data-aos-delay="100">
-                    <div class="industry-card p-4 rounded-xl bg-white border border-primary-10 text-center hover-up transition-all group">
-                        <div class="icon-box mb-3 text-primary transition-all group-hover-rotate group-hover-scale">
+                    <div class="industry-card p-4 rounded-xl bg-white border border-primary-10 text-center hover-up transition-all group cursor-pointer">
+                        <div class="icon-box mb-3 text-primary transition-all">
                             <i class="fas fa-utensils fs-2"></i>
                         </div>
-                        <p class="fw-bold mb-2 fs-6">Restaurants</p>
-                        <p class="fs-xs text-muted">Table-side QR payments & instant tips</p>
+                        <p class="fw-bold mb-2 fs-6 text-foreground group-hover-text-primary transition-colors">Restaurants</p>
+                        <p class="fs-xs text-muted leading-snug">Table-side QR payments & instant tips</p>
                     </div>
                 </div>
                 <div class="col" data-aos="zoom-in" data-aos-delay="200">
-                    <div class="industry-card p-4 rounded-xl bg-white border border-primary-10 text-center hover-up transition-all group">
-                        <div class="icon-box mb-3 text-primary transition-all group-hover-rotate group-hover-scale">
+                    <div class="industry-card p-4 rounded-xl bg-white border border-primary-10 text-center hover-up transition-all group cursor-pointer">
+                        <div class="icon-box mb-3 text-primary transition-all">
                             <i class="fas fa-hotel fs-2"></i>
                         </div>
-                        <p class="fw-bold mb-2 fs-6">Hotels</p>
-                        <p class="fs-xs text-muted">Secure check-in/out payment links</p>
+                        <p class="fw-bold mb-2 fs-6 text-foreground group-hover-text-primary transition-colors">Hotels</p>
+                        <p class="fs-xs text-muted leading-snug">Secure check-in/out payment links</p>
                     </div>
                 </div>
                 <div class="col" data-aos="zoom-in" data-aos-delay="300">
-                    <div class="industry-card p-4 rounded-xl bg-white border border-primary-10 text-center hover-up transition-all group">
-                        <div class="icon-box mb-3 text-primary transition-all group-hover-rotate group-hover-scale">
+                    <div class="industry-card p-4 rounded-xl bg-white border border-primary-10 text-center hover-up transition-all group cursor-pointer">
+                        <div class="icon-box mb-3 text-primary transition-all">
                             <i class="fas fa-shopping-bag fs-2"></i>
                         </div>
-                        <p class="fw-bold mb-2 fs-6">Retail</p>
-                        <p class="fs-xs text-muted">Cardless checkout & digital invoices</p>
+                        <p class="fw-bold mb-2 fs-6 text-foreground group-hover-text-primary transition-colors">Retail</p>
+                        <p class="fs-xs text-muted leading-snug">Cardless checkout & digital invoices</p>
                     </div>
                 </div>
                 <div class="col" data-aos="zoom-in" data-aos-delay="400">
-                    <div class="industry-card p-4 rounded-xl bg-white border border-primary-10 text-center hover-up transition-all group">
-                        <div class="icon-box mb-3 text-primary transition-all group-hover-rotate group-hover-scale">
+                    <div class="industry-card p-4 rounded-xl bg-white border border-primary-10 text-center hover-up transition-all group cursor-pointer">
+                        <div class="icon-box mb-3 text-primary transition-all">
                             <i class="fas fa-cut fs-2"></i>
                         </div>
-                        <p class="fw-bold mb-2 fs-6">Salons</p>
-                        <p class="fs-xs text-muted">Deposits & bookings via WhatsApp</p>
+                        <p class="fw-bold mb-2 fs-6 text-foreground group-hover-text-primary transition-colors">Salons</p>
+                        <p class="fs-xs text-muted leading-snug">Deposits & bookings via WhatsApp</p>
                     </div>
                 </div>
                 <div class="col" data-aos="zoom-in" data-aos-delay="500">
-                    <div class="industry-card p-4 rounded-xl bg-white border border-primary-10 text-center hover-up transition-all group">
-                        <div class="icon-box mb-3 text-primary transition-all group-hover-rotate group-hover-scale">
+                    <div class="industry-card p-4 rounded-xl bg-white border border-primary-10 text-center hover-up transition-all group cursor-pointer">
+                        <div class="icon-box mb-3 text-primary transition-all">
                             <i class="fas fa-dumbbell fs-2"></i>
                         </div>
-                        <p class="fw-bold mb-2 fs-6">Gyms</p>
-                        <p class="fs-xs text-muted">Membership & subscriptions</p>
+                        <p class="fw-bold mb-2 fs-6 text-foreground group-hover-text-primary transition-colors">Gyms</p>
+                        <p class="fs-xs text-muted leading-snug">Membership & subscriptions</p>
                     </div>
                 </div>
                 <div class="col" data-aos="zoom-in" data-aos-delay="600">
-                    <div class="industry-card p-4 rounded-xl bg-white border border-primary-10 text-center hover-up transition-all group">
-                        <div class="icon-box mb-3 text-primary transition-all group-hover-rotate group-hover-scale">
+                    <div class="industry-card p-4 rounded-xl bg-white border border-primary-10 text-center hover-up transition-all group cursor-pointer">
+                        <div class="icon-box mb-3 text-primary transition-all">
                             <i class="fas fa-box fs-2"></i>
                         </div>
-                        <p class="fw-bold mb-2 fs-6">E-commerce</p>
-                        <p class="fs-xs text-muted">Zero gateway setup, link-based checkout</p>
+                        <p class="fw-bold mb-2 fs-6 text-foreground group-hover-text-primary transition-colors">E-commerce</p>
+                        <p class="fs-xs text-muted leading-snug">Zero gateway setup, link-based checkout</p>
                     </div>
                 </div>
             </div>
@@ -264,65 +288,65 @@
     </section>
 
     <!-- Why Choose Us -->
-    <section class="py-10 bg-white">
+    <section class="py-32 bg-white">
         <div class="container">
-            <div class="mb-10 text-center text-md-start">
-                <h2 class="display-5 fw-bold mb-3">Why Businesses Choose <span class="text-gradient">SimpleBit</span></h2>
+            <div class="mb-20">
+                <h2 class="display-5 fw-bold mb-4">Why Businesses Choose <span class="text-gradient">SimpleBit</span></h2>
                 <p class="text-muted fs-5 max-w-2xl">Join thousands of forward-thinking businesses that have transformed their payment experience.</p>
             </div>
 
             <div class="row g-4">
                 <div class="col-md-6 col-lg-4" data-aos="fade-up">
-                    <div class="d-flex gap-4 p-5 rounded-xl bg-white border border-primary-10 hover-shadow-lg transition-all group">
-                        <i class="fas fa-chart-line fs-3 text-primary transition-transform group-hover-scale"></i>
+                    <div class="d-flex gap-4 p-5 rounded-xl bg-white border border-primary-10 hover-shadow-lg transition-all group hover-bg-primary-02">
+                        <i class="fas fa-chart-line fs-3 text-primary transition-transform group-hover-scale-125"></i>
                         <div>
                             <h4 class="fw-bold mb-2">New Revenue Streams</h4>
-                            <p class="text-muted small">Reach crypto-paying customers and boost tips by up to 300%.</p>
+                            <p class="text-muted small leading-relaxed">Reach crypto-paying customers and boost tips by up to 300%.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="d-flex gap-4 p-5 rounded-xl bg-white border border-primary-10 hover-shadow-lg transition-all group">
-                        <i class="fas fa-bolt fs-3 text-primary transition-transform group-hover-scale"></i>
+                    <div class="d-flex gap-4 p-5 rounded-xl bg-white border border-primary-10 hover-shadow-lg transition-all group hover-bg-primary-02">
+                        <i class="fas fa-bolt fs-3 text-primary transition-transform group-hover-scale-125"></i>
                         <div>
                             <h4 class="fw-bold mb-2">Instant AED Settlement</h4>
-                            <p class="text-muted small">No delays. Fastest conversion rates in the UAE with real-time settlement.</p>
+                            <p class="text-muted small leading-relaxed">No delays. Fastest conversion rates in the UAE with real-time settlement.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="d-flex gap-4 p-5 rounded-xl bg-white border border-primary-10 hover-shadow-lg transition-all group">
-                        <i class="fas fa-check-circle fs-3 text-primary transition-transform group-hover-scale"></i>
+                    <div class="d-flex gap-4 p-5 rounded-xl bg-white border border-primary-10 hover-shadow-lg transition-all group hover-bg-primary-02">
+                        <i class="fas fa-check-circle fs-3 text-primary transition-transform group-hover-scale-125"></i>
                         <div>
                             <h4 class="fw-bold mb-2">Plug & Play Setup</h4>
-                            <p class="text-muted small">Static or dynamic QR codes, custom invoices, and inventory management.</p>
+                            <p class="text-muted small leading-relaxed">Static or dynamic QR codes, custom invoices, and inventory management.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="d-flex gap-4 p-5 rounded-xl bg-white border border-primary-10 hover-shadow-lg transition-all group">
-                        <i class="fas fa-shield-alt fs-3 text-primary transition-transform group-hover-scale"></i>
+                    <div class="d-flex gap-4 p-5 rounded-xl bg-white border border-primary-10 hover-shadow-lg transition-all group hover-bg-primary-02">
+                        <i class="fas fa-shield-alt fs-3 text-primary transition-transform group-hover-scale-125"></i>
                         <div>
                             <h4 class="fw-bold mb-2">Enterprise Security</h4>
-                            <p class="text-muted small">Bank-level encryption and UAE regulatory compliance.</p>
+                            <p class="text-muted small leading-relaxed">Bank-level encryption and UAE regulatory compliance.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                    <div class="d-flex gap-4 p-5 rounded-xl bg-white border border-primary-10 hover-shadow-lg transition-all group">
-                        <i class="fas fa-globe fs-3 text-primary transition-transform group-hover-scale"></i>
+                    <div class="d-flex gap-4 p-5 rounded-xl bg-white border border-primary-10 hover-shadow-lg transition-all group hover-bg-primary-02">
+                        <i class="fas fa-globe fs-3 text-primary transition-transform group-hover-scale-125"></i>
                         <div>
                             <h4 class="fw-bold mb-2">Global Reach</h4>
-                            <p class="text-muted small">Accept payments from anywhere in the world, expanding your base.</p>
+                            <p class="text-muted small leading-relaxed">Accept payments from anywhere in the world, expanding your base.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
-                    <div class="d-flex gap-4 p-5 rounded-xl bg-white border border-primary-10 hover-shadow-lg transition-all group">
-                        <i class="fas fa-chart-bar fs-3 text-primary transition-transform group-hover-scale"></i>
+                    <div class="d-flex gap-4 p-5 rounded-xl bg-white border border-primary-10 hover-shadow-lg transition-all group hover-bg-primary-02">
+                        <i class="fas fa-chart-bar fs-3 text-primary transition-transform group-hover-scale-125"></i>
                         <div>
                             <h4 class="fw-bold mb-2">Advanced Analytics</h4>
-                            <p class="text-muted small">Real-time insights and detailed reporting to optimize strategy.</p>
+                            <p class="text-muted small leading-relaxed">Real-time insights and detailed reporting to optimize strategy.</p>
                         </div>
                     </div>
                 </div>
