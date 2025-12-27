@@ -1,0 +1,127 @@
+STOP AND UPDATE ONLY THE HERO SECTION — DO NOT touch other sections yet.
+
+Replace the current hero section with the corrected one below, and add the CSS provided.
+
+========================================
+📌 UPDATE HERO HTML
+========================================
+Rewrite the hero section like this:
+
+<section class="hero-section">
+  <div class="hero-overlay"></div>
+
+  <div class="hero-badge">
+    <span>🌟 Apple Pay Integration Now Live</span>
+  </div>
+
+  <h1 class="hero-title">
+    The Future of Business<br>
+    Payments in <span class="accent">AED.</span>
+  </h1>
+
+  <p class="hero-subtitle">
+    Accept Crypto, Cards & Apple Pay — Settle Instantly in AED.
+  </p>
+
+  <div class="hero-cta">
+    <a href="#" class="btn-primary">Partner With Us</a>
+    <a href="#" class="btn-outline">Watch Demo</a>
+  </div>
+
+  <div class="hero-device">
+    <img src="assets/images/fintech_business_mob_09d37021.jpg"
+         alt="SimpleBit Phone QR"
+         class="hero-phone" />
+  </div>
+
+  <div class="hero-logos">
+    <img src="assets/images/visa.png" alt="Visa" />
+    <img src="assets/images/mastercard.png" alt="Mastercard" />
+    <img src="assets/images/applepay.png" alt="Apple Pay" />
+  </div>
+</section>
+
+========================================
+📌 ADD THIS CSS TO style.css
+========================================
+.hero-section {
+  position: relative;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+              url('assets/images/fintech_business_mob_09d37021.jpg') center/cover no-repeat;
+  padding: 150px 0 140px;
+  text-align: center;
+  color: #fff;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65));
+  z-index: 0;
+}
+.hero-section * {
+  position: relative;
+  z-index: 2;
+}
+.hero-badge span {
+  background: rgba(255,255,255,0.15);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.hero-title {
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.hero-title .accent {
+  color: #8e49f0;
+}
+.hero-subtitle {
+  max-width: 600px;
+  margin: 12px auto 26px;
+  font-size: 1.1rem;
+}
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.btn-primary {
+  background: #8e49f0;
+  padding: 14px 32px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+}
+.btn-outline {
+  border: 2px solid #fff;
+  padding: 14px 32px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+}
+.hero-device {
+  margin-top: 35px;
+}
+.hero-phone {
+  max-width: 420px;
+  height: auto;
+  border-radius: 14px;
+}
+.hero-logos img {
+  height: 28px;
+  margin: 10px 6px 0;
+  opacity: 0.85;
+}
+
+========================================
+📌 AFTER APPLYING:
+- Remove any white centered logo or extra image currently in the hero
+- Do NOT change other sections yet
+- Return ONLY updated hero output
+========================================
+
+Once complete, STOP and ask for confirmation before moving on.

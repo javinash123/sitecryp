@@ -1,0 +1,77 @@
+Completely remove my current hero section and replace it with this new working version.
+Do NOT edit any other section.
+
+========================================
+REPLACE HERO HTML WITH THIS:
+========================================
+
+<section id="hero" class="hero">
+  <div class="hero-content">
+    <span class="hero-badge">🌟 Apple Pay Integration Now Live</span>
+
+    <h1>The Future of Business <br> Payments in <span class="highlight">AED.</span></h1>
+    <p>Accept Crypto, Cards & Apple Pay — Settle Instantly in AED.</p>
+
+    <div class="hero-buttons">
+      <a href="#" class="btn-primary">Partner With Us</a>
+      <a href="#" class="btn-outline">Watch Demo</a>
+    </div>
+  </div>
+
+  <div class="hero-phone-wrap">
+    <img src="assets/images/fintech_business_mob_09d37021.jpg" alt="Phone" class="hero-phone">
+  </div>
+
+  <div class="hero-trust-logos">
+    <img src="assets/images/visa.png">
+    <img src="assets/images/mastercard.png">
+    <img src="assets/images/applepay.png">
+  </div>
+</section>
+
+========================================
+ADD/REPLACE CSS FOR HERO:
+========================================
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+              url("assets/images/fintech_business_mob_09d37021.jpg") center/cover no-repeat;
+  min-height: 100vh;
+  padding: 160px 0 120px;
+  text-align: center;
+  position: relative;
+  color: #fff;
+}
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+.hero .highlight { color: #8e49f0; }
+.hero-buttons { display:flex; justify-content:center; gap:18px; margin-top:24px; }
+.btn-primary {
+  background:#8e49f0; padding:14px 34px; border-radius:8px; color:#fff; font-weight:600;
+}
+.btn-outline {
+  border:2px solid #fff; padding:14px 34px; border-radius:8px; color:#fff; font-weight:600;
+}
+.hero-phone-wrap {
+  margin-top:40px;
+}
+.hero-phone {
+  width: 350px;
+  border-radius: 12px;
+  display: block;
+  margin: 0 auto;
+}
+.hero-trust-logos img {
+  height:24px; margin:18px 6px; opacity:0.9;
+}
+
+========================================
+IMPORTANT:
+- DO NOT set the phone image as the section background
+- The section background must stay the blurred lifestyle hero image
+- The phone is an element, not a background
+- Remove any previously injected white-logo or hero HTML
+========================================
+
+After applying, output the updated hero EXACTLY as React displays.

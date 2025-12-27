@@ -1,0 +1,62 @@
+STOP. Compare the current HTML homepage directly to the React homepage screenshot.
+Do not re-convert. FIX the existing HTML to MATCH the React version pixel-for-pixel.
+
+These items MUST be corrected to match React:
+
+1️⃣ HERO SECTION (TOP BANNER)
+- Increase heading font size and weight to match React (same line breaks and spacing)
+- Apply the correct hero background image from React and include dark overlay for contrast
+- Align buttons on one line with equal spacing as React
+- Restore trust badges above and below hero exactly like the React version
+- Make the hero container centered vertically like React, not stretched
+
+2️⃣ METRICS ROW (3 TAGS AT TOP)
+- Restore small icon + text pill badges with gradient outlines
+- Match sizing, padding, spacing, and font-weight EXACTLY
+
+3️⃣ PAYMENT METHODS + SECURITY SECTION
+- Restore two-column layout like React version
+- Same icon sizes, spacing, left column "Payment Methods", right column "Security & Trust"
+
+4️⃣ HOW IT WORKS SECTION
+- Equal box height for steps: 01 - 02 - 03
+- Restore number typography, bold weight, and faded background box effect
+- Icons must match size and alignment in React
+
+5️⃣ INDUSTRY GRID
+- 6 boxes must be equal width with even padding, no wrapping or irregular spacing
+- Match React icon sizes, label weight, and card shadow
+
+6️⃣ WHY BUSINESSES CHOOSE SIMPLEBIT
+- Fix spacing between icon and text so the layout matches React
+- Align fonts, line height, and margin-bottom the same way
+
+7️⃣ DARK GRADIENT METRIC BANNER
+- Restore full gradient background like React (purple to black)
+- Center values in a 4-column layout
+- Match font sizes and spacing exactly
+
+8️⃣ TESTIMONIALS SECTION
+- Match card width, spacing, star rating layout, and avatar alignment
+- Typography must match React line-height, weight, spacing
+
+9️⃣ FINAL CTA SECTION
+- Add gradient background, correct padding, and button spacing from React
+- Restore bold heading and subheading formatting
+
+🔟 FOOTER
+- Reduce vertical padding to match React version
+- Align column headers and links properly
+
+====================================================
+REQUIREMENTS:
+✔ Do not delete sections
+✔ Do not simplify styles
+✔ Fix the existing HTML/CSS instead of rewriting from scratch
+✔ All fonts, sizing, colors, paddings, and layout must be matched to React
+✔ Hero section must look IDENTICAL before continuing
+
+====================================================
+DO THIS FIRST:
+Fix ONLY the hero section and stop. Show the updated code for just the hero.
+Wait for approval before adjusting the rest.
