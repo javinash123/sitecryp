@@ -360,30 +360,30 @@
             <div class="row g-5 text-center">
                 <div class="col-6 col-md-3" data-aos="fade-up">
                     <div class="stat-item">
-                        <i class="fas fa-clock fs-3 text-primary mb-3"></i>
-                        <h3 class="display-4 fw-bold mb-1 counter" data-target="10">0</h3>
+                        <i class="fas fa-clock fs-3 mb-3"></i>
+                        <h3 class="display-4 fw-bold mb-1"><span class="counter" data-target="10">0</span>s</h3>
                         <p class="text-white-50 small mb-0">Second Settlement</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="stat-item">
-                        <i class="fas fa-chart-line fs-3 text-primary mb-3"></i>
-                        <h3 class="display-4 fw-bold mb-1 counter" data-target="300">0</h3>
-                        <p class="text-white-50 small mb-0">Revenue Boost %</p>
+                        <i class="fas fa-chart-line fs-3 mb-3"></i>
+                        <h3 class="display-4 fw-bold mb-1"><span class="counter" data-target="300">0</span>%</h3>
+                        <p class="text-white-50 small mb-0">Revenue Boost</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
                     <div class="stat-item">
-                        <i class="fas fa-shield-alt fs-3 text-primary mb-3"></i>
-                        <h3 class="display-4 fw-bold mb-1 counter" data-target="99.9">0</h3>
-                        <p class="text-white-50 small mb-0">System Uptime %</p>
+                        <i class="fas fa-shield-alt fs-3 mb-3"></i>
+                        <h3 class="display-4 fw-bold mb-1"><span class="counter" data-target="99.9">0</span>%</h3>
+                        <p class="text-white-50 small mb-0">System Uptime</p>
                     </div>
                 </div>
                 <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
                     <div class="stat-item">
-                        <i class="fas fa-dollar-sign fs-3 text-primary mb-3"></i>
-                        <h3 class="display-4 fw-bold mb-1 counter" data-target="50">0</h3>
-                        <p class="text-white-50 small mb-0">Million Processed</p>
+                        <i class="fas fa-dollar-sign fs-3 mb-3"></i>
+                        <h3 class="display-4 fw-bold mb-1">$<span class="counter" data-target="50">0</span>M</h3>
+                        <p class="text-white-50 small mb-0">Processed</p>
                     </div>
                 </div>
             </div>
@@ -391,76 +391,188 @@
     </section>
 
     <!-- Testimonials -->
-    <section class="py-10 bg-light-gradient">
+    <section class="py-32 bg-white">
         <div class="container">
-            <div class="text-center max-w-3xl mx-auto mb-10">
-                <h2 class="display-5 fw-bold mb-3">What Merchants <span class="text-gradient">Are Saying</span></h2>
-                <p class="text-muted fs-5">Trusted by hundreds of businesses across the UAE. Real results from real partners.</p>
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="display-5 fw-bold mb-4">What Our <span class="text-gradient">Partners Say</span></h2>
+                <p class="text-muted fs-5">Empowering businesses across the UAE to thrive in the digital economy.</p>
             </div>
 
-            <div class="row g-4">
-                <div class="col-md-4" data-aos="fade-up">
-                    <div class="card h-100 border-0 shadow-sm p-4 rounded-xl">
-                        <div class="stars mb-3 text-warning">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+            <div class="row g-5">
+                <!-- Card 1 -->
+                <div class="col-lg-4" data-aos="fade-up">
+                    <div class="testimonial-card bg-slate-50 p-5 rounded-xl border border-black-08 position-relative overflow-hidden group" style="min-height: 500px;">
+                        <!-- Star Watermark -->
+                        <div class="position-absolute top-0 end-0 p-4 opacity-5 group-hover-opacity-10 transition-opacity" style="z-index: 1;">
+                            <i class="fas fa-star fa-10x text-primary"></i>
                         </div>
-                        <p class="fst-italic text-muted mb-4">"SimpleBit transformed our business. International customers can now pay with crypto, and we receive AED instantly."</p>
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 48px; height: 48px;">AR</div>
-                            <div>
-                                <h6 class="fw-bold mb-0">Ahmed Al-Rashid</h6>
-                                <p class="text-muted small mb-0">CEO, Rent Any Car Dubai</p>
+                        
+                        <!-- Star Rating -->
+                        <div class="stars mb-4 position-relative" style="z-index: 10;">
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                        </div>
+                        
+                        <!-- Quote -->
+                        <p class="text-base fw-medium mb-5 text-foreground position-relative" style="z-index: 10; min-height: 5rem;">"SimpleBit transformed our business. International customers can now pay with crypto, and we receive AED instantly."</p>
+                        
+                        <!-- Metrics -->
+                        <div class="row g-3 mb-5 p-4 bg-white rounded-lg position-relative" style="z-index: 10;">
+                            <div class="col-6 text-center">
+                                <div class="text-lg fw-bold text-primary">300%</div>
+                                <div class="text-xs text-muted fw-medium">Revenue Boost</div>
                             </div>
+                            <div class="col-6 text-center">
+                                <div class="text-lg fw-bold text-primary">10s</div>
+                                <div class="text-xs text-muted fw-medium">Checkout Speed</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Author Info with Border Top -->
+                        <div class="d-flex align-items-center justify-content-between position-relative pt-4 border-top border-black-08" style="z-index: 10;">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="avatar-square bg-primary text-white d-flex align-items-center justify-content-center fw-bold rounded-lg" style="width: 40px; height: 40px; flex-shrink: 0;">AR</div>
+                                <div>
+                                    <h6 class="fw-bold mb-0 fs-sm">Ahmed Al-Rashid</h6>
+                                    <p class="text-muted small mb-0">CEO, Rent Any Car Dubai</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Verified Badge -->
+                        <div class="position-absolute bottom-3 end-3" style="z-index: 10;">
+                            <span class="badge bg-primary-10 text-primary px-3 py-1 rounded-pill fw-bold" style="font-size: 0.7rem; background-color: rgba(142, 73, 240, 0.1);">Verified Partner</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card h-100 border-0 shadow-sm p-4 rounded-xl border-primary-10 bg-primary-5" style="background-color: rgba(142, 73, 240, 0.05);">
-                        <div class="stars mb-3 text-warning">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
+                <!-- Card 2 -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card bg-slate-50 p-5 rounded-xl border border-black-08 position-relative overflow-hidden group" style="min-height: 500px;">
+                        <!-- Star Watermark -->
+                        <div class="position-absolute top-0 end-0 p-4 opacity-5 group-hover-opacity-10 transition-opacity" style="z-index: 1;">
+                            <i class="fas fa-star fa-10x text-primary"></i>
                         </div>
-                        <p class="fst-italic text-muted mb-4">"The Apple Pay integration and instant AED settlement is game-changing. Our customers love the seamless experience."</p>
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 48px; height: 48px;">FZ</div>
-                            <div>
-                                <h6 class="fw-bold mb-0">Fatima Al-Zahra</h6>
-                                <p class="text-muted small mb-0">Owner, The Golden Fork</p>
+                        
+                        <!-- Star Rating -->
+                        <div class="stars mb-4 position-relative" style="z-index: 10;">
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                        </div>
+                        
+                        <!-- Quote -->
+                        <p class="text-base fw-medium mb-5 text-foreground position-relative" style="z-index: 10; min-height: 5rem;">"The Apple Pay integration and instant AED settlement is game-changing. Our customers love the seamless experience."</p>
+                        
+                        <!-- Metrics -->
+                        <div class="row g-3 mb-5 p-4 bg-white rounded-lg position-relative" style="z-index: 10;">
+                            <div class="col-6 text-center">
+                                <div class="text-lg fw-bold text-primary">45%</div>
+                                <div class="text-xs text-muted fw-medium">Sales Growth</div>
                             </div>
+                            <div class="col-6 text-center">
+                                <div class="text-lg fw-bold text-primary">5.0</div>
+                                <div class="text-xs text-muted fw-medium">Customer Rating</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Author Info with Border Top -->
+                        <div class="d-flex align-items-center justify-content-between position-relative pt-4 border-top border-black-08" style="z-index: 10;">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="avatar-square bg-primary text-white d-flex align-items-center justify-content-center fw-bold rounded-lg" style="width: 40px; height: 40px; flex-shrink: 0;">FZ</div>
+                                <div>
+                                    <h6 class="fw-bold mb-0 fs-sm">Fatima Al-Zahra</h6>
+                                    <p class="text-muted small mb-0">Owner, The Golden Fork</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Verified Badge -->
+                        <div class="position-absolute bottom-3 end-3" style="z-index: 10;">
+                            <span class="badge bg-primary-10 text-primary px-3 py-1 rounded-pill fw-bold" style="font-size: 0.7rem; background-color: rgba(142, 73, 240, 0.1);">Verified Partner</span>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card h-100 border-0 shadow-sm p-4 rounded-xl">
-                        <div class="stars mb-3 text-warning">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
+                <!-- Card 3 -->
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card bg-slate-50 p-5 rounded-xl border border-black-08 position-relative overflow-hidden group" style="min-height: 500px;">
+                        <!-- Star Watermark -->
+                        <div class="position-absolute top-0 end-0 p-4 opacity-5 group-hover-opacity-10 transition-opacity" style="z-index: 1;">
+                            <i class="fas fa-star fa-10x text-primary"></i>
                         </div>
-                        <p class="fst-italic text-muted mb-4">"Setup took 10 minutes. Enterprise security, zero hidden fees. Best fintech decision for the UAE market."</p>
-                        <div class="d-flex align-items-center gap-3">
-                            <div class="avatar bg-primary text-white rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width: 48px; height: 48px;">MH</div>
-                            <div>
-                                <h6 class="fw-bold mb-0">Mohammed Hassan</h6>
-                                <p class="text-muted small mb-0">Founder, TechFlow Solutions</p>
+                        
+                        <!-- Star Rating -->
+                        <div class="stars mb-4 position-relative" style="z-index: 10;">
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                            <i class="fas fa-star text-primary"></i>
+                        </div>
+                        
+                        <!-- Quote -->
+                        <p class="text-base fw-medium mb-5 text-foreground position-relative" style="z-index: 10; min-height: 5rem;">"Setup took 10 minutes. Enterprise security, zero hidden fees. Best fintech decision for the UAE market."</p>
+                        
+                        <!-- Metrics -->
+                        <div class="row g-3 mb-5 p-4 bg-white rounded-lg position-relative" style="z-index: 10;">
+                            <div class="col-6 text-center">
+                                <div class="text-lg fw-bold text-primary">&lt;1 hr</div>
+                                <div class="text-xs text-muted fw-medium">Integration Time</div>
                             </div>
+                            <div class="col-6 text-center">
+                                <div class="text-lg fw-bold text-primary">5.0</div>
+                                <div class="text-xs text-muted fw-medium">Support Quality</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Author Info with Border Top -->
+                        <div class="d-flex align-items-center justify-content-between position-relative pt-4 border-top border-black-08" style="z-index: 10;">
+                            <div class="d-flex align-items-center gap-3">
+                                <div class="avatar-square bg-primary text-white d-flex align-items-center justify-content-center fw-bold rounded-lg" style="width: 40px; height: 40px; flex-shrink: 0;">MH</div>
+                                <div>
+                                    <h6 class="fw-bold mb-0 fs-sm">Mohammed Hassan</h6>
+                                    <p class="text-muted small mb-0">Founder, TechFlow Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Verified Badge -->
+                        <div class="position-absolute bottom-3 end-3" style="z-index: 10;">
+                            <span class="badge bg-primary-10 text-primary px-3 py-1 rounded-pill fw-bold" style="font-size: 0.7rem; background-color: rgba(142, 73, 240, 0.1);">Verified Partner</span>
                         </div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Case Studies Link -->
+            <div class="mt-5 text-center" data-aos="fade-up" style="margin-top: 4rem;">
+                <a href="case-studies.html" class="text-primary fw-bold fs-5 text-decoration-none d-inline-flex align-items-center gap-2 group">
+                    Explore our case studies
+                    <i class="fas fa-arrow-right transition-transform group-hover-translate-x-1"></i>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Final CTA -->
-    <section class="py-10 bg-white">
+    <section class="py-32 bg-white">
         <div class="container">
-            <div class="rounded-4 overflow-hidden position-relative" style="border-radius: 2rem !important;">
-                <div class="bg-gradient-purple p-5 p-md-5 text-center text-white" style="background: linear-gradient(135deg, #1e1b4b, #7e22ce); padding: 5rem !important;">
+            <div class="rounded-4 overflow-hidden position-relative">
+                <div class="bg-gradient-purple text-center text-white" style="padding: 5rem 2rem;">
                     <div class="position-relative z-1" data-aos="zoom-in">
-                        <h2 class="display-4 fw-bold mb-4">Start Accepting Payments Today</h2>
-                        <p class="fs-5 mb-5 text-white-80 max-w-2xl mx-auto">Join the future of fintech in the UAE. Quick setup, instant AED payouts, and secure transactions for your business.</p>
+                        <h2 class="fw-bold mb-4">Start Accepting Payments Today</h2>
+                        <p class="fs-5 mb-5 text-white-80 mx-auto" style="max-width: 36rem;">Join the future of fintech in the UAE. Quick setup, instant AED payouts, and secure transactions for your business.</p>
                         <div class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-3">
-                            <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 fw-bold rounded-3 shadow-xl hover-scale w-100 w-sm-auto">
+                            <a href="contact.html" class="btn btn-light btn-lg px-5 py-3 fw-bold rounded-3 shadow-xl hover-scale" style="width: 100%; max-width: 200px;">
                                 Get Started Now
                             </a>
-                            <a href="pricing.html" class="btn btn-outline-light btn-lg px-5 py-3 rounded-3 hover-scale w-100 w-sm-auto">
+                            <a href="pricing.html" class="btn btn-outline-light btn-lg px-5 py-3 rounded-3 hover-scale" style="width: 100%; max-width: 200px;">
                                 View Pricing
                             </a>
                         </div>
