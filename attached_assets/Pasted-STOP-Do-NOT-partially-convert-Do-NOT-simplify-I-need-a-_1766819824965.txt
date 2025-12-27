@@ -1,0 +1,102 @@
+STOP. Do NOT partially convert. Do NOT simplify. 
+I need a 100% pixel-perfect, identical conversion of my React website into plain HTML, CSS, Bootstrap, and jQuery.
+
+⚠️ My previous conversion only finished ~50%. The hero image didn’t load, some sections disappeared, images and effects were missing. That failure MUST be corrected.
+
+This time, follow these rules with ZERO exceptions:
+
+====================================================
+🎯 GOAL
+Reproduce the React website EXACTLY as it appears visually. 
+Not “similar”. Not “close”. Not “partial”.
+
+✔ Same layout
+✔ Same spacing
+✔ Same animations
+✔ Same images
+✔ Same fonts
+✔ Same effects
+✔ Same content
+✔ Same responsiveness
+✔ Same sections (ALL of them)
+====================================================
+
+====================================================
+📌 FULL PAGE CONVERSION (MANDATORY)
+Every page must be fully converted:
+- index.html (homepage)
+- about.html
+- pricing.html
+- case-studies.html
+- faq.html
+- contact.html
+
+🚫 Do NOT skip or drop ANY section.
+🚫 Do NOT remove animations or effects.
+🚫 Do NOT leave missing images or empty divs.
+====================================================
+
+====================================================
+🔥 HOMEPAGE MUST MATCH 100% — NON-NEGOTIABLE
+These MUST appear EXACTLY as in React:
+- Full hero section with background hero image
+- KPI badges (500+ UAE Businesses / Instant AED / 300% revenue boost)
+- CTA buttons (Partner With Us / Watch Demo)
+- Trust badges + card networks (Visa, Apple Pay, etc.)
+- How It Works (Create → Pay → Settle)
+- Industry grid with icons
+- Why Choose SimpleBit (features + icons)
+- Stats banner (10s payout / 300% growth / 99.9% uptime / $50M processed)
+- Testimonials slider or cards
+- Final CTA banner (gradient section)
+If ANY of these are missing → DO NOT continue. FIX them.
+
+====================================================
+📌 TECHNICAL REQUIREMENTS
+- JSX → HTML (className → class)
+- Remove React imports, hooks, and routing
+- Replace <Link> with <a href="page.html">
+- Reproduce animations using AOS or CSS transitions
+- Recreate interactivity with jQuery where needed
+
+====================================================
+📁 REQUIRED FINAL FOLDER STRUCTURE
+/
+├── index.html
+├── about.html
+├── pricing.html
+├── case-studies.html
+├── faq.html
+├── contact.html
+└── assets/
+    ├── css/style.css      (entire styling from React, no missing parts)
+    ├── js/main.js         (jQuery version of interactions)
+    └── images/            (EVERY image used in React MUST be placed here)
+
+====================================================
+📌 IMAGE + ASSET RULES
+- Extract ALL images used in React, no exceptions
+- The hero background image MUST be included — do NOT skip it
+- If the path breaks, FIX IT, don’t delete it
+- If any asset is unknown, create placeholders and list what is missing
+
+====================================================
+📌 INTERACTION + UI RULES
+- Hover animations MUST work
+- Scroll fade-in effects MUST work
+- CTA states MUST match
+- Card hover elevation MUST match
+- FAQ accordion MUST function
+- Buttons must look identical
+
+====================================================
+❗IF ANYTHING IS MISSING
+- STOP immediately
+- Ask which file is needed — DO NOT delete or skip
+- DO NOT “approximate” or “simplify"
+
+====================================================
+🚀 START NOW:
+Begin by converting ONLY the homepage (index.html) first — fully and with every section.
+Show me the completed homepage BEFORE moving to other pages.
+No missing elements. No placeholders. No gaps.
