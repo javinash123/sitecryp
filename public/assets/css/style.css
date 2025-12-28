@@ -596,12 +596,41 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-mini-cta {
-  background-color: rgba(142, 73, 240, 0.03) !important;
+  background-color: hsla(280, 85%, 55%, 0.03) !important;
+  transition: all 0.5s ease;
+}
+
+.text-muted-foreground {
+  color: #64748b !important;
+}
+
+.hover-border-primary-20:hover {
+  border-color: hsla(280, 85%, 55%, 0.2) !important;
 }
 
 .hover-shadow-md:hover {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
 }
+
+.bg-primary-05 { background-color: hsla(280, 85%, 55%, 0.05) !important; }
+.hover-border-primary-30:hover { border-color: hsla(280, 85%, 55%, 0.3) !important; }
+.hover-bg-primary-10:hover { background-color: hsla(280, 85%, 55%, 0.1) !important; }
+.rounded-3xl { border-radius: 1.5rem !important; }
+.object-cover { object-fit: cover !important; }
+
+.w-24 { width: 6rem !important; }
+.h-24 { height: 6rem !important; }
+
+.text-muted-foreground-70 {
+  color: rgba(100, 116, 139, 0.7) !important;
+}
+
+.translate-middle-x {
+  transform: translateX(-50%) !important;
+}
+
+.border-black-03 { border-color: rgba(0, 0, 0, 0.03) !important; }
+.border-primary-20 { border-color: hsla(280, 85%, 55%, 0.2) !important; }
 
 /* General Spacing & Alignment */
 .py-32 {
