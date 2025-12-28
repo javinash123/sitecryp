@@ -640,12 +640,26 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center !important;
 }
 
-.bg-slate-50 {
-  background-color: #f1f5f9 !important;
+.bg-primary-05 {
+  background-color: rgba(142, 73, 240, 0.05) !important;
 }
 
-.border-black-08 {
-  border-color: rgba(0, 0, 0, 0.08) !important;
+.from-primary-05 {
+  --tw-gradient-from: rgba(142, 73, 240, 0.05) !important;
+  --tw-gradient-to: rgba(142, 73, 240, 0) !important;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to) !important;
+}
+
+.text-2xl {
+  font-size: 1.5rem !important;
+}
+
+.tracking-widest {
+  letter-spacing: 0.1em !important;
+}
+
+.uppercase {
+  text-transform: uppercase !important;
 }
 
 .group-hover-opacity-10:hover {
@@ -658,7 +672,19 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(142, 73, 240, 0.1) !important;
+    border-radius: 1.25rem !important;
 }
+
+.md\:p-12 {
+    padding: 3rem !important;
+}
+
+@media (max-width: 768px) {
+    .md\:p-12 {
+        padding: 2rem !important;
+    }
+}
+
 
 .bg-cta-gradient::before {
     content: '';
