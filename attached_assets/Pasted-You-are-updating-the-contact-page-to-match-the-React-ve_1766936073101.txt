@@ -1,0 +1,52 @@
+You are updating the contact page to match the React version accurately. Do not remove any content; just modify structure, spacing, and styling.
+
+Fix the Contact page using the following instructions:
+
+1. PAGE HEADER & TITLE
+- Increase heading size to match React.
+- Apply brand color #8E49F0 to the word "Payments Team".
+- Add proper spacing above and below the heading (80px top, 40px bottom).
+
+2. CONTACT INFO CARDS (LEFT SIDE)
+- Increase card padding to 22px.
+- Make icons circular, 48x48px, soft lavender background (#F7F2FF), brand icon color #8E49F0.
+- Round cards to 18px radius.
+- Add shadow: rgba(0,0,0,0.06) 0px 4px 12px.
+- Add spacing of 16px between cards.
+
+3. WHATSAPP CTA BUTTON
+- Full-width button, height 48px, rounded 10px.
+- Background: #20C056 (WhatsApp green).
+- Left-align icon, text centered, arrow on right.
+- Add small text below: “⚡ FASTEST RESPONSE FOR UAE BUSINESSES”.
+
+4. FORM CARD (RIGHT SIDE)
+- Increase container width slightly to match React scale.
+- Round corners to 24px.
+- Add soft shadow: rgba(0,0,0,0.07) 0px 8px 24px.
+- Add label spacing: 8px between label & input.
+- Inputs: 50px height, radius 10px, border #E6E6E6.
+- Add light gray background to dropdown rows: #FAFAFA.
+
+5. SUBMIT BUTTON (PURPLE)
+- Convert button to full width.
+- Color: #8E49F0 gradient to #732BDF.
+- Height: 52px, radius 10px, bold text.
+- Button text: “Submit & Get a Response Within 24 Hours”.
+
+6. RESPONSIVENESS
+- On mobile: stack columns.
+- Add 40px spacing between left and right sections.
+- Cards full width, no display issues.
+
+7. REMOVE / REPOSITION BUGS
+- Remove any leftover alignment issues.
+- Make sure "Made with Replit" badges remain if found, but reposition bottom right, not floating near dropdown.
+
+IMPORTANT RULES:
+- Do not delete real content, just restyle it.
+- Keep existing field names and structure.
+- Maintain file paths and dependencies.
+- Apply these changes ONLY to the contact page layout.
+
+Confirm final results by matching it to the reference React screenshot style.
