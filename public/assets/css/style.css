@@ -471,6 +471,60 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem !important;
+}
+
+.p-12 {
+  padding: 3rem !important;
+}
+
+.shadow-2xl {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+.bg-cta-gradient {
+  background: linear-gradient(135deg, rgba(142, 73, 240, 0.05) 0%, #ffffff 50%, rgba(142, 73, 240, 0.05) 100%) !important;
+  color: #1a1a2e !important;
+  border-radius: 1.5rem !important;
+}
+
+.bg-cta-gradient h2 {
+  color: #1a1a2e !important;
+}
+
+.bg-cta-gradient .text-white-80 {
+  color: #64748b !important;
+}
+
+.btn-outline-dashboard {
+  border: 1px solid rgba(142, 73, 240, 0.2) !important;
+  color: #8e49f0 !important;
+  background: transparent !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.btn-outline-dashboard:hover {
+  background-color: rgba(142, 73, 240, 0.05) !important;
+  border-color: #8e49f0 !important;
+  transform: scale(1.02) !important;
+}
+
+.btn-whatsapp {
+  background-color: #25D366 !important;
+  color: white !important;
+  border: none !important;
+}
+
+.btn-whatsapp:hover {
+  background-color: #128C7E !important;
+  color: white !important;
+}
+
+.p-md-16 {
+  padding: 4rem !important;
+}
+
 .bg-slate-50 {
   background-color: #f1f5f9 !important;
 }
