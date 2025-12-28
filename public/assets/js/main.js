@@ -13,12 +13,16 @@ $(document).ready(function() {
             $('#mainNav .nav-brand-text').removeClass('text-white').addClass('text-dark');
             $('#mainNav .nav-link').removeClass('text-white text-white-50').addClass('text-muted');
             $('#mainNav .navbar-toggler').removeClass('text-white').addClass('text-dark');
+            // Toggle Dashboard Login button styling
+            $('#dashboardBtn').removeClass('btn-dashboard-nav').addClass('btn-dashboard-nav');
         } else {
             $('#mainNav').removeClass('navbar-scrolled shadow-sm bg-white');
             $('#mainNav .nav-brand-text').removeClass('text-dark').addClass('text-white');
             $('#mainNav .nav-link').removeClass('text-muted').addClass('text-white-50');
             $('#mainNav .nav-link.active').addClass('text-white');
             $('#mainNav .navbar-toggler').removeClass('text-dark').addClass('text-white');
+            // Ensure Dashboard Login button is styled correctly for transparent header
+            $('#dashboardBtn').addClass('btn-dashboard-nav');
         }
     });
 

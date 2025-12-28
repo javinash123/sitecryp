@@ -715,6 +715,43 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.5s ease;
 }
 
+/* Dashboard Login Button in Navbar */
+.btn-dashboard-nav {
+  background-color: #8e49f0 !important;
+  color: white !important;
+  border: none !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  font-weight: 500;
+}
+
+.btn-dashboard-nav:hover {
+  background-color: #7a35dc !important;
+  transform: scale(1.05) !important;
+  box-shadow: 0 10px 25px rgba(142, 73, 240, 0.3) !important;
+  color: white !important;
+}
+
+/* Navbar scrolled state - Dashboard button should be white with primary text */
+.navbar-scrolled .btn-dashboard-nav {
+  background-color: white !important;
+  color: #8e49f0 !important;
+  box-shadow: 0 4px 6px rgba(142, 73, 240, 0.1) !important;
+}
+
+.navbar-scrolled .btn-dashboard-nav:hover {
+  background-color: #f5f3ff !important;
+  color: #7a35dc !important;
+  box-shadow: 0 10px 25px rgba(142, 73, 240, 0.2) !important;
+}
+
+.h-11 {
+  height: 2.75rem !important;
+}
+
+.h-12 {
+  height: 3rem !important;
+}
+
 .text-muted-foreground {
   color: #64748b !important;
 }
