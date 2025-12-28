@@ -42,24 +42,24 @@
   </nav>
 
   <!-- Contact Section -->
-  <section class="py-5" style="padding-top: 120px; padding-bottom: 80px;">
+  <section style="padding-top: 120px; padding-bottom: 80px;">
     <div class="container">
-      <div class="row g-5">
+      <div class="row g-5" style="align-items: flex-start;">
         <!-- Left Column -->
         <div class="col-lg-6">
-          <div class="mb-5">
+          <div style="margin-bottom: 48px;">
             <h1 class="display-5 fw-bold mb-3">Talk to Our <span class="text-gradient">Payments Team</span></h1>
             <p class="lead text-muted">Get fast support, demos, or onboarding guidance within 24 hours.</p>
           </div>
 
           <!-- Contact Cards -->
-          <div class="space-y-4">
+          <div style="display: flex; flex-direction: column; gap: 24px; margin-bottom: 48px;">
             <!-- Email -->
-            <div class="group d-flex gap-4 p-5 rounded-4 bg-white border border-slate-100 shadow-sm hover-shadow-md transition-all hover-border-primary-20" style="border-color: #e2e8f0;">
-              <div class="bg-primary-10 p-4 rounded-3 text-primary flex-shrink-0 transition-transform group-hover-scale-110" style="background-color: rgba(142, 73, 240, 0.1); width: 56px; height: 56px; display: flex; align-items: center; justify-content: center;">
+            <div class="group d-flex gap-4 p-6 rounded-4 bg-white border border-slate-100 shadow-sm" style="border-color: #e2e8f0; transition: all 0.3s ease;">
+              <div class="text-primary flex-shrink-0 transition-transform" style="background-color: rgba(142, 73, 240, 0.1); width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 16px; flex-shrink: 0;">
                 <i class="fas fa-envelope fs-5"></i>
               </div>
-              <div>
+              <div style="flex: 1;">
                 <h5 class="fw-bold mb-2">Email Us</h5>
                 <p class="text-muted fw-500 mb-1">hello@simplebit.ae</p>
                 <p class="text-slate-400 text-sm">support@simplebit.ae</p>
@@ -67,11 +67,11 @@
             </div>
 
             <!-- Address -->
-            <div class="group d-flex gap-4 p-5 rounded-4 bg-white border border-slate-100 shadow-sm hover-shadow-md transition-all hover-border-primary-20" style="border-color: #e2e8f0;">
-              <div class="bg-primary-10 p-4 rounded-3 text-primary flex-shrink-0 transition-transform group-hover-scale-110" style="background-color: rgba(142, 73, 240, 0.1); width: 56px; height: 56px; display: flex; align-items: center; justify-content: center;">
+            <div class="group d-flex gap-4 p-6 rounded-4 bg-white border border-slate-100 shadow-sm" style="border-color: #e2e8f0; transition: all 0.3s ease;">
+              <div class="text-primary flex-shrink-0 transition-transform" style="background-color: rgba(142, 73, 240, 0.1); width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 16px; flex-shrink: 0;">
                 <i class="fas fa-map-marker-alt fs-5"></i>
               </div>
-              <div>
+              <div style="flex: 1;">
                 <h5 class="fw-bold mb-2 d-flex align-items-center gap-2">
                   Visit Us 
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="color: #3b82f6;">
@@ -83,11 +83,11 @@
             </div>
 
             <!-- Phone -->
-            <div class="group d-flex gap-4 p-5 rounded-4 bg-white border border-slate-100 shadow-sm hover-shadow-md transition-all hover-border-primary-20" style="border-color: #e2e8f0;">
-              <div class="bg-primary-10 p-4 rounded-3 text-primary flex-shrink-0 transition-transform group-hover-scale-110" style="background-color: rgba(142, 73, 240, 0.1); width: 56px; height: 56px; display: flex; align-items: center; justify-content: center;">
+            <div class="group d-flex gap-4 p-6 rounded-4 bg-white border border-slate-100 shadow-sm" style="border-color: #e2e8f0; transition: all 0.3s ease;">
+              <div class="text-primary flex-shrink-0 transition-transform" style="background-color: rgba(142, 73, 240, 0.1); width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 16px; flex-shrink: 0;">
                 <i class="fas fa-phone fs-5"></i>
               </div>
-              <div>
+              <div style="flex: 1;">
                 <h5 class="fw-bold mb-2">Call Us</h5>
                 <p class="text-muted fw-500">+971 4 123 4567</p>
                 <p class="text-slate-400 text-sm italic">Mon-Fri, 9AM - 6PM GST</p>
@@ -96,8 +96,8 @@
           </div>
 
           <!-- WhatsApp CTA -->
-          <div class="mt-5">
-            <a href="https://wa.me/#" target="_blank" class="btn btn-success btn-lg w-100 fw-bold rounded-3 py-3 gap-2 d-flex align-items-center justify-content-center">
+          <div style="padding-top: 24px;">
+            <a href="https://wa.me/#" target="_blank" class="btn btn-success btn-lg w-100 fw-bold rounded-3 py-3 gap-2 d-flex align-items-center justify-content-center" style="height: 56px; background-color: #25D366;">
               <i class="fab fa-whatsapp"></i> Chat on WhatsApp
             </a>
             <p class="text-center text-muted small mt-3 fw-bold">⚡ Fastest response for UAE businesses</p>
@@ -107,50 +107,56 @@
         <!-- Right Column - Form -->
         <div class="col-lg-6">
           <div class="position-relative">
-            <div class="position-absolute -inset-4 rounded-5 blur-lg -z-1" style="background-color: rgba(142,73,240,0.05); border-radius: 2.5rem; width: calc(100% + 2rem); height: calc(100% + 2rem);"></div>
-            <div class="bg-white p-5 rounded-5 border border-slate-100 shadow-lg">
-              <div class="d-flex align-items-center gap-2 text-primary mb-4">
+            <div class="position-absolute" style="top: -16px; left: -16px; right: -16px; bottom: -16px; background-color: rgba(142,73,240,0.05); border-radius: 40px; filter: blur(32px); z-index: -1;"></div>
+            <div class="bg-white p-8 p-md-10 rounded-5 border border-slate-100 shadow-lg" style="border-radius: 40px;">
+              <div class="d-flex align-items-center gap-3 text-primary mb-8" style="margin-bottom: 32px;">
                 <i class="fas fa-clock"></i>
-                <span class="small fw-bold text-uppercase">Response in 24h</span>
+                <span class="small fw-bold text-uppercase tracking-wider">Response in 24h</span>
               </div>
 
-              <form id="contactForm" class="space-y-4">
-                <div class="row g-3 mb-3">
+              <form id="contactForm" style="display: flex; flex-direction: column; gap: 24px;">
+                <div class="row g-4" style="margin-bottom: 0;">
                   <div class="col-sm-6">
-                    <label class="form-label fw-500 mb-2">Name</label>
-                    <input type="text" class="form-control rounded-2" id="name" placeholder="Your name" required>
+                    <label class="form-label fw-bold text-slate-700" style="margin-bottom: 8px;">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="John Doe" style="height: 48px; border-radius: 12px; border-color: #cbd5e1;" required>
                   </div>
                   <div class="col-sm-6">
-                    <label class="form-label fw-500 mb-2">Email</label>
-                    <input type="email" class="form-control rounded-2" id="email" placeholder="your@email.com" required>
+                    <label class="form-label fw-bold text-slate-700" style="margin-bottom: 8px;">Work Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="john@company.com" style="height: 48px; border-radius: 12px; border-color: #cbd5e1;" required>
                   </div>
                 </div>
 
-                <div class="mb-3">
-                  <label class="form-label fw-500 mb-2">Company</label>
-                  <input type="text" class="form-control rounded-2" id="company" placeholder="Company name" required>
+                <div>
+                  <label class="form-label fw-bold text-slate-700" style="margin-bottom: 8px;">Company Name</label>
+                  <input type="text" class="form-control" id="company" placeholder="Acme Inc." style="height: 48px; border-radius: 12px; border-color: #cbd5e1;" required>
                 </div>
 
-                <div class="mb-3">
-                  <label class="form-label fw-500 mb-2">What can we help with?</label>
-                  <select class="form-select rounded-2" id="purpose" required>
-                    <option value="">Select an option...</option>
-                    <option value="integration">Integration Support</option>
-                    <option value="demo">Schedule Demo</option>
-                    <option value="enterprise">Enterprise Solution</option>
-                    <option value="support">Technical Support</option>
+                <div>
+                  <label class="form-label fw-bold text-slate-700" style="margin-bottom: 8px;">What do you need help with?</label>
+                  <select class="form-select" id="purpose" style="height: 48px; border-radius: 12px; border-color: #cbd5e1;" required>
+                    <option value="">Select purpose</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="accepting">Start accepting payments</option>
+                    <option value="integration">Integration / API support</option>
+                    <option value="enterprise">Enterprise pricing</option>
+                    <option value="compliance">Compliance & onboarding</option>
                     <option value="other">Other</option>
                   </select>
                 </div>
 
-                <div class="mb-4">
-                  <label class="form-label fw-500 mb-2">Message</label>
-                  <textarea class="form-control rounded-2" id="message" rows="4" placeholder="Tell us about your business..." required></textarea>
+                <div>
+                  <label class="form-label fw-bold text-slate-700" style="margin-bottom: 8px;">Message</label>
+                  <textarea class="form-control" id="message" rows="4" placeholder="Tell us about your business needs..." style="border-radius: 12px; border-color: #cbd5e1; min-height: 120px; resize: none; padding-top: 16px;" required></textarea>
                 </div>
 
-                <button type="submit" class="btn btn-primary w-100 fw-bold rounded-3 py-3">
-                  Send Message <i class="fas fa-arrow-right ms-2"></i>
-                </button>
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                  <button type="submit" class="btn btn-primary w-100 fw-bold" style="border-radius: 16px; height: 56px; font-size: 16px; background-color: #8e49f0;">
+                    Submit & Get a Response Within 24 Hours
+                  </button>
+                  <p class="text-center" style="font-size: 11px; color: #a1aab9; font-weight: 500; margin: 0;">
+                    <i class="fas fa-shield-alt"></i> Your information is secure. We do not share data with third parties.
+                  </p>
+                </div>
               </form>
             </div>
           </div>
