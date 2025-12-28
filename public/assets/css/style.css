@@ -485,33 +485,60 @@ h1, h2, h3, h4, h5, h6 {
 
 /* CTA Banner */
 .bg-cta-gradient {
-  background: linear-gradient(135deg, rgba(142, 73, 240, 0.05) 0%, #ffffff 50%, rgba(142, 73, 240, 0.05) 100%) !important;
+    background: linear-gradient(135deg, rgba(142, 73, 240, 0.05) 0%, #ffffff 50%, rgba(142, 73, 240, 0.05) 100%) !important;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(142, 73, 240, 0.1) !important;
+}
+
+.bg-cta-gradient::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(142, 73, 240, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
 }
 
 .btn-whatsapp {
-  background-color: #16a34a !important;
-  color: white !important;
-  border: none !important;
-  transition: all 0.3s ease;
+    background-color: #25D366 !important;
+    color: white !important;
+    border: none !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 .btn-whatsapp:hover {
-  background-color: #15803d !important;
-  transform: scale(1.05);
-  color: white !important;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    background-color: #22c35e !important;
+    transform: scale(1.02) !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1) !important;
 }
 
 .btn-outline-primary-custom {
-  border: 2px solid #8e49f0 !important;
-  color: #8e49f0 !important;
-  background: transparent !important;
-  transition: all 0.3s ease;
+    border: 1px solid rgba(142, 73, 240, 0.2) !important;
+    color: #8e49f0 !important;
+    background: transparent !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
 .btn-outline-primary-custom:hover {
-  background-color: rgba(142, 73, 240, 0.05) !important;
-  transform: scale(1.05);
+    background-color: rgba(142, 73, 240, 0.05) !important;
+    border-color: #8e49f0 !important;
+    transform: scale(1.02) !important;
+}
+
+.active-scale-95:active {
+    transform: scale(0.95) !important;
+}
+
+.whitespace-nowrap {
+    white-space: nowrap !important;
 }
 
 .bg-mini-cta {
