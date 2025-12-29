@@ -88,10 +88,9 @@ export default function Hero() {
 
           {/* Right Side - Generated Mockup */}
           <motion.div
-            variants={item}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
+            initial={{ opacity: 0, scale: 0.8, x: 100 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
+            transition={{ delay: 0.4, duration: 1, ease: "easeOut" }}
             className="hero-right-content"
           >
             <div className="hero-image-wrapper">

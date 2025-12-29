@@ -1,0 +1,65 @@
+I want to deploy this on my aws ec2 instance server to showcase to the client and other users. I had generated the build earlier also for this project. It will be deployed on this url - http://3.208.52.220/simplebit/ , it will be in simplebit folder, i need only frontend build. the build folder should be ready to deploy.
+
+SimpleBit Merchant Dashboard
+Manage your crypto payments with SimpleBit
+ 
+developerpriya5@gmail.com
+ 
+ 
+ 
+https://a048a38d-fd6e-4d80-9fd8-fb3255f44195-00-llkzsa8a6n1t.spock.replit.dev/
+SimpleBit Merchant Dashboard
+Manage your crypto payments with SimpleBit
+ 
+dist (1).zip
+ 
+https://testflight.apple.com/v1/invite/57952787ded34c9bb41db55282c1b83b6c2c55911a594640801ff7df6e01779f1835a7f77?ct=8739SDBDQ6&advp=10000&platform=ios
+Join the YU4C beta
+Available on iOS
+ 
+https://69a19afb-ff96-4d2e-8862-5fe31d0252a9-00-t0kta6bmkzte.riker.replit.dev/dashboard
+SimpleBit Merchant Dashboard
+Manage your crypto payments with SimpleBit
+ 
+Admin login kya h 
+User 
+admin@pegslam.co.uk
+ 
+admin123
+ 
+User login - 
+ 
+procodeitservices@gmail.com 
+111111
+ 
+simplebit.zip
+ 
+currently Fornt:    Annie use your telescope
+ 
+font:  ----- delius
+ 
+https://ys18.co.in/the-designer/
+ 
+molengo
+ 
+procodedevaws.ppk
+ 
+spectral
+ 
+Capture3.PNG
+Capture2.PNG
+Capture 1.png
+ 
+fishing49@aarnaitservices.com
+Abc@123#
+ 
+I want to design a website for my fintech business. I should be mobile friendly, fully responsive website. I want to strictly design it using HTML, CSS, Bootstrap, Javascript and jQuery only, I dont need it to be designed using React and Vite. I need this website to be in light mode only. The name of the website will be SimpleBit use the logo and color from the reference link - https://app--simple-bit-8911b974.base44.app/ , also this website https://app--simple-bit-8911b974.base44.app/ can be used for all the content that will be required in the website. We are looking something like stripe very professional and our business competitior websites are - https://www.zbooni.com/ and https://ziina.com/ , In the header use the logo from the reference link, also the color combination should be as per the logo color only in the website, we will have Home, About, Features, Case Studies, FAQ, COntact and a button for Partner With Us. And in footer we should have light gray as the background color,  all the header menus will be there and at the bottom along with copyright line Privacy Policy and Terms Of Services option should be there. There will be following pages in the website -
+ 
+1. Home - It should have a image as the hero section , image should start from top of the header,header should be above to it and having two buttons Partner With Us and Watch Demo. Then we should have TRUSTED BY 500+ UAE BUSINESSES with there logo and name, below to this we should have how it works with modern and unique design. Then why business choose us section, below to it a banner section with statistics, then we should have success stories section, then perfect for which industries section, then a banner to partner with us.
+SimpleBit
+Effortlessly accept crypto, cards, and Apple Pay, settling instantly in AED. Built for businesses of every size to unlock new revenue streams.
+ 
+Hi Avinash Looks like all the old issues are resolved But we see some major issue in sos button. 1. Getting approval before call 2. cloud upload is taking very long time even for 3 sec video 3.we expect to upload the video in chunks to avoid this last minute upload issue 4.most of the time sms is not getting triggered 5.sms is not have the required details
+ 
+PegSlamMobile 3.zip
+ 
