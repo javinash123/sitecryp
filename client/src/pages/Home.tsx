@@ -3,13 +3,13 @@ import { ArrowRight, CheckCircle2, Play, Shield, Zap, Globe, BarChart3, Trending
 import { SiVisa, SiMastercard, SiApplepay, SiBitcoin } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import mobilePaymentMockup from "@assets/generated_images/mobile_invoice_payment_screen_mockup.png";
-import laptopDashboardMockup from "@assets/generated_images/laptop_dashboard_analytics_screen_mockup.png";
 import { Link } from "wouter";
-import { RotatingFeatures } from "@/components/RotatingFeatures";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { AnimatedCryptoGlobe } from "@/components/AnimatedCryptoGlobe";
+// @ts-ignore
+import Hero from "@/components/Hero.jsx";
 import { useState, useEffect } from "react";
 
 export default function Home() {
@@ -118,122 +118,8 @@ export default function Home() {
         <Navbar isTransparent={!isScrolled} />
       </div>
 
-      {/* Hero Section - Stripe Style */}
-      <section className="relative min-h-screen pt-24 pb-20 overflow-hidden flex items-center bg-white">
-        {/* Diagonal gradient with wave animation - behind everything */}
-        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-          <div 
-            className="absolute inset-0 hero-wave"
-            style={{
-              background: 'linear-gradient(135deg, #d946ef 0%, #c084fc 25%, #a855f7 50%, #9333ea 75%, #7e22ce 100%)',
-              clipPath: 'polygon(100% 0, 100% 100%, 0 100%, 0 0)',
-            }}
-          />
-        </div>
-
-        {/* Content Container */}
-        <div className="container relative z-10 px-4 md:px-6 mx-auto w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen pt-20 lg:pt-0 relative z-20">
-            {/* Left Side - Content */}
-            <motion.div 
-              variants={container}
-              initial="hidden"
-              animate="show"
-              className="space-y-8 lg:space-y-10"
-            >
-              {/* Rotating Features Ticker */}
-              <motion.div variants={item}>
-                <RotatingFeatures />
-              </motion.div>
-
-              {/* Main Heading */}
-              <motion.h1 
-                variants={item} 
-                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.2]"
-              >
-                The Future of Business Payments in <span className="text-primary">AED</span>.
-              </motion.h1>
-
-              {/* Subheading */}
-              <motion.p 
-                variants={item} 
-                className="text-base md:text-lg text-foreground/85 leading-relaxed font-medium max-w-xl"
-              >
-                Accept Crypto, Cards & Apple Pay — Settle Instantly in AED.
-              </motion.p>
-
-              {/* CTA Buttons */}
-              <motion.div 
-                variants={item} 
-                className="flex flex-col gap-4 md:flex-row md:items-center md:gap-4 pt-4"
-              >
-                <Link href="/contact" className="w-full md:w-auto">
-                  <Button 
-                    size="lg" 
-                    className="h-12 md:h-14 px-8 md:px-12 text-base md:text-lg bg-primary text-white hover:bg-primary/90 shadow-xl hover:shadow-2xl transition-all font-bold w-full hover:scale-105 active:scale-95 duration-200"
-                    data-testid="button-hero-partner"
-                  >
-                    Partner With Us <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5" />
-                  </Button>
-                </Link>
-                <Link href="/contact" className="w-full md:w-auto">
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="h-12 md:h-14 px-8 md:px-12 text-base md:text-lg border-primary text-primary hover:bg-primary/10 w-full hover:scale-105 active:scale-95 duration-200"
-                    data-testid="button-hero-demo"
-                  >
-                    <Play className="mr-2 h-3 md:h-4 w-3 md:w-4 fill-current" /> Watch Demo
-                  </Button>
-                </Link>
-              </motion.div>
-            </motion.div>
-
-            {/* Right Side - Device Mockups (Content Only) */}
-            <motion.div 
-              variants={item}
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4, duration: 0.8 }}
-              className="hidden lg:flex items-center justify-center relative h-full"
-            >
-              <div className="relative w-full h-full flex items-center justify-center">
-                {/* Mobile Screen Content - Positioned to the left */}
-                <motion.div
-                  animate={{ y: [0, -10, 0] }}
-                  transition={{ duration: 4, repeat: Infinity }}
-                  className="absolute left-0 z-20 device-shadow"
-                  style={{ width: '280px' }}
-                >
-                  <div className="rounded-3xl overflow-hidden shadow-2xl">
-                    <img 
-                      src={mobilePaymentMockup} 
-                      alt="Invoice Payment Screen" 
-                      className="w-full h-auto"
-                    />
-                  </div>
-                </motion.div>
-
-                {/* Laptop Screen Content - Positioned to the right and back */}
-                <motion.div
-                  animate={{ y: [0, 10, 0] }}
-                  transition={{ duration: 4, repeat: Infinity, delay: 0.2 }}
-                  className="absolute right-0 z-10 device-shadow"
-                  style={{ width: '480px', transform: 'translateX(40px)' }}
-                >
-                  <div className="rounded-2xl overflow-hidden shadow-2xl">
-                    <img 
-                      src={laptopDashboardMockup} 
-                      alt="Dashboard Analytics" 
-                      className="w-full h-auto"
-                    />
-                  </div>
-                </motion.div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      {/* Hero Section */}
+      <Hero />
 
       {/* Feature Chips & Compliance Strip */}
       <section className="bg-gradient-to-b from-white/50 to-white border-b py-12">
@@ -473,44 +359,98 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-32 bg-slate-950 text-white relative overflow-hidden">
+      <section className="py-48 bg-slate-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary blur-[120px] rounded-full"></div>
           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600 blur-[120px] rounded-full"></div>
         </div>
         
         <div className="container relative z-10 px-4 md:px-6 mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-            {[
-              { val: 10, label: "Second Settlement", suffix: "s", icon: Clock },
-              { val: 300, label: "Revenue Boost", suffix: "%", icon: TrendingUp },
-              { val: 99.9, label: "System Uptime", suffix: "%", icon: Shield },
-              { val: 50, label: "Million Processed", prefix: "$", icon: DollarSign }
-            ].map((stat, i) => {
-              const IconComponent = stat.icon;
-              return (
-                <motion.div 
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[600px]">
+            {/* Left Side - Content & Stats */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="space-y-12"
+            >
+              {/* Section Header */}
+              <div className="space-y-4">
+                <motion.p 
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.1 }}
+                  className="text-xs font-semibold uppercase tracking-widest text-primary"
+                >
+                  Our Impact
+                </motion.p>
+                <motion.h2 
+                  initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: i * 0.1 }}
-                  className="text-center"
+                  transition={{ delay: 0.2 }}
+                  className="text-4xl md:text-5xl font-bold leading-tight"
                 >
-                  <div className="flex justify-center mb-4">
-                    <IconComponent className="w-10 h-10 text-primary" />
-                  </div>
-                  <div className="text-4xl md:text-5xl font-bold mb-2">
-                    <AnimatedCounter 
-                      value={stat.val} 
-                      prefix={stat.prefix} 
-                      suffix={stat.suffix} 
-                    />
-                  </div>
-                  <p className="text-white/70">{stat.label}</p>
-                </motion.div>
-              );
-            })}
+                  Powering <span className="text-gradient">Fintech Innovation</span> in the UAE
+                </motion.h2>
+                <motion.p 
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: 0.3 }}
+                  className="text-lg text-white/70 max-w-xl leading-relaxed"
+                >
+                  SimpleBit is revolutionizing how businesses accept payments by seamlessly integrating cryptocurrency, traditional cards, and Apple Pay. Our platform delivers instant AED settlement and enterprise-grade security, enabling 500+ UAE businesses to grow faster and reach global customers.
+                </motion.p>
+              </div>
+
+              {/* Stats Grid */}
+              <div className="grid grid-cols-2 gap-8">
+                {[
+                  { val: 10, label: "Second Settlement", suffix: "s", icon: Clock },
+                  { val: 300, label: "Revenue Boost", suffix: "%", icon: TrendingUp },
+                  { val: 99.9, label: "System Uptime", suffix: "%", icon: Shield },
+                  { val: 50, label: "Million Processed", prefix: "$", icon: DollarSign }
+                ].map((stat, i) => {
+                  const IconComponent = stat.icon;
+                  return (
+                    <motion.div 
+                      key={i}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.4 + i * 0.1 }}
+                      className="p-6 rounded-lg bg-white/10 backdrop-blur-sm border border-white/10 hover:border-primary/50 transition-all hover:bg-white/[0.15]"
+                    >
+                      <div className="flex items-center gap-3 mb-3">
+                        <IconComponent className="w-6 h-6 text-primary flex-shrink-0" />
+                        <p className="text-sm text-white/70">{stat.label}</p>
+                      </div>
+                      <div className="text-3xl md:text-4xl font-bold">
+                        <AnimatedCounter 
+                          value={stat.val} 
+                          prefix={stat.prefix} 
+                          suffix={stat.suffix} 
+                        />
+                      </div>
+                    </motion.div>
+                  );
+                })}
+              </div>
+            </motion.div>
+
+            {/* Right Side - Animated Crypto Globe */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="h-full min-h-[500px] hidden lg:flex items-center justify-center"
+            >
+              <AnimatedCryptoGlobe />
+            </motion.div>
           </div>
         </div>
       </section>
