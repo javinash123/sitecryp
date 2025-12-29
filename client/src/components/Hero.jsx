@@ -3,7 +3,7 @@ import { ArrowRight, Play, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { RotatingFeatures } from "@/components/RotatingFeatures";
-import heroMockup from "@assets/generated_images/stripe-style_fintech_hero_product_mockup.png";
+import heroMockup from "@assets/simpleimage-removebg-preview_1767017314547.png";
 import "../assets/css/hero.css";
 import "../assets/css/deviceFrames.css";
 
