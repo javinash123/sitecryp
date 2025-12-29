@@ -3,7 +3,8 @@ import { ArrowRight, CheckCircle2, Play, Shield, Zap, Globe, BarChart3, Trending
 import { SiVisa, SiMastercard, SiApplepay, SiBitcoin } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import heroBg from "@assets/stock_images/fintech_business_mob_09d37021.jpg";
+import mobilePaymentMockup from "@assets/generated_images/mobile_invoice_payment_screen_mockup.png";
+import laptopDashboardMockup from "@assets/generated_images/laptop_dashboard_analytics_screen_mockup.png";
 import { Link } from "wouter";
 import { RotatingFeatures } from "@/components/RotatingFeatures";
 import { AnimatedCounter } from "@/components/AnimatedCounter";
@@ -112,117 +113,125 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen overflow-x-hidden">
-      {/* Hero Section with Transparent Navbar */}
-      <section className="relative min-h-screen pt-40 pb-32 overflow-hidden flex items-center">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src={heroBg} 
-            alt="Background" 
-            className="w-full h-full object-cover"
+      {/* Fixed Navbar */}
+      <div className="fixed top-0 left-0 right-0 z-50">
+        <Navbar isTransparent={!isScrolled} />
+      </div>
+
+      {/* Hero Section - Stripe Style */}
+      <section className="relative min-h-screen pt-24 pb-20 overflow-hidden flex items-center bg-white">
+        {/* Diagonal gradient with wave animation - behind everything */}
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <div 
+            className="absolute inset-0 hero-wave"
+            style={{
+              background: 'linear-gradient(135deg, #d946ef 0%, #c084fc 25%, #a855f7 50%, #9333ea 75%, #7e22ce 100%)',
+              clipPath: 'polygon(100% 0, 100% 100%, 0 100%, 0 0)',
+            }}
           />
-          <div className="absolute inset-0 bg-gradient-to-tr from-black/95 via-black/75 to-primary/20 z-10" />
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_10%,_rgba(0,0,0,0.7)_100%)] z-10" />
-          <div className="absolute bottom-0 right-0 w-2/3 h-2/3 bg-gradient-to-tl from-black/40 to-transparent z-10 pointer-events-none" />
         </div>
-        
-        {/* Dynamic Navbar */}
-        <div className="fixed top-0 left-0 right-0 z-50">
-          <Navbar isTransparent={!isScrolled} />
-        </div>
-        
-        <div className="container relative z-10 px-4 md:px-6 mx-auto h-full flex items-center">
-          <motion.div 
-            variants={container}
-            initial="hidden"
-            animate="show"
-            className="max-w-5xl mx-auto text-center space-y-14 w-full"
-          >
-            {/* KPI Line */}
+
+        {/* Content Container */}
+        <div className="container relative z-10 px-4 md:px-6 mx-auto w-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-screen pt-20 lg:pt-0 relative z-20">
+            {/* Left Side - Content */}
+            <motion.div 
+              variants={container}
+              initial="hidden"
+              animate="show"
+              className="space-y-8 lg:space-y-10"
+            >
+              {/* Rotating Features Ticker */}
+              <motion.div variants={item}>
+                <RotatingFeatures />
+              </motion.div>
+
+              {/* Main Heading */}
+              <motion.h1 
+                variants={item} 
+                className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground leading-[1.2]"
+              >
+                The Future of Business Payments in <span className="text-primary">AED</span>.
+              </motion.h1>
+
+              {/* Subheading */}
+              <motion.p 
+                variants={item} 
+                className="text-base md:text-lg text-foreground/85 leading-relaxed font-medium max-w-xl"
+              >
+                Accept Crypto, Cards & Apple Pay — Settle Instantly in AED.
+              </motion.p>
+
+              {/* CTA Buttons */}
+              <motion.div 
+                variants={item} 
+                className="flex flex-col gap-4 md:flex-row md:items-center md:gap-4 pt-4"
+              >
+                <Link href="/contact" className="w-full md:w-auto">
+                  <Button 
+                    size="lg" 
+                    className="h-12 md:h-14 px-8 md:px-12 text-base md:text-lg bg-primary text-white hover:bg-primary/90 shadow-xl hover:shadow-2xl transition-all font-bold w-full hover:scale-105 active:scale-95 duration-200"
+                    data-testid="button-hero-partner"
+                  >
+                    Partner With Us <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5" />
+                  </Button>
+                </Link>
+                <Link href="/contact" className="w-full md:w-auto">
+                  <Button 
+                    size="lg" 
+                    variant="outline" 
+                    className="h-12 md:h-14 px-8 md:px-12 text-base md:text-lg border-primary text-primary hover:bg-primary/10 w-full hover:scale-105 active:scale-95 duration-200"
+                    data-testid="button-hero-demo"
+                  >
+                    <Play className="mr-2 h-3 md:h-4 w-3 md:w-4 fill-current" /> Watch Demo
+                  </Button>
+                </Link>
+              </motion.div>
+            </motion.div>
+
+            {/* Right Side - Device Mockups (Content Only) */}
             <motion.div 
               variants={item}
-              className="flex flex-wrap justify-center items-center gap-6 text-white/80 text-xs md:text-sm lg:text-base font-medium"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="hidden lg:flex items-center justify-center relative h-full"
             >
-              <motion.span 
-                className="flex items-center gap-2 group cursor-default px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors"
-                whileHover={{ scale: 1.05 }}
-              >
-                <span className="w-2 h-2 rounded-full bg-primary group-hover:scale-150 transition-transform"></span>
-                <span>Trusted by 500+ UAE businesses</span>
-              </motion.span>
-              <span className="text-white/30 hidden sm:inline">•</span>
-              <motion.span 
-                className="flex items-center gap-2 group cursor-default px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors"
-                whileHover={{ scale: 1.05 }}
-              >
-                <span className="w-2 h-2 rounded-full bg-primary group-hover:scale-150 transition-transform"></span>
-                <span>AED payouts in seconds</span>
-              </motion.span>
-              <span className="text-white/30 hidden sm:inline">•</span>
-              <motion.span 
-                className="flex items-center gap-2 group cursor-default px-3 py-1.5 rounded-full hover:bg-white/10 transition-colors"
-                whileHover={{ scale: 1.05 }}
-              >
-                <span className="w-2 h-2 rounded-full bg-primary group-hover:scale-150 transition-transform"></span>
-                <span>Up to 300% revenue boost</span>
-              </motion.span>
-            </motion.div>
-
-            <motion.div variants={item}>
-              <RotatingFeatures />
-            </motion.div>
-            
-            <motion.h1 
-              variants={item} 
-              className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.25] px-4"
-            >
-              The Future of Business <br className="hidden md:block" />
-              Payments in <span className="text-primary">AED</span>.
-            </motion.h1>
-            
-            <motion.p 
-              variants={item} 
-              className="text-base md:text-lg text-white/85 max-w-2xl mx-auto leading-relaxed font-medium px-4"
-            >
-              Accept Crypto, Cards & Apple Pay — Settle Instantly in AED.
-            </motion.p>
-            
-            {/* CTA Buttons - Stacked on Mobile */}
-            <motion.div 
-              variants={item} 
-              className="flex flex-col gap-3 md:flex-row md:items-center md:justify-center md:gap-4 px-4"
-            >
-              <Link href="/contact" className="w-full md:w-auto">
-                <Button 
-                  size="lg" 
-                  className="h-12 md:h-14 px-8 md:px-12 text-base md:text-lg bg-primary text-white hover:bg-primary/90 shadow-xl hover:shadow-2xl transition-all font-bold w-full hover:scale-105 active:scale-95 duration-200"
-                  data-testid="button-hero-partner"
+              <div className="relative w-full h-full flex items-center justify-center">
+                {/* Mobile Screen Content - Positioned to the left */}
+                <motion.div
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 4, repeat: Infinity }}
+                  className="absolute left-0 z-20 device-shadow"
+                  style={{ width: '280px' }}
                 >
-                  Partner With Us <ArrowRight className="ml-2 h-4 md:h-5 w-4 md:w-5" />
-                </Button>
-              </Link>
-              <Link href="/contact" className="w-full md:w-auto">
-                <Button 
-                  size="lg" 
-                  variant="outline" 
-                  className="h-12 md:h-14 px-8 md:px-12 text-base md:text-lg border-white/40 text-white hover:bg-white/20 backdrop-blur-sm w-full hover:scale-105 active:scale-95 duration-200"
-                  data-testid="button-hero-demo"
-                >
-                  <Play className="mr-2 h-3 md:h-4 w-3 md:w-4 fill-current" /> Watch Demo
-                </Button>
-              </Link>
-            </motion.div>
+                  <div className="rounded-3xl overflow-hidden shadow-2xl">
+                    <img 
+                      src={mobilePaymentMockup} 
+                      alt="Invoice Payment Screen" 
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </motion.div>
 
-            {/* Payment Methods */}
-            <motion.div variants={item} className="space-y-6">
-              <p className="text-white/50 text-xs font-semibold uppercase tracking-widest">Supported by global payment networks</p>
-              <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 grayscale invert opacity-70 hover:opacity-100 transition-opacity duration-500">
-                <SiVisa className="w-10 md:w-12 h-10 md:h-12" title="Visa" />
-                <SiMastercard className="w-8 md:w-10 h-8 md:h-10" title="Mastercard" />
-                <SiApplepay className="w-11 md:w-14 h-11 md:h-14" title="Apple Pay" />
-                <SiBitcoin className="w-8 md:w-10 h-8 md:h-10" title="Crypto" />
+                {/* Laptop Screen Content - Positioned to the right and back */}
+                <motion.div
+                  animate={{ y: [0, 10, 0] }}
+                  transition={{ duration: 4, repeat: Infinity, delay: 0.2 }}
+                  className="absolute right-0 z-10 device-shadow"
+                  style={{ width: '480px', transform: 'translateX(40px)' }}
+                >
+                  <div className="rounded-2xl overflow-hidden shadow-2xl">
+                    <img 
+                      src={laptopDashboardMockup} 
+                      alt="Dashboard Analytics" 
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </motion.div>
               </div>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -486,21 +495,19 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="text-center group"
+                  className="text-center"
                 >
                   <div className="flex justify-center mb-4">
-                    <div className="p-4 bg-white/5 rounded-xl group-hover:bg-primary/20 transition-colors">
-                      <IconComponent className="w-8 h-8 text-primary" />
-                    </div>
+                    <IconComponent className="w-10 h-10 text-primary" />
                   </div>
-                  <div className="font-bold text-4xl md:text-5xl lg:text-6xl mb-3 font-heading tracking-tight">
+                  <div className="text-4xl md:text-5xl font-bold mb-2">
                     <AnimatedCounter 
                       value={stat.val} 
-                      suffix={stat.suffix}
-                      prefix={stat.prefix}
+                      prefix={stat.prefix} 
+                      suffix={stat.suffix} 
                     />
                   </div>
-                  <div className="text-white/50 font-semibold text-xs uppercase tracking-widest">{stat.label}</div>
+                  <p className="text-white/70">{stat.label}</p>
                 </motion.div>
               );
             })}
@@ -508,234 +515,56 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials - Enhanced with Metrics */}
+      {/* Testimonials Section */}
       <section className="py-32 bg-white">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-20">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">What Our <span className="text-gradient">Partners Say</span></h2>
+            <h2 className="text-3xl md:text-5xl font-bold mb-4">Loved by <span className="text-gradient">Business Leaders</span></h2>
             <p className="text-muted-foreground text-lg">
-              Empowering businesses across the UAE to thrive in the digital economy.
+              See how SimpleBit is transforming payments for UAE businesses.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: i * 0.15 }}
-                className="bg-slate-50 p-8 md:p-10 rounded-xl border border-black/[0.08] relative overflow-hidden group hover:shadow-lg hover:shadow-primary/5 hover:border-primary/20 transition-all duration-500"
+                transition={{ delay: i * 0.1 }}
+                className="p-8 rounded-xl bg-gradient-to-br from-white to-primary/5 border border-primary/10 hover:border-primary/30 hover:shadow-lg transition-all"
               >
-                <div className="absolute top-0 right-0 p-8 opacity-5 group-hover:opacity-10 transition-opacity">
-                  <Star className="w-32 h-32 fill-primary text-primary" />
-                </div>
-                
-                {/* Star Rating */}
-                <div className="flex gap-1 mb-6 relative z-10">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <motion.div
-                      key={s}
-                      initial={{ scale: 0 }}
-                      whileInView={{ scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: i * 0.15 + (s * 0.05) }}
-                    >
-                      <Star className="w-4 h-4 fill-primary text-primary" />
-                    </motion.div>
+                <div className="flex gap-1 mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
                   ))}
                 </div>
-
-                {/* Quote */}
-                <p className="text-base font-medium mb-8 leading-relaxed relative z-10 min-h-20">
+                <p className="text-foreground font-medium mb-6 leading-relaxed">
                   "{testimonial.quote}"
                 </p>
-
-                {/* Metrics */}
-                <div className="grid grid-cols-2 gap-4 mb-8 p-4 bg-white rounded-lg relative z-10">
-                  {testimonial.metrics.map((metric, idx) => (
-                    <div key={idx} className="text-center">
-                      <div className="text-lg font-bold text-primary">{metric.value}</div>
-                      <div className="text-xs text-muted-foreground font-medium">{metric.label}</div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Author Info */}
-                <div className="flex items-center justify-between relative z-10 pt-6 border-t border-black/[0.08]">
-                  <div className="flex items-center gap-3">
-                    <div className="h-10 w-10 rounded-lg bg-primary text-white flex items-center justify-center font-bold text-sm shadow-md">
+                <div className="border-t border-primary/10 pt-6">
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">
                       {testimonial.avatar}
                     </div>
                     <div>
-                      <div className="font-bold text-sm">{testimonial.name}</div>
-                      <div className="text-xs text-muted-foreground">{testimonial.role}</div>
+                      <p className="font-bold text-foreground text-sm">{testimonial.name}</p>
+                      <p className="text-xs text-muted-foreground">{testimonial.role}</p>
                     </div>
                   </div>
-                  <div className="text-xs font-bold uppercase tracking-wider text-primary bg-primary/10 px-3 py-1 rounded-full">
-                    Verified Partner
+                  <div className="grid grid-cols-2 gap-4">
+                    {testimonial.metrics.map((metric, j) => (
+                      <div key={j}>
+                        <p className="text-lg font-bold text-primary">{metric.value}</p>
+                        <p className="text-xs text-muted-foreground">{metric.label}</p>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </motion.div>
             ))}
           </div>
-
-          {/* Case Studies Link */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: 0.5 }}
-            className="mt-16 text-center"
-          >
-            <Link href="/case-studies">
-              <Button variant="link" className="p-0 h-auto text-primary font-bold text-lg hover:no-underline group" data-testid="link-case-studies">
-                Explore our case studies <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </Link>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Security Section - Dedicated Mini Strip */}
-      <section className="bg-slate-50/60 border-y border-black/[0.05] py-10">
-        <div className="container px-4 md:px-6 mx-auto">
-          <p className="text-center text-xs font-bold text-muted-foreground uppercase tracking-widest mb-8">
-            Enterprise Grade Security & Compliance
-          </p>
-          <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              className="flex items-center gap-2 text-sm font-medium text-foreground group"
-            >
-              <Shield className="w-4 h-4 text-primary group-hover:scale-125 transition-transform" />
-              <span>PCI-DSS Compliant</span>
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="flex items-center gap-2 text-sm font-medium text-foreground group"
-            >
-              <Lock className="w-4 h-4 text-primary group-hover:scale-125 transition-transform" />
-              <span>AES-256 Encryption</span>
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="flex items-center gap-2 text-sm font-medium text-foreground group"
-            >
-              <Award className="w-4 h-4 text-primary group-hover:scale-125 transition-transform" />
-              <span>Fraud Protection</span>
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="flex items-center gap-2 text-sm font-medium text-foreground group"
-            >
-              <Globe className="w-4 h-4 text-primary group-hover:scale-125 transition-transform" />
-              <span>UAE Compliant</span>
-            </motion.div>
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-              className="flex items-center gap-2 text-sm font-medium text-foreground group"
-            >
-              <CheckCircle2 className="w-4 h-4 text-primary group-hover:scale-125 transition-transform" />
-              <span>Global Payment Networks</span>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA Section - Upgraded */}
-      <section className="py-32 bg-white">
-        <div className="container px-4 md:px-6 mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-gradient-to-br from-primary/5 via-white to-primary/5 rounded-2xl p-12 md:p-16 border border-primary/10 text-center space-y-8"
-          >
-            <div>
-              <h2 className="text-3xl md:text-5xl font-bold mb-4">Start accepting payments today.</h2>
-              <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                Onboard in under 24 hours. No setup fees. No hidden costs. Enterprise-grade security for the modern UAE business.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
-              <Link href="/contact" className="w-full sm:w-auto">
-                <Button 
-                  size="lg" 
-                  className="h-14 px-12 text-lg bg-primary text-white hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all font-bold w-full hover:scale-105 active:scale-95 duration-200"
-                  data-testid="button-cta-book-demo"
-                >
-                  Book a Demo
-                </Button>
-              </Link>
-              <a 
-                href="https://wa.me/971501234567?text=Hi%20SimpleBit,%20I%20want%20to%20learn%20more%20about%20your%20payment%20solutions"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto"
-              >
-                <Button 
-                  size="lg"
-                  className="h-14 px-12 text-lg bg-green-600 text-white hover:bg-green-700 shadow-lg hover:shadow-xl transition-all font-bold w-full hover:scale-105 active:scale-95 duration-200 flex items-center justify-center gap-2"
-                  data-testid="button-whatsapp-cta"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Chat on WhatsApp
-                </Button>
-              </a>
-              <Link href="/dashboard" className="w-full sm:w-auto">
-                <Button 
-                  size="lg"
-                  variant="outline" 
-                  className="h-14 px-12 text-lg border-primary text-primary hover:bg-primary/5 font-bold w-full hover:scale-105 active:scale-95 duration-200"
-                  data-testid="button-cta-explore"
-                >
-                  Explore Dashboard
-                </Button>
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Mini Contact CTA - Simplified */}
-      <section className="pb-16 bg-white">
-        <div className="container px-4 md:px-6 mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-primary/[0.03] rounded-xl p-8 md:p-10 flex flex-col md:flex-row items-center justify-between gap-8 border border-primary/10 hover:border-primary/20 hover:shadow-md transition-all duration-500"
-          >
-            <div className="text-center md:text-left flex-1">
-              <h3 className="text-xl md:text-2xl font-bold mb-2">Questions? We're here to help.</h3>
-              <p className="text-muted-foreground font-medium">Schedule a free consultation with our payment experts.</p>
-            </div>
-            <Link href="/contact">
-              <Button 
-                className="h-12 px-8 bg-primary text-white hover:bg-primary/90 font-bold shadow-lg hover:scale-105 active:scale-95 transition-transform duration-200 whitespace-nowrap"
-                data-testid="button-contact-help"
-              >
-                Get in Touch
-              </Button>
-            </Link>
-          </motion.div>
         </div>
       </section>
 

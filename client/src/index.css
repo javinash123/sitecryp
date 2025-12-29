@@ -168,4 +168,47 @@
   .counter-number {
     font-variant-numeric: tabular-nums;
   }
+
+  /* Waving animation for hero gradient */
+  .hero-wave {
+    animation: wave 5s ease-in-out infinite;
+    transform-origin: center;
+  }
+
+  @keyframes wave {
+    0%, 100% {
+      clip-path: polygon(0 0, 55% 0, 45% 100%, 0 100%);
+    }
+    25% {
+      clip-path: polygon(0 0, 55% 0, 46% 100%, 0 100%);
+    }
+    50% {
+      clip-path: polygon(0 0, 55% 0, 47% 100%, 0 100%);
+    }
+    75% {
+      clip-path: polygon(0 0, 55% 0, 46% 100%, 0 100%);
+    }
+  }
+
+  /* Device shadow for mockups */
+  .device-shadow {
+    @apply drop-shadow-2xl;
+  }
+
+  /* Hover elevation utilities */
+  .hover-elevate {
+    @apply transition-all duration-200;
+  }
+
+  .hover-elevate:hover {
+    @apply shadow-lg -translate-y-1;
+  }
+
+  .active-elevate-2 {
+    @apply transition-all duration-150;
+  }
+
+  .active-elevate-2:active {
+    @apply shadow-md translate-y-0.5;
+  }
 }
