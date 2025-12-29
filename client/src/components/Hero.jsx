@@ -3,8 +3,7 @@ import { ArrowRight, Play, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 import { RotatingFeatures } from "@/components/RotatingFeatures";
-import mobilePaymentMockup from "@assets/generated_images/mobile_invoice_payment_screen_mockup.png";
-import laptopDashboardMockup from "@assets/generated_images/laptop_dashboard_analytics_screen_mockup.png";
+import heroMockup from "@assets/generated_images/stripe-style_fintech_hero_product_mockup.png";
 import "../assets/css/hero.css";
 import "../assets/css/deviceFrames.css";
 
@@ -87,7 +86,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* Right Side - Device Mockups */}
+          {/* Right Side - Generated Mockup */}
           <motion.div
             variants={item}
             initial={{ opacity: 0, x: 50 }}
@@ -95,22 +94,12 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="hero-right-content"
           >
-            <div className="device-frame">
-              {/* Phone - Foreground */}
-              <div className="device-phone">
-                <img
-                  src={mobilePaymentMockup}
-                  alt="Payment App Phone"
-                />
-              </div>
-
-              {/* Laptop - Background */}
-              <div className="device-laptop">
-                <img
-                  src={laptopDashboardMockup}
-                  alt="Dashboard Laptop"
-                />
-              </div>
+            <div className="hero-image-wrapper">
+              <img
+                src={heroMockup}
+                alt="SimpleBit Fintech Mockup"
+                className="hero-main-mockup"
+              />
             </div>
           </motion.div>
         </div>

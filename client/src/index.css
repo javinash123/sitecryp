@@ -132,6 +132,14 @@
 }
 
 @layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
   .text-balance {
     text-wrap: balance;
   }
@@ -142,6 +150,14 @@
   
   .glass-card {
     @apply bg-white/60 backdrop-blur-sm border border-black/[0.05] shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   .text-gradient {

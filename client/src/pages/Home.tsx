@@ -40,47 +40,88 @@ export default function Home() {
   };
 
   const industries = [
-    { name: "Restaurants", benefit: "Table-side QR payments & instant tips", icon: <Utensils className="w-10 h-10" /> },
-    { name: "Hotels", benefit: "Secure check-in/out payment links", icon: <Hotel className="w-10 h-10" /> },
-    { name: "Retail", benefit: "Cardless checkout & digital invoices", icon: <ShoppingBag className="w-10 h-10" /> },
-    { name: "Salons", benefit: "Deposits & bookings via WhatsApp links", icon: <Scissors className="w-10 h-10" /> },
-    { name: "Gyms", benefit: "Membership & subscription payments", icon: <Dumbbell className="w-10 h-10" /> },
-    { name: "E-commerce", benefit: "Zero gateway setup, link-based checkout", icon: <Package className="w-10 h-10" /> },
+    { 
+      name: "Restaurants", 
+      benefit: "Table-side QR payments & instant tips", 
+      icon: <Utensils className="w-10 h-10" />,
+      clients: ["Arabian Pay", "Dubai Eats"],
+      description: "Empower your waitstaff with digital tipping and lightning-fast table-side checkouts. Reduce wait times by up to 40%."
+    },
+    { 
+      name: "Hotels", 
+      benefit: "Secure check-in/out payment links", 
+      icon: <Hotel className="w-10 h-10" />,
+      clients: ["Nexus Resorts", "Velvet Stays"],
+      description: "Streamline guest experiences with secure pre-arrival payment links and seamless on-site charges."
+    },
+    { 
+      name: "Retail", 
+      benefit: "Cardless checkout & digital invoices", 
+      icon: <ShoppingBag className="w-10 h-10" />,
+      clients: ["TechFlow Retail", "Golden Fork"],
+      description: "Modernize your storefront with QR-based cardless payments and automated digital receipting for every customer."
+    },
+    { 
+      name: "Salons", 
+      benefit: "Deposits & bookings via WhatsApp links", 
+      icon: <Scissors className="w-10 h-10" />,
+      clients: ["Aura Spa", "Elite Cuts"],
+      description: "Secure your schedule with automated deposit collection and simplified payment links sent directly via chat."
+    },
+    { 
+      name: "Gyms", 
+      benefit: "Membership & subscription payments", 
+      icon: <Dumbbell className="w-10 h-10" />,
+      clients: ["FitCore UAE", "Iron Haven"],
+      description: "Manage recurring memberships effortlessly with automated billing and flexible subscription management."
+    },
+    { 
+      name: "E-commerce", 
+      benefit: "Zero gateway setup, link-based checkout", 
+      icon: <Package className="w-10 h-10" />,
+      clients: ["DUBÁI EATS", "ArabianPay"],
+      description: "Launch in minutes with zero-integration checkouts and global payment acceptance for your online store."
+    },
   ];
+
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
 
   const testimonials = [
     {
       name: "Ahmed Al-Rashid",
       role: "CEO, Rent Any Car Dubai",
-      avatar: "AR",
+      company: "TechFlow",
       quote: "SimpleBit transformed our business. International customers can now pay with crypto, and we receive AED instantly.",
+      image: "https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80&w=1000",
       metrics: [
-        { label: "Revenue Boost", value: "300%" },
+        { label: "Revenue Boost", value: "+300%" },
         { label: "Checkout Speed", value: "10s" }
       ],
-      rating: 5
+      products: ["Crypto Payments", "AED Settlement"]
     },
     {
       name: "Fatima Al-Zahra",
-      role: "Owner, The Golden Fork Restaurant",
-      avatar: "FZ",
+      role: "Owner, The Golden Fork",
+      company: "Velvet.co",
       quote: "The Apple Pay integration and instant AED settlement is game-changing. Our customers love the seamless experience.",
+      image: "https://images.unsplash.com/photo-1556740734-7f9a2b7a0f4c?auto=format&fit=crop&q=80&w=1000",
       metrics: [
-        { label: "Sales Growth", value: "45%" },
+        { label: "Sales Growth", value: "+45%" },
         { label: "Customer Rating", value: "5.0" }
       ],
-      rating: 5
+      products: ["Apple Pay", "Digital Invoices"]
     },
     {
       name: "Mohammed Hassan",
       role: "Founder, TechFlow Solutions",
-      avatar: "MH",
+      company: "NEXUS",
       quote: "Setup took 10 minutes. Enterprise security, zero hidden fees. Best fintech decision for the UAE market.",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1000",
       metrics: [
         { label: "Integration Time", value: "<1 hour" },
-        { label: "Support Quality", value: "5.0" }
+        { label: "System Uptime", value: "99.9%" }
       ],
-      rating: 5
+      products: ["API Integration", "Enterprise Security"]
     }
   ];
 
@@ -95,19 +136,19 @@ export default function Home() {
       step: "01", 
       title: "Create", 
       desc: "Generate a QR code or custom invoice in seconds with our intuitive dashboard.",
-      icon: <Zap className="h-8 w-8 text-primary" />
+      icon: <Zap className="h-8 w-8" />
     },
     { 
       step: "02", 
       title: "Pay", 
       desc: "Customer pays via crypto, card, or Apple Pay with a seamless checkout experience.",
-      icon: <Globe className="h-8 w-8 text-primary" />
+      icon: <Globe className="h-8 w-8" />
     },
     { 
       step: "03", 
       title: "Settle", 
       desc: "Business receives AED instantly with best-in-market conversion rates.",
-      icon: <CheckCircle2 className="h-8 w-8 text-primary" />
+      icon: <CheckCircle2 className="h-8 w-8" />
     }
   ];
 
@@ -229,7 +270,7 @@ export default function Home() {
                     <span className="text-9xl font-bold text-primary">{item.step}</span>
                   </div>
                   <CardContent className="pt-8 pb-8 px-8 relative z-10">
-                    <div className="mb-6 p-4 bg-primary/10 w-fit rounded-xl group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+                    <div className="mb-6 p-4 bg-primary/10 w-fit rounded-xl group-hover:bg-primary text-primary group-hover:text-white transition-colors duration-500">
                       {item.icon}
                     </div>
                     <h3 className="text-2xl font-bold mb-3 text-foreground">{item.title}</h3>
@@ -266,7 +307,7 @@ export default function Home() {
                     <span className="text-9xl font-bold text-primary">{item.step}</span>
                   </div>
                   <CardContent className="pt-8 pb-8 px-8 relative z-10">
-                    <div className="mb-6 p-4 bg-primary/10 w-fit rounded-xl group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+                    <div className="mb-6 p-4 bg-primary/10 w-fit rounded-xl group-hover:bg-primary text-primary group-hover:text-white transition-colors duration-500">
                       {item.icon}
                     </div>
                     <h3 className="text-2xl font-bold mb-3 text-foreground">{item.title}</h3>
@@ -281,8 +322,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Industry Section - Enhanced Benefits */}
-      <section className="py-32 bg-gradient-to-br from-primary/5 via-white to-purple-50">
+      {/* Industry Section - Enhanced Benefits with Slider */}
+      <section className="py-32 bg-gradient-to-br from-primary/5 via-white to-purple-50 overflow-hidden">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-20">
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Perfect for <span className="text-gradient">Every Industry</span></h2>
@@ -291,29 +332,52 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {industries.map((industry, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                whileHover={{ scale: 1.08, y: -8 }}
-                whileTap={{ scale: 0.95 }}
-                className="p-6 md:p-8 rounded-xl bg-white border border-primary/10 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10 transition-all cursor-pointer text-center group"
-              >
-                <motion.div 
-                  initial={{ scale: 1 }}
-                  whileHover={{ rotate: [0, -10, 10, 0], scale: 1.2 }}
-                  className="mb-4 flex justify-center text-primary"
+          <div className="relative group overflow-hidden">
+            <motion.div 
+              className="flex gap-6 pb-8 no-scrollbar cursor-grab active:cursor-grabbing"
+              drag="x"
+              dragConstraints={{ right: 0, left: -1600 }}
+              style={{ width: "fit-content" }}
+            >
+              {industries.map((industry, i) => (
+                <div
+                  key={i}
+                  className="flex-shrink-0 w-[320px] md:w-[380px] lg:w-[400px]"
                 >
-                  {industry.icon}
-                </motion.div>
-                <p className="font-bold text-foreground group-hover:text-primary transition-colors mb-3 text-sm">{industry.name}</p>
-                <p className="text-xs text-muted-foreground leading-snug">{industry.benefit}</p>
-              </motion.div>
-            ))}
+                  <Card className="h-full p-8 md:p-10 rounded-2xl bg-white border border-primary/10 hover:border-primary/50 hover:shadow-xl hover:shadow-primary/10 transition-all group flex flex-col">
+                    <div className="mb-6 flex justify-between items-start">
+                      <div className="p-4 bg-primary/5 rounded-2xl text-primary group-hover:scale-110 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                        {industry.icon}
+                      </div>
+                      <div className="flex -space-x-2">
+                        {industry.clients.map((client, ci) => (
+                          <div key={ci} className="w-8 h-8 rounded-full bg-slate-100 border-2 border-white flex items-center justify-center text-[8px] font-bold text-slate-400 group-hover:border-primary/20 transition-colors">
+                            {client.split(' ').map(n => n[0]).join('')}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    
+                    <h3 className="text-2xl font-bold text-foreground mb-4 group-hover:text-primary transition-colors">{industry.name}</h3>
+                    <p className="font-semibold text-primary/80 mb-3 text-sm">{industry.benefit}</p>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-8 flex-grow">
+                      {industry.description}
+                    </p>
+                    
+                    <div className="pt-6 border-t border-slate-100">
+                      <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-3">Trusted By</p>
+                      <div className="flex flex-wrap gap-2">
+                        {industry.clients.map((client, ci) => (
+                          <span key={ci} className="px-2 py-1 rounded-md bg-slate-50 text-[10px] font-medium text-slate-600 border border-slate-100">
+                            {client}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                  </Card>
+                </div>
+              ))}
+            </motion.div>
           </div>
         </div>
       </section>
@@ -359,14 +423,14 @@ export default function Home() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-48 bg-slate-950 text-white relative overflow-hidden">
+      <section className="py-24 bg-slate-950 text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary blur-[120px] rounded-full"></div>
           <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-purple-600 blur-[120px] rounded-full"></div>
         </div>
         
         <div className="container relative z-10 px-4 md:px-6 mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[600px]">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[400px]">
             {/* Left Side - Content & Stats */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
@@ -443,19 +507,21 @@ export default function Home() {
 
             {/* Right Side - Animated Crypto Globe */}
             <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="h-full min-h-[500px] hidden lg:flex items-center justify-center"
+              transition={{ duration: 1 }}
+              className="relative h-full min-h-[600px] hidden lg:flex items-center justify-center z-50 pointer-events-none"
             >
-              <AnimatedCryptoGlobe />
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-auto">
+                <AnimatedCryptoGlobe />
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
+      {/* Testimonials Section - Interactive Layout */}
       <section className="py-32 bg-white">
         <div className="container px-4 md:px-6 mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-20">
@@ -465,46 +531,154 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="p-8 rounded-xl bg-gradient-to-br from-white to-primary/5 border border-primary/10 hover:border-primary/30 hover:shadow-lg transition-all"
-              >
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-primary text-primary" />
-                  ))}
+          <div className="grid lg:grid-cols-12 gap-12 items-start max-w-6xl mx-auto">
+            {/* Left Side - Vertical Logo Selection */}
+            <div className="lg:col-span-3 flex flex-col gap-8">
+              {testimonials.map((t, i) => (
+                <div key={i} className="space-y-4">
+                  <motion.button
+                    onClick={() => setActiveTestimonial(i)}
+                    className={`flex items-center gap-4 w-full text-left p-4 rounded-xl transition-all duration-300 ${
+                      activeTestimonial === i 
+                      ? "bg-primary/5 border-l-4 border-primary shadow-sm" 
+                      : "opacity-40 grayscale hover:opacity-100 hover:grayscale-0 hover:bg-slate-50"
+                    }`}
+                  >
+                    <span className="text-xl font-bold tracking-tight">{t.company}</span>
+                  </motion.button>
+                  {activeTestimonial === i && (
+                    <div className="pl-4 space-y-6 pt-2">
+                      {t.metrics.map((m, j) => (
+                        <div key={j} className="border-l border-primary/20 pl-4 py-1">
+                          <p className="text-2xl font-bold text-primary">{m.value}</p>
+                          <p className="text-xs text-muted-foreground leading-snug">{m.label}</p>
+                        </div>
+                      ))}
+                      <div className="pt-4">
+                        <p className="text-[10px] font-bold uppercase tracking-widest text-muted-foreground mb-3">Products Used</p>
+                        <div className="space-y-2">
+                          {t.products.map((p, j) => (
+                            <div key={j} className="flex items-center gap-2 text-xs font-medium text-foreground">
+                              <CheckCircle2 className="w-3 h-3 text-primary" />
+                              {p}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
-                <p className="text-foreground font-medium mb-6 leading-relaxed">
-                  "{testimonial.quote}"
-                </p>
-                <div className="border-t border-primary/10 pt-6">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">
-                      {testimonial.avatar}
+              ))}
+            </div>
+
+            {/* Right Side - Testimonial Detail with Image */}
+            <div className="lg:col-span-9">
+              <motion.div
+                key={activeTestimonial}
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5 }}
+                className="relative min-h-[500px] rounded-3xl overflow-hidden shadow-2xl group"
+              >
+                {/* Background Image with Dark Wash */}
+                <div 
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                  style={{ backgroundImage: `url(${testimonials[activeTestimonial].image})` }}
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/60 to-transparent" />
+                
+                {/* Content Overlay */}
+                <div className="relative z-10 p-12 h-full flex flex-col justify-center max-w-2xl text-white">
+                  <div className="mb-8 p-3 bg-white/10 backdrop-blur-md rounded-xl w-fit border border-white/20">
+                    <span className="text-xl font-bold tracking-tight text-white">{testimonials[activeTestimonial].company}</span>
+                  </div>
+                  
+                  <h3 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+                    {testimonials[activeTestimonial].quote}
+                  </h3>
+                  
+                  <div className="flex items-center gap-6 mt-auto pt-8 border-t border-white/10">
+                    <div className="w-16 h-16 rounded-full bg-primary/30 backdrop-blur-md flex items-center justify-center font-bold text-2xl border border-white/20">
+                      {testimonials[activeTestimonial].name.charAt(0)}
                     </div>
                     <div>
-                      <p className="font-bold text-foreground text-sm">{testimonial.name}</p>
-                      <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                      <p className="text-xl font-bold">{testimonials[activeTestimonial].name}</p>
+                      <p className="text-white/60">{testimonials[activeTestimonial].role}</p>
                     </div>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    {testimonial.metrics.map((metric, j) => (
-                      <div key={j}>
-                        <p className="text-lg font-bold text-primary">{metric.value}</p>
-                        <p className="text-xs text-muted-foreground">{metric.label}</p>
-                      </div>
-                    ))}
-                  </div>
+
+                  <Link href="/contact" className="mt-8 block">
+                    <Button variant="outline" className="text-white border-white hover:bg-white/10 group">
+                      Read Full Case Study <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
                 </div>
               </motion.div>
-            ))}
+            </div>
           </div>
+        </div>
+      </section>
+
+      {/* FAQ Preview Section */}
+      <section className="py-24 bg-slate-50/50">
+        <div className="container px-4 md:px-6 mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Frequently Asked <span className="text-gradient">Questions</span></h2>
+              <p className="text-muted-foreground text-lg mb-8">
+                Everything you need to know about SimpleBit and how we can help your business grow.
+              </p>
+              <Link href="/faq">
+                <Button variant="outline" size="lg" className="group">
+                  View All FAQs <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
+            </div>
+            <div className="space-y-4">
+              {[
+                { q: "How fast is the settlement?", a: "We offer instant AED settlement, typically processed within seconds." },
+                { q: "What are the fees?", a: "We maintain transparent, competitive pricing with no hidden charges." },
+                { q: "Is it secure?", a: "Yes, we use bank-level AES-256 encryption and are PCI-DSS Level 1 compliant." }
+              ].map((faq, i) => (
+                <Card key={i} className="hover:border-primary/30 transition-colors">
+                  <CardContent className="p-6">
+                    <h4 className="font-bold mb-2">{faq.q}</h4>
+                    <p className="text-sm text-muted-foreground">{faq.a}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="py-24 bg-primary relative overflow-hidden">
+        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+        <div className="container relative z-10 px-4 md:px-6 mx-auto text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="max-w-3xl mx-auto text-white"
+          >
+            <h2 className="text-4xl md:text-6xl font-bold mb-8">Ready to Transform Your <span className="text-yellow-400">Payments?</span></h2>
+            <p className="text-white/80 text-xl mb-12">
+              Join 500+ UAE businesses already using SimpleBit. Setup takes less than 10 minutes.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <Link href="/contact">
+                <Button size="lg" className="bg-white text-primary hover:bg-white/90 w-full sm:w-auto text-lg px-8 h-14">
+                  Partner With Us Today
+                </Button>
+              </Link>
+              <Link href="/contact">
+                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 w-full sm:w-auto text-lg px-8 h-14">
+                  Schedule a Demo
+                </Button>
+              </Link>
+            </div>
+          </motion.div>
         </div>
       </section>
 
